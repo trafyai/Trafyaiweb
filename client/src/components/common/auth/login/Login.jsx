@@ -67,9 +67,9 @@ export default function Login() {
     };
 
     return (
-        <div className="signup">
-            <div className="signup-container">
-                <div className="signup-heading"><h1>Login to Your Account</h1></div>
+        <div className="login">
+            <div className="login-container">
+                <div className="login-heading"><h1>Login to Your Account</h1></div>
 
                 <form className="form" onSubmit={handleSubmit}>
                     
@@ -83,7 +83,7 @@ export default function Login() {
                             <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} onClick={handleTogglePasswordVisibility} className="eye" />
                         </div>
                     </div>
-                    <div className="SignUp-button">
+                    <div className="login-button">
                         <button className="signup-btn" type="submit">Login</button>
                     </div>
                     <p>Don't have an account? <Link to="/signup"> Signup</Link></p>
