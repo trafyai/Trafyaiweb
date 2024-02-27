@@ -11,10 +11,12 @@ export default function CourseHeroSection(){
                 <div className="hero-section-container">
 
                   <div className="hero-main">
-                    
+                          <div></div>
                   </div>
 
-                  <div className="hero-sub"></div>
+                  <div className="hero-sub">
+                           <div></div>
+                  </div>
 
             </div>
             </div>
