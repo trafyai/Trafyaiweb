@@ -1,0 +1,54 @@
+.hero-section{
+    padding-top: 120px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+.hero-section-container{
+    width: 90%;
+    display: flex;
+    gap:2rem;
+}
+.hero-main, .hero-sub{
+    border: 2px solid #121212;
+    border-radius: 24px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+}
+.hero-main{
+    width: 70%;
+}
+.hero-label{
+    display: flex;
+    gap:0.5rem;
+}
+.hero-category, .hero-popularity{
+    padding: 8px;
+    color:#121212;
+    border: 2px solid #121212;
+    border-radius: 8px;
+    font-family: 'Inter',sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+.hero-main-heading{
+    font-family: 'Raleway',sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+}
+.hero-description{
+    font-family: 'Inter',sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+.hero-rating{
+    display: flex;
+    gap:0.3rem;
+}
+.hero-rating-number{
+    font-family: 'Inter',sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
