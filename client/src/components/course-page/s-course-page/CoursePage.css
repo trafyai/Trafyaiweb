@@ -1,6 +1,5 @@
 .hero-section{
     padding-top: 120px;
-    padding-bottom: 60px;
     display: flex;
     justify-content: center;
 }
@@ -22,7 +21,8 @@
 }
 .hero-label{
     display: flex;
-    gap:0.5rem;
+    gap:0.8rem;
+    align-items: center;
 }
 .hero-category, .hero-popularity{
     padding: 8px;
@@ -33,22 +33,276 @@
     font-weight: 400;
     font-size: 14px;
 }
-.hero-main-heading{
+.hero-main-heading h1{
     font-family: 'Raleway',sans-serif;
-    font-weight: 600;
-    font-size: 32px;
+    font-weight: 700;
+    font-size: 40px;
 }
-.hero-description{
+.hero-description p{
     font-family: 'Inter',sans-serif;
     font-weight: 400;
     font-size: 16px;
+    width: 80%;
+    line-height: 150%;
 }
 .hero-rating{
     display: flex;
-    gap:0.3rem;
+    gap:0.5rem;
 }
 .hero-rating-number{
     font-family: 'Inter',sans-serif;
     font-weight: 500;
     font-size: 15px;
 }
+.hero-cta{
+    display: flex;
+    gap:1rem;
+    align-items: center;
+}
+.hero-enroll{
+    padding: 8px 24px;
+    border: 2px solid #121212;
+    border-radius: 8px;
+    background-color: #121212;
+    color:#f8f8ff;
+    font-size: 16px;
+}
+.hero-enroll:hover{
+    background-color: inherit;
+    color: #121212;
+}
+.hero-enrolled{
+    font-family: 'Inter',sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+
+
+.hero-sub{
+    width: 30%;
+    justify-content: center;
+}
+.hero-platform, .hero-start-date, .hero-level, .hero-duration{
+    display: flex;
+    flex-direction: column;
+    gap:0.6rem;
+}
+.platform-heading, .start-date-heading, .level-heading, .duration-heading{
+    font-family: 'Raleway',sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+.platform-images{
+    display: flex;
+    gap:1rem;
+}
+.platform-images svg{
+    height: 28px;
+}
+.start-date, .level, .duration{
+    font-family: 'Inter',sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
+@media only screen and (max-width:1024px){
+    .hero-section-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-main-heading h1{
+        font-size: 40px;
+    }
+    .hero-main, .hero-sub{
+        width: 90%;
+        height: max-content;
+    }
+    .hero-sub{
+        justify-content: flex-start;
+        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 169px); 
+        gap:2.5rem;
+    }
+    .start-date, .level, .duration{
+        font-size: 20px;
+    }
+
+}
+
+@media only screen and (max-width:600px){
+    .hero-section{
+        padding-top: 90px;
+    }
+    .hero-section-container {
+        gap:1rem;
+    }
+    .hero-main, .hero-sub{
+        width: 95%;
+    }
+    .hero-main{
+        gap:1rem;
+    }
+    .hero-main-heading h1{
+        font-size: 32px;
+    }
+    .hero-description p{
+        width: 100%;
+    }
+    .hero-cta{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .hero-sub{
+        gap:1.5rem;
+        column-gap: 2.5rem;
+    }
+    .start-date, .level, .duration{
+        font-size: 18px;
+    }
+}
+
+
+/* -------------------------------------------------course-description------------------------------ */
+
+.course-description{
+    padding-top:60px;
+    display: flex;
+    justify-content: center;
+}
+.course-description-container{
+    width: 90%;
+    display: flex;
+    gap:4rem;
+    padding: 0px 24px;
+}
+.about-course{
+    width:70%;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.about-course-heading h1, .course-skills-heading h1{
+    font-size: 24px;
+    font-weight: 700px;
+    font-family: 'Raleway',sans-serif;
+}
+.about-course-description p{
+    font-size: 16px;
+    font-weight: 400px;
+    font-family: 'Inter',sans-serif;
+    line-height: 150%;
+}
+.course-skills{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.course-skills-description ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+.course-skills-description li{
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: 400px;
+    font-family: 'Inter',sans-serif;
+    line-height: 150%;
+}
+.course-skills-description li::before {
+    content: "\2714"; /* Unicode tick mark character */
+    color: #121212; /* Change color if needed */
+    margin-right: 1rem; /* Add some space between tick mark and text */
+  }
+
+
+@media only screen and  (max-width:1200px){
+    
+    .course-description-container{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .about-course{
+        width: 80%;
+    }
+}
+@media only screen and  (max-width:1024px){
+    .course-description-container{
+        width: 80%;
+        padding: 0;
+    }
+    .about-course{
+        width: 100%;
+    }
+    .course-skills{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:600px){
+    .course-description{
+        padding-top: 40px;
+    }
+    .course-description-container{
+        gap:30px
+    }
+}
+
+/* ------------------------------------------------------course-syllabus------------------------------------- */
+.course-syllabus{
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+.course-syllabus-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    padding-left: 24px;
+}
+.course-syllabus-heading h1{
+    font-size: 24px;
+    font-weight: 700px;
+    font-family: 'Raleway',sans-serif;
+}
+.course-syllabus-accordion-container{
+    display: flex;
+    flex-direction: column;
+   gap:0.5rem;
+}
+.course-syllabus-accordion{
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #121212;
+    border-radius: 16px;
+    gap:1rem;
+}
+.syllabus-accordion-title{
+    display: flex;
+    justify-content: space-between;
+    gap:3rem;
+}
+.syllabus-accordion-title h2{
+    font-size: 18px;
+    font-weight: 600px;
+    font-family: 'Raleway',sans-serif;
+}
+.syllabus-accordion-contents p{
+    font-size: 16px;
+    font-weight: 600px;
+    font-family: 'Inter',sans-serif;
+}
+.rotated {
+    transform: rotate(180deg);
+  }
+
+
+  /* --------------------------------------------------PRoject-section----------------------------------------- */
+
+  
