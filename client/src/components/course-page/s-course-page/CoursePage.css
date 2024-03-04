@@ -2,9 +2,10 @@
     padding-top: 120px;
     display: flex;
     justify-content: center;
+    background-color: #f8f8ff;
 }
 .hero-section-container{
-    width: 90%;
+    width: 80%;
     display: flex;
     gap:2rem;
 }
@@ -97,20 +98,25 @@
     display: flex;
     gap:1rem;
 }
-.platform-images svg{
+.platform-images img{
     height: 28px;
 }
 .start-date, .level, .duration{
     font-family: 'Inter',sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 20px;
 }
 
 
 @media only screen and (max-width:1024px){
+    .hero-section{
+        padding-top: 90px;
+    }
     .hero-section-container{
+        width: 90%;
         flex-direction: column;
         align-items: center;
+        gap:1rem;
     }
     .hero-main-heading h1{
         font-size: 40px;
@@ -162,18 +168,22 @@
     .start-date, .level, .duration{
         font-size: 18px;
     }
+    .hero-enroll{
+        width: max-content;
+    }
 }
 
 
 /* -------------------------------------------------course-description------------------------------ */
 
 .course-description{
-    padding-top:60px;
+    padding:60px 0px;
     display: flex;
     justify-content: center;
+    background-color: #f8f8ff;
 }
 .course-description-container{
-    width: 90%;
+    width: 80%;
     display: flex;
     gap:4rem;
     padding: 0px 24px;
@@ -182,9 +192,9 @@
     width:70%;
     display: flex;
     flex-direction: column;
-    gap:1rem;
+    gap:1.5rem;
 }
-.about-course-heading h1, .course-skills-heading h1{
+.about-course-heading h1, .course-skills-heading h1, .tools-covered h1{
     font-size: 24px;
     font-weight: 700px;
     font-family: 'Raleway',sans-serif;
@@ -195,11 +205,18 @@
     font-family: 'Inter',sans-serif;
     line-height: 150%;
 }
+.tools-img{
+    display: flex;
+    gap:1rem;
+}
+.tools-img img{
+    height: 40px;
+}
 .course-skills{
     width: 30%;
     display: flex;
     flex-direction: column;
-    gap:1rem;
+    gap:1.5rem;
 }
 .course-skills-description ul{
     display: flex;
@@ -212,6 +229,7 @@
     font-weight: 400px;
     font-family: 'Inter',sans-serif;
     line-height: 150%;
+    display: flex;
 }
 .course-skills-description li::before {
     content: "\2714"; /* Unicode tick mark character */
@@ -229,8 +247,14 @@
     .about-course{
         width: 80%;
     }
+    .course-skills{
+        width: 100%;
+    }
 }
 @media only screen and  (max-width:1024px){
+    .course-description{
+        padding-bottom: 0;
+    }
     .course-description-container{
         width: 80%;
         padding: 0;
@@ -247,32 +271,35 @@
         padding-top: 40px;
     }
     .course-description-container{
+        width: 85%;
         gap:30px
     }
 }
 
 /* ------------------------------------------------------course-syllabus------------------------------------- */
-.course-syllabus{
-    padding-top: 60px;
+.course-syllabus {
+    padding:60px 0px;
     display: flex;
     justify-content: center;
+    background-color: #f8f8ff;
 }
 .course-syllabus-container{
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: column;
-    gap:2rem;
+    gap:3rem;
     padding-left: 24px;
 }
 .course-syllabus-heading h1{
     font-size: 24px;
     font-weight: 700px;
     font-family: 'Raleway',sans-serif;
+    text-align: center;
 }
 .course-syllabus-accordion-container{
     display: flex;
     flex-direction: column;
-   gap:0.5rem;
+    gap:0.7rem;
 }
 .course-syllabus-accordion{
     width: 100%;
@@ -301,8 +328,296 @@
 .rotated {
     transform: rotate(180deg);
   }
-
+ 
+  @media only screen and (max-width:1024px){
+    .course-syllabus-container {
+        padding-left: 0;
+    }
+    .course-syllabus{
+        padding-bottom: 0;
+    }
+  }
+  @media only screen and (max-width:600px){
+    .course-syllabus{
+        padding-top: 40px;
+    }
+    .course-syllabus-container{
+        width: 85%;
+    }
+  }
 
   /* --------------------------------------------------PRoject-section----------------------------------------- */
 
-  
+  .course-project{
+    display: flex;
+    padding:60px 0px;
+    justify-content: center;
+    background-color: #f8f8ff;
+  }
+  .course-project-container{
+    width: 80%;
+    padding-left:24px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:3rem;
+  }
+  .course-project-heading h1{
+    font-size: 24px;
+    font-weight: 700px;
+    font-family: 'Raleway',sans-serif;
+    text-align: center;
+  }
+  .course-projects-contents{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:2.5rem;
+  }
+  .project-box{
+    width: 300px;
+    height: 250px;
+    border: 2px solid #121212;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-box-heading{
+    border-radius: 16px;
+    border: 0;
+    border-bottom: 2px solid #121212;
+    max-height: 170px;
+    overflow: hidden;
+  }
+  .project-box h2{
+    font-size: 18px;
+    font-weight: 700px;
+    font-family: 'Raleway',sans-serif;
+    padding: 16px;
+  }
+  .project-box-description{
+    
+  }
+  .project-box-description p{
+    font-size: 16px;
+    font-weight: 400px;
+    font-family: 'Inter',sans-serif;
+    line-height: 150%;
+  }
+  .project-view-btn{
+    width: max-content;
+    border: 2px solid #121212;
+    background-color: inherit;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+  }
+  .project-view-btn:hover{
+    background-color: #121212;
+    color:#f8f8ff
+  }
+
+  @media only screen and (max-width:1024px){
+    .course-project {
+        padding-bottom: 0;
+    }
+    .course-project-container{
+        padding-left: 0;
+    }
+  }
+  @media only screen and (max-width:600px){
+    .course-project {
+        padding-top: 40px;
+    }
+    .course-project-container{
+        width: 90%;
+    }
+    .course-projects-contents{
+        gap:1.5rem;
+    }
+    .project-box{
+        width: 270px;
+    }
+  }
+
+
+  /* ------------------------------------------------------review-section-------------------- */
+
+  .course-review{
+    display: flex;
+    justify-content: center;
+    padding:60px 0px;
+    background-color: #f8f8ff;
+  }
+  .course-review-container{
+    width: 80%;
+    padding-left:24px ;
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+  }
+  .course-review-heading h1{
+    font-size: 24px;
+    font-weight: 700px;
+    font-family: 'Raleway',sans-serif;
+    text-align: center;
+  }
+  .course-review-contents{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:2.5rem;
+  }
+  .review-box{
+    width: 300px;
+    height: 300px;
+    border: 2px solid #121212;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+  }
+  .review-box-description p{
+    font-size: 16px;
+    font-weight: 400px;
+    font-family: 'Inter',sans-serif;
+    line-height: 150%;
+  }
+  .review-box-name h2{
+    font-size: 18px;
+    font-weight: 700px;
+    font-family: 'Raleway',sans-serif;
+  }
+  @media only screen and (max-width:1024px){
+    .course-review-container{
+        padding-left: 0;
+    }
+  }
+  @media only screen and (max-width:600px){
+    .course-review{
+        padding-top: 40px;
+        padding-bottom: 0;
+    }
+    .course-review-container{
+        width: 90%;
+    }
+    .course-review-contents {
+        gap:1.5rem;
+    }
+    .review-box{
+        width: 270px;
+    }
+  }
+  /* -------------------------------------------certificate-section---------------------------------------------- */
+
+  .course-certificate{
+    display: flex;
+    justify-content: center;
+    padding:60px 0px;
+    background-color: #f8f8ff;
+  }
+  .course-certificate-container{
+    width: 80%;
+    padding-left:24px ;
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+  }
+  .course-certificate-heading h1{
+    font-size: 24px;
+    font-weight: 700px;
+    font-family: 'Raleway',sans-serif;
+  }
+  .course-certificate-contents{
+    display: flex;
+    gap:3rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .course-certificate-image{
+    width:300px;
+    height: 200px;
+    border: 1px solid;
+  }
+  .course-certificate-description{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+  }
+  .course-certificate-description p{
+    width: 90%;
+    font-size: 16px;
+    font-weight: 400px;
+    font-family: 'Inter',sans-serif;
+    line-height: 150%;
+  }
+  @media only screen and (max-width:600px){
+    .course-certificate-container{
+        padding-left: 0;
+        width: 85%;
+    }
+    .course-certificate-contents{
+        flex-direction: column;
+    }
+    .course-certificate-description{
+        width: 100%;
+        gap:1rem;
+    }
+    
+  }
+
+  /* ------------------------------------------------------course-faq------------------------------------- */
+.course-faq{
+    padding:60px 0px;
+    display: flex;
+    justify-content: center;
+    background-color: #f8f8ff;
+}
+.course-faq-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+    padding-left: 24px;
+}
+.course-faq-heading h1{
+    font-size: 24px;
+    font-weight: 700px;
+    font-family: 'Raleway',sans-serif;
+    text-align: center;
+}
+.course-faq-accordion-container{
+    display: flex;
+    flex-direction: column;
+   gap:0.7rem;
+}
+.course-faq-accordion{
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #121212;
+    border-radius: 16px;
+    gap:1rem;
+}
+.faq-accordion-title{
+    display: flex;
+    justify-content: space-between;
+    gap:3rem;
+}
+.faq-accordion-title h2{
+    font-size: 18px;
+    font-weight: 600px;
+    font-family: 'Raleway',sans-serif;
+}
+.faq-accordion-contents p{
+    font-size: 16px;
+    font-weight: 600px;
+    font-family: 'Inter',sans-serif;
+}
+.rotated {
+    transform: rotate(180deg);
+  }

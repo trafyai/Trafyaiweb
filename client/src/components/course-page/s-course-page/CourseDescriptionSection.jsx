@@ -1,6 +1,12 @@
 import React from "react";
 import './CoursePage.css';
-import CheckBox from "../../../assets/Images/course-page/skills-section/check_small.svg";
+import Figma from "../../../assets/Images/course-page/hero-section/Figma.png";
+import Miro from "../../../assets/Images/course-page/hero-section/Miro.png";
+import Chatgpt from "../../../assets/Images/course-page/hero-section/ChatGPT.png";
+import Gemini from "../../../assets/Images/course-page/hero-section/Gemini.png";
+import Framer from "../../../assets/Images/course-page/hero-section/Framer.png";
+
+
 export default function CourseDescriptionSection(){
     return(
         <main>
@@ -14,6 +20,14 @@ export default function CourseDescriptionSection(){
                             for modern technologies like VR and AR, and Gamification of UX. This 
                             course helps you build a progressive career in UI/UX industry and increase
                             your skill and potential as an UI/UX designer.</p>
+                        </div>
+                        <div className="tools-covered"><h1>Tools Covered</h1></div>
+                        <div className="tools-img">
+                            <img src={Figma} alt="" />
+                            <img src={Miro} alt="" />
+                            <img src={Chatgpt} alt="" />
+                            <img src={Gemini} alt="" />
+                            <img src={Framer} alt="" />
                         </div>
                     </div>
 

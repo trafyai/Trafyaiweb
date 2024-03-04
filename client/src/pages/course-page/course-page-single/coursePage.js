@@ -1,7 +1,10 @@
 import CourseHeroSection from "../../../components/course-page/s-course-page/CourseHeroSection";
 import CourseDescriptionSection from "../../../components/course-page/s-course-page/CourseDescriptionSection";
 import CourseSyllabusSection from "../../../components/course-page/s-course-page/CourseSyllabusSection";
-import courseProjectSection from "../../../components/course-page/s-course-page/CourseProjectSection";
+import CourseProjectSection from "../../../components/course-page/s-course-page/CourseProjectSection";
+import CourseReviewSection from "../../../components/course-page/s-course-page/CourseReviewSection";
+import CourseCertificateSection from "../../../components/course-page/s-course-page/CourseCertificateSection";
+import CourseFaqSection from "../../../components/course-page/s-course-page/CourseFaqSection";
 
 export default function coursePage(){
 
@@ -10,7 +13,10 @@ export default function coursePage(){
        <CourseHeroSection/>
        <CourseDescriptionSection/>
        <CourseSyllabusSection/>
-       <courseProjectSection/>
+       <CourseProjectSection/>
+       <CourseReviewSection/>
+       <CourseCertificateSection/>
+       <CourseFaqSection/>
          </>
 
     )
