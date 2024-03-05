@@ -2,7 +2,7 @@
     padding-top: 120px;
     display: flex;
     justify-content: center;
-    background-color: #f8f8ff;
+    background-color: #f9f7ff;
 }
 .hero-section-container{
     width: 80%;
@@ -26,16 +26,17 @@
     align-items: center;
 }
 .hero-category, .hero-popularity{
-    padding: 8px;
+    padding: 8px 16px;
     color:#121212;
-    border: 2px solid #121212;
+    border: 1px solid #121212;
     border-radius: 8px;
     font-family: 'Inter',sans-serif;
     font-weight: 400;
     font-size: 14px;
 }
 .hero-main-heading h1{
-    font-family: 'Raleway',sans-serif;
+    color:#121212;
+    font-family: 'Inter',sans-serif;
     font-weight: 700;
     font-size: 40px;
 }
@@ -45,6 +46,7 @@
     font-size: 16px;
     width: 80%;
     line-height: 150%;
+    color: #313131;
 }
 .hero-rating{
     display: flex;
@@ -62,15 +64,15 @@
 }
 .hero-enroll{
     padding: 8px 24px;
-    border: 2px solid #121212;
+    border: 2px solid #6D28D9;
     border-radius: 8px;
-    background-color: #121212;
+    background-color: #6D28D9;
     color:#f8f8ff;
     font-size: 16px;
 }
 .hero-enroll:hover{
     background-color: inherit;
-    color: #121212;
+    color: #6D28D9;
 }
 .hero-enrolled{
     font-family: 'Inter',sans-serif;
@@ -90,8 +92,8 @@
     gap:0.6rem;
 }
 .platform-heading, .start-date-heading, .level-heading, .duration-heading{
-    font-family: 'Raleway',sans-serif;
-    font-weight: 600;
+    font-family: 'Inter',sans-serif;
+    font-weight: 400;
     font-size: 16px;
 }
 .platform-images{
@@ -104,7 +106,7 @@
 .start-date, .level, .duration{
     font-family: 'Inter',sans-serif;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 
@@ -180,30 +182,43 @@
     padding:60px 0px;
     display: flex;
     justify-content: center;
-    background-color: #f8f8ff;
+    background-color: #f9f7ff;
 }
 .course-description-container{
     width: 80%;
     display: flex;
     gap:4rem;
-    padding: 0px 24px;
+    padding-left:24px;
+}
+.left-description-container{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    width:70%;
 }
 .about-course{
-    width:70%;
     display: flex;
     flex-direction: column;
     gap:1.5rem;
 }
 .about-course-heading h1, .course-skills-heading h1, .tools-covered h1{
     font-size: 24px;
-    font-weight: 700px;
-    font-family: 'Raleway',sans-serif;
+    font-weight: 600;
+    font-family: 'Inter',sans-serif;
+    color:#121212;
 }
 .about-course-description p{
     font-size: 16px;
     font-weight: 400px;
     font-family: 'Inter',sans-serif;
     line-height: 150%;
+    color: #313131;
+}
+.course-tools{
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
 }
 .tools-img{
     display: flex;
@@ -230,6 +245,7 @@
     font-family: 'Inter',sans-serif;
     line-height: 150%;
     display: flex;
+    color: #313131;
 }
 .course-skills-description li::before {
     content: "\2714"; /* Unicode tick mark character */
@@ -281,34 +297,38 @@
     padding:60px 0px;
     display: flex;
     justify-content: center;
-    background-color: #f8f8ff;
+    background-color: #f9f7ff;
 }
 .course-syllabus-container{
     width: 80%;
     display: flex;
     flex-direction: column;
-    gap:3rem;
+    gap:2rem;
     padding-left: 24px;
 }
 .course-syllabus-heading h1{
     font-size: 24px;
-    font-weight: 700px;
-    font-family: 'Raleway',sans-serif;
-    text-align: center;
+    color:#121212;
+    font-weight: 600;
+    font-family: 'Inter',sans-serif;
 }
 .course-syllabus-accordion-container{
     display: flex;
     flex-direction: column;
-    gap:0.7rem;
+    border: 1px solid #121212;
+    background-color: #fcfefe;
+    border-radius: 16px;
 }
 .course-syllabus-accordion{
     width: 100%;
-    padding: 16px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    border: 2px solid #121212;
-    border-radius: 16px;
     gap:1rem;
+    border-bottom:1px solid #121212 ;
+}
+.course-syllabus-accordion:last-child{
+    border-bottom: 0;
 }
 .syllabus-accordion-title{
     display: flex;
@@ -316,14 +336,16 @@
     gap:3rem;
 }
 .syllabus-accordion-title h2{
-    font-size: 18px;
-    font-weight: 600px;
-    font-family: 'Raleway',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Inter',sans-serif;
+    color:#121212;
 }
 .syllabus-accordion-contents p{
     font-size: 16px;
-    font-weight: 600px;
+    font-weight: 400;
     font-family: 'Inter',sans-serif;
+    color: #313131;
 }
 .rotated {
     transform: rotate(180deg);
@@ -343,41 +365,41 @@
     }
     .course-syllabus-container{
         width: 85%;
+        gap:1.5rem;
     }
   }
 
   /* --------------------------------------------------PRoject-section----------------------------------------- */
-
   .course-project{
     display: flex;
-    padding:60px 0px;
+    padding: 60px 0px;
     justify-content: center;
-    background-color: #f8f8ff;
+    background-color: #f9f7ff;
   }
   .course-project-container{
     width: 80%;
-    padding-left:24px ;
+    padding-left: 24px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap:3rem;
+    gap: 2rem;
   }
   .course-project-heading h1{
     font-size: 24px;
-    font-weight: 700px;
-    font-family: 'Raleway',sans-serif;
-    text-align: center;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    color:#121212;
   }
   .course-projects-contents{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap:2.5rem;
+    display: flex; /* Change to flex */
+    flex-wrap: wrap; /* Allow items to wrap */
+    gap: 2rem;
   }
   .project-box{
-    width: 300px;
+    /* flex: 1;  */
+    width: 270px;
     height: 250px;
-    border: 2px solid #121212;
+    border: 1px solid #121212;
+    background-color: #fcfefe;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -385,62 +407,81 @@
   .project-box-heading{
     border-radius: 16px;
     border: 0;
-    border-bottom: 2px solid #121212;
+    border-bottom: 1px solid #121212;
     max-height: 170px;
     overflow: hidden;
   }
   .project-box h2{
-    font-size: 18px;
-    font-weight: 700px;
-    font-family: 'Raleway',sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
     padding: 16px;
+    color:#121212;
   }
   .project-box-description{
-    
   }
   .project-box-description p{
     font-size: 16px;
-    font-weight: 400px;
-    font-family: 'Inter',sans-serif;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
     line-height: 150%;
+    color: #313131;
   }
   .project-view-btn{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .project-view-btn p{
     width: max-content;
-    border: 2px solid #121212;
-    background-color: inherit;
-    padding: 8px 16px;
-    border-radius: 8px;
     font-family: 'Inter', sans-serif;
     font-size: 14px;
   }
   .project-view-btn:hover{
-    background-color: #121212;
-    color:#f8f8ff
   }
-
-  @media only screen and (max-width:1024px){
-    .course-project {
+  
+  @media only screen and (max-width: 1252px){
+    .project-box{
+       width: 48%;
+    }
+  }
+  @media only screen and (max-width: 1043px){
+    .project-box{
+        width: 47%; 
+      }
+  }
+  
+  @media only screen and (max-width: 1024px){
+    .course-project-container{
+      width: 80%;
+      padding-left: 0;
+    }
+    .project-box{
+      width: 47%; 
+    }
+  }
+  @media only screen and (max-width:700px){
+    .project-box{
+        width:100% /* Set width for 1 column */
+    }
+  }
+  @media only screen and (max-width: 600px){
+    .course-project{
+        padding-top: 40px;
         padding-bottom: 0;
     }
     .course-project-container{
-        padding-left: 0;
-    }
-  }
-  @media only screen and (max-width:600px){
-    .course-project {
-        padding-top: 40px;
-    }
-    .course-project-container{
-        width: 90%;
-    }
-    .course-projects-contents{
+        width: 85%;
         gap:1.5rem;
     }
+    .course-projects-contents{
+        gap:1rem;
+    }
     .project-box{
-        width: 270px;
+        width:100%  /* Set width for 1 column */
     }
   }
-
+  
 
   /* ------------------------------------------------------review-section-------------------- */
 
@@ -448,51 +489,72 @@
     display: flex;
     justify-content: center;
     padding:60px 0px;
-    background-color: #f8f8ff;
+    background-color: #f9f7ff;
   }
   .course-review-container{
     width: 80%;
     padding-left:24px ;
     display: flex;
     flex-direction: column;
-    gap:3rem;
+    gap:2rem;
   }
   .course-review-heading h1{
     font-size: 24px;
-    font-weight: 700px;
-    font-family: 'Raleway',sans-serif;
-    text-align: center;
+    font-weight: 600;
+    font-family: 'Inter',sans-serif;
+    color:#121212;
   }
   .course-review-contents{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap:2.5rem;
+    gap:2rem;
   }
   .review-box{
     width: 300px;
     height: 300px;
-    border: 2px solid #121212;
+    border: 1px solid #121212;
     border-radius: 24px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 16px;
+    gap:2rem;
   }
   .review-box-description p{
     font-size: 16px;
     font-weight: 400px;
     font-family: 'Inter',sans-serif;
     line-height: 150%;
+    color: #313131;
   }
   .review-box-name h2{
-    font-size: 18px;
-    font-weight: 700px;
-    font-family: 'Raleway',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Inter',sans-serif;
+    color:#121212;
+  }
+  @media only screen and (max-width: 1250px){
+    
+    .review-box{
+        width:48%;
+    }
+  }
+  @media only screen and (max-width: 1047px){
+    .review-box{
+      width: 47%;
+    }
   }
   @media only screen and (max-width:1024px){
     .course-review-container{
         padding-left: 0;
+    }
+    .review-box{
+        width: 47%;
+      }
+  }
+  @media only screen and (max-width:700px){
+    .review-box{
+        width: 100%; /* Set width for 1 column */
     }
   }
   @media only screen and (max-width:600px){
@@ -501,22 +563,30 @@
         padding-bottom: 0;
     }
     .course-review-container{
-        width: 90%;
+        width: 85%;
+        gap: 1.5rem;
     }
     .course-review-contents {
-        gap:1.5rem;
+        gap:1rem;
     }
     .review-box{
-        width: 270px;
+        width: 100%; /* Set width for 1 column */
     }
   }
+ 
+  
+ 
+  
+  
+ 
+  
   /* -------------------------------------------certificate-section---------------------------------------------- */
 
   .course-certificate{
     display: flex;
     justify-content: center;
     padding:60px 0px;
-    background-color: #f8f8ff;
+    background-color: #f9f7ff;
   }
   .course-certificate-container{
     width: 80%;
@@ -527,8 +597,9 @@
   }
   .course-certificate-heading h1{
     font-size: 24px;
-    font-weight: 700px;
-    font-family: 'Raleway',sans-serif;
+    font-weight: 600;
+    font-family: 'Inter',sans-serif;
+    color:#121212;
   }
   .course-certificate-contents{
     display: flex;
@@ -550,7 +621,8 @@
   .course-certificate-description p{
     width: 90%;
     font-size: 16px;
-    font-weight: 400px;
+    font-weight: 400;
+    color: #313131;
     font-family: 'Inter',sans-serif;
     line-height: 150%;
   }
@@ -574,20 +646,20 @@
     padding:60px 0px;
     display: flex;
     justify-content: center;
-    background-color: #f8f8ff;
+    background-color: #f4f0ff;
 }
 .course-faq-container{
     width: 80%;
     display: flex;
     flex-direction: column;
-    gap:3rem;
+    gap:2rem;
     padding-left: 24px;
 }
 .course-faq-heading h1{
     font-size: 24px;
-    font-weight: 700px;
-    font-family: 'Raleway',sans-serif;
-    text-align: center;
+    font-weight: 600;
+    font-family: 'Inter',sans-serif;
+    color:#121212;
 }
 .course-faq-accordion-container{
     display: flex;
@@ -599,7 +671,8 @@
     padding: 16px;
     display: flex;
     flex-direction: column;
-    border: 2px solid #121212;
+    border: 1px solid #121212;
+    background-color: #fcfefe;
     border-radius: 16px;
     gap:1rem;
 }
@@ -609,15 +682,23 @@
     gap:3rem;
 }
 .faq-accordion-title h2{
-    font-size: 18px;
-    font-weight: 600px;
-    font-family: 'Raleway',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Inter',sans-serif;
+    color:#121212;
 }
 .faq-accordion-contents p{
     font-size: 16px;
-    font-weight: 600px;
+    font-weight: 400;
     font-family: 'Inter',sans-serif;
 }
 .rotated {
     transform: rotate(180deg);
+  }
+
+  @media only screen and (max-width:1024px){
+    .course-faq-container{
+        width: 85%;
+        padding-left: 0;
+    }
   }

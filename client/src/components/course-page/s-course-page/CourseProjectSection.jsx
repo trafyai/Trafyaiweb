@@ -22,18 +22,18 @@ export default function CourseProjectSection() {
             <h1>Projects</h1>
           </div>
           <div className="course-projects-contents">
-            {CourseProjectData.slice(0, showAllProjects ? undefined : 3).map((item, index) => (
+            {CourseProjectData.slice(0, showAllProjects ? undefined : 4).map((item, index) => (
               <div
                 className="project-box"
                 key={index}
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
               >
-                <div className="project-box-heading" style={{ transition: "opacity 10s ease" }}>
+                <div className="project-box-heading" style={{ transition: "opacity 100s ease" }}>
                   {hoveredIndex === index ? (
-                    <h2 style={{ opacity: 1 }}>{item.title}</h2>
+                    <h2 style={{ opacity: 1, backgroundColor: item.bg_color }}>{item.title}</h2>
                   ) : (
-                    <img src={item.project_image} alt="Project" style={{ opacity: 1, width: "100%"}} className="proj-img" />
+                    <img src={item.project_image} alt="Project" style={{ opacity: 1,width: "100%" }} className="proj-img" />
                   )}
                 </div>
                 <div className="project-box-description" style={{ transition: "opacity 0.5s ease" }}>
@@ -46,14 +46,11 @@ export default function CourseProjectSection() {
               </div>
             ))}
           </div>
-          {!showAllProjects && (
-            <button onClick={() => setShowAllProjects(true)} className="project-view-btn">
-              View All
-            </button>
-          )}
+          <div onClick={() => setShowAllProjects(!showAllProjects)} className="project-view-btn">
+           <p>{showAllProjects ? "View Less" : "View All"}</p> 
+          </div>
         </div>
       </div>
     </main>
   );
 }
-

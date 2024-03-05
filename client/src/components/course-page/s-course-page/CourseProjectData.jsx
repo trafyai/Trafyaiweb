@@ -3,31 +3,37 @@
     {
         title:"Payment Gateway App",
         description:"Learn the core concepts behind the fintech SASS Applications and build user friendly and innovative Payment Gateway Mobile Application UI",
-        project_image: image
+        project_image: image,
+        bg_color:""
     },
     {
         title:"Payment Gateway App",
         description:"Learn the core concepts behind the fintech SASS Applications and build user friendly and innovative Payment Gateway Mobile Application UI",
-        project_image: image
+        project_image: image,
+        bg_color:""
     },
     {
         title:"Payment Gateway App",
         description:"Learn the core concepts behind the fintech SASS Applications and build user friendly and innovative Payment Gateway Mobile Application UI",
-        project_image: image
+        project_image: image,
+        bg_color:""
     },
     {
         title:"Payment Gateway App",
         description:"Learn the core concepts behind the fintech SASS Applications and build user friendly and innovative Payment Gateway Mobile Application UI",
-        project_image: image
+        project_image: image,
+        bg_color:""
     },
     {
         title:"Payment Gateway App",
         description:"Learn the core concepts behind the fintech SASS Applications and build user friendly and innovative Payment Gateway Mobile Application UI",
-        project_image: image
+        project_image: image,
+        bg_color:""
     },
     {
         title:"Payment Gateway App",
         description:"Learn the core concepts behind the fintech SASS Applications and build user friendly and innovative Payment Gateway Mobile Application UI",
-        project_image: image
+        project_image: image,
+        bg_color:""
     },
 ]

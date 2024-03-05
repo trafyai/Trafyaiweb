@@ -12,6 +12,7 @@ export default function CourseDescriptionSection(){
         <main>
             <div className="course-description">
                 <div className="course-description-container">
+                    <div className="left-description-container">
                     <div className="about-course">
                         <div className="about-course-heading"><h1>About the Course</h1></div>
                         <div className="about-course-description">
@@ -21,13 +22,16 @@ export default function CourseDescriptionSection(){
                             course helps you build a progressive career in UI/UX industry and increase
                             your skill and potential as an UI/UX designer.</p>
                         </div>
-                        <div className="tools-covered"><h1>Tools Covered</h1></div>
-                        <div className="tools-img">
-                            <img src={Figma} alt="" />
-                            <img src={Miro} alt="" />
-                            <img src={Chatgpt} alt="" />
-                            <img src={Gemini} alt="" />
-                            <img src={Framer} alt="" />
+                    </div>
+                        <div className="course-tools">
+                            <div className="tools-covered"><h1>Tools Covered</h1></div>
+                            <div className="tools-img">
+                                <img src={Figma} alt="" />
+                                <img src={Miro} alt="" />
+                                <img src={Chatgpt} alt="" />
+                                <img src={Gemini} alt="" />
+                                <img src={Framer} alt="" />
+                            </div>
                         </div>
                     </div>
 

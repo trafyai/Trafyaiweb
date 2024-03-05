@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './CoursePage.css';
+import ExpandMore from '../../../assets/Images/course-page/syllabus-section/expand_more.svg';
 
 export default function CourseSyllabusSection() {
     const [accordionState, setAccordionState] = useState({});
@@ -31,7 +32,7 @@ export default function CourseSyllabusSection() {
                             <div className="course-syllabus-accordion" key={index} onClick={() => toggleAccordion(index)}>
                                 <div className="syllabus-accordion-title">
                                     <h2>{item.title}</h2>
-                                    <span className={`accordion-icon ${accordionState[index]?.isRotated ? 'rotated' : ''}`}>▼</span>
+                                    <img src={ExpandMore} style={{width: "13px", height: "19.200px" }} className={`accordion-icon ${accordionState[index]?.isRotated ? 'rotated' : ''}`} />
                                 </div>
                                 {accordionState[index]?.isOpen && (
                                     <div className="syllabus-accordion-contents">

@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f8f8ff;
+    background-color: #fcfefe;
     border-bottom: 1px solid #c9c9ca;
     position: fixed;
     z-index: 100;
@@ -69,7 +69,7 @@
   position: absolute;
   top:60px;
   right:300px;
-  background-color: #f8f8ff;
+  background-color: #fcfefe;
   border-radius: 8px;
   box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
  }
@@ -112,7 +112,7 @@
     top:60px;
     right:490px;
     padding: 16px;
-    background-color: #f8f8ff;
+    background-color: #fcfefe;
     box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.12);
     border-radius: 8px;
  }
@@ -185,15 +185,15 @@
     border: 2px solid #121212;
     border-radius: 8px;
     background-color: #121212;
-    color: #fafafa;
+    color: #fcfefe;
     padding: 8px 20px;
  }
  .header-login:hover{
   background-color: #121212;
-    color: #fafafa;
+    color: #fcfefe;
  }
  .header-signup:hover{
-  background-color: #fafafa;
+  background-color: #fcfefe;
   color: #121212;
  }
  .hamburger{
