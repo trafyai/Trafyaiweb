@@ -1,5 +1,6 @@
 import React from "react";
 import './CoursePage.css';
+import Image from '../../../assets/Images/course-page/certificate/download (26).jpeg';
 
 export default function CourseCertificateSection(){
     return(
@@ -8,7 +9,7 @@ export default function CourseCertificateSection(){
                 <div className="course-certificate-container">
                     <div className="course-certificate-contents">
                         <div className="course-certificate-image">
-                            
+                            <img src={Image} alt="" />
                         </div>
                         <div className="course-certificate-description">
                         <div className="course-certificate-heading"><h1>Earn Industry Recognised Certificate </h1></div>

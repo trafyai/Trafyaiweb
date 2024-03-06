@@ -1,4 +1,4 @@
- import image from '../../../assets/Images/course-page/project-section/Rectangle 13.svg';
+ import image from '../../../assets/Images/course-page/project-section/Rectangle 14.png';
  export default [
     {
         title:"Payment Gateway App",

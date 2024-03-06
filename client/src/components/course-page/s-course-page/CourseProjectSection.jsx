@@ -22,7 +22,7 @@ export default function CourseProjectSection() {
             <h1>Projects</h1>
           </div>
           <div className="course-projects-contents">
-            {CourseProjectData.slice(0, showAllProjects ? undefined : 4).map((item, index) => (
+            {CourseProjectData.map((item, index) => (
               <div
                 className="project-box"
                 key={index}
@@ -45,9 +45,6 @@ export default function CourseProjectSection() {
                 </div>
               </div>
             ))}
-          </div>
-          <div onClick={() => setShowAllProjects(!showAllProjects)} className="project-view-btn">
-           <p>{showAllProjects ? "View Less" : "View All"}</p> 
           </div>
         </div>
       </div>
