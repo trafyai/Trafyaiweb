@@ -1,6 +1,5 @@
 import react from "react";
 import './LandingPage.css';
-import Group from '../../assets/Images/comman/common/Group 1 (1).png';
 
 export default function LandingLearning(){
     return(
@@ -16,11 +15,30 @@ export default function LandingLearning(){
                     </div>
                     <div className="landing-learning-right">
                         <div className="landing-learning-right-one">
-                        <li> <span className="learning-right-icon"></span>Personalized Curriculam</li>
-                        <li><span className="learning-right-icon"></span>Unlimited Doubt Clearing Session</li>
-                        <li><span className="learning-right-icon"></span>Placement Training</li>
-                        <li><span className="learning-right-icon"></span>Impressive CV & Cover Letters</li>
-                        <li><span className="learning-right-icon"></span>Post Hiring Support</li>
+                            <div className="learning-right-one-heading">
+                                <h1>Education</h1>
+                                <hr />
+                            </div>
+                            <div className="learning-right-one-contents">
+                                <li>Core Concepts</li>
+                                <li>Modern Technology</li>
+                                <li>Learning Paths</li>
+                                <li>Cheat Sheets</li>
+                                <li>Multiplatform training</li>
+                            </div>
+                        </div>
+                        <div className="landing-learning-right-one">
+                            <div className="learning-right-one-heading">
+                                <h1>Carrer</h1>
+                                <hr />
+                            </div>
+                            <div className="learning-right-one-contents">
+                                <li>Personalized Curriculam</li>
+                                <li>Unlimited Doubt Clearing Session</li>
+                                <li>Placement Training</li>
+                                <li>Impressive CV & Cover Letters</li>
+                                <li>Post Hiring Support</li>
+                            </div>
                         </div>
                     </div>
                 </div>

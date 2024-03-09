@@ -133,7 +133,7 @@ return(
           </div>
         
 
-        <button className="header-academy">Academy</button>
+        <button className="header-academy">Course</button>
         <button className="header-resources">Resources</button>
         </div>
 
