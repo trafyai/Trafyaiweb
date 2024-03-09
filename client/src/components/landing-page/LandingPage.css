@@ -197,6 +197,46 @@
         height: 150px;
     }
 }
+@media only screen and (max-width:600px){
+    .landing-hero-section {
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+    .landing-hero-container {
+        width: 92%;
+        gap: 1rem;
+    }
+    .landing-hero-left {
+        padding: 40px 24px;
+        gap: 1rem;
+    }
+    .landing-hero-left h1 {
+        font-size: 32px;
+    }
+    .landing-hero-left p {
+        width: 100%;
+    }
+    .landing-hero-top {
+        padding: 16px;
+    }
+    .landing-hero-top h1 {
+        font-size: 20px;
+    }
+    .landing-hero-form {
+        width: 95%;
+        gap: 1rem;   
+    }
+   
+}
+@media only screen and (max-width:400px){
+    .landing-hero-bottom{
+        flex-wrap: wrap;
+    }
+    .landing-hero-live, .landing-hero-training, .landing-hero-placement {
+        height: 60px;
+        padding: 12px;
+    }
+}
 
 /* -----------------------------------------------------Learning section----------------------------------------------- */
 .landing-learning{
@@ -473,6 +513,58 @@
     color: #3f3f3f;
     line-height: 150%;
 }
+
+@media only screen and (max-width:1024px){
+    .landing-optimised{
+        padding: 40px 0px;
+    }
+    .landing-optimised-container{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .landing-optimised-left{
+        width: 100%;
+        gap:1rem;
+    }
+    .landing-optimised-left h1{
+        width: 80%;
+        font-size: 32px;
+    }
+    .landing-optimised-left p {
+        font-size: 16px;
+    }
+    .landing-optimised-right {
+        width: 80%;
+    }
+    .landing-optimised-accordion{
+        gap:1rem;
+    }
+    .landing-accordion-heading h1{
+        font-size: 18px;
+    }
+    .landing-accordion-contents {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width:600px){
+    .landing-optimised {
+        padding: 40px 0px;
+    }
+    .landing-optimised-container {
+        gap:1.5rem;
+    }
+    .landing-optimised-left h1 {
+        font-size: 24px;
+        width: 100%;
+    }  
+    .landing-optimised-right {
+        width: 100%;
+    }
+    .landing-accordion-heading h1{
+        font-size: 16px;
+    }
+   
+}
 /* --------------------------------------------------review section----------------------------------------- */
 
 .landing-review{
@@ -523,9 +615,10 @@
     gap:2rem;
     justify-content: space-between;
 }
-.landing-review-card img{
+.landing-review-card img {
     height: 24px;
     width: 34.23px;
+    transform: rotate(180deg);
 }
 .landing-reviews{
     display: flex;
@@ -545,6 +638,65 @@
     font-weight: 500;
     color: #1c1623;
     line-height: 150%;
+}
+@media only screen and (max-width:1024px){
+    .landing-review{
+        padding: 60px 0px;
+    }
+    .landing-review-container{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+    }
+    .landing-review-bottom {
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+    .landing-reviews{
+        gap: 1.5rem;
+    }
+    .landing-review-card {
+        padding: 24px;
+        width: 261px;
+        height: 345px;
+    }
+    .landing-review-top h1{
+        font-size: 32px;
+    }
+    .landing-review-top p {
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width:600px){
+    .landing-review {
+        padding: 40px 0px;
+    }
+    .landing-review-container {
+        gap:1.5rem;
+    }
+    .landing-review-bottom {
+        gap: 1rem;
+    }
+    .landing-review-card {
+        padding: 24px;
+        width: 100%;
+        height: 318px;
+    }
+    .landing-review-card img {
+        height: 20px;
+        width: 30.229999999999997px;
+    }
+    .landing-review-top h1 {
+        font-size: 24px;
+        width: 100%;
+    } 
+    .landing-reviews p {
+        font-size: 14px;
+    }
+    .landing-review-name h3 {
+        font-size: 14px;
+    }
+   
 }
 /* -----------------------------------------------Newsletter section---------------------------------------------- */
 .landing-newsletter{
@@ -595,6 +747,7 @@
     border: 0;
     border-top-left-radius:8px ;
     border-bottom-left-radius:8px ;
+    font-size: 16px;
 }
 .landing-newsletter-form input:focus {
     outline: none; /* Add this line to remove the focus border */
@@ -618,6 +771,9 @@
     font-weight: 500;
 }
 @media only screen and (max-width:1024px){
+    .landing-newsletter {
+        padding: 60px 0px;
+    }
     .landing-newsletter-container{
         flex-direction: column;
         align-items: center;
@@ -627,7 +783,7 @@
         width: 80%;
     }
     .landing-newsletter-heading h1 {
-        font-size: 32px;
+        font-size: 24px;
         text-align: center;
     }
     .landing-newsletter-form{
@@ -635,12 +791,15 @@
     }
 }
 @media only screen and (max-width:600px){
+    .landing-newsletter {
+        padding: 40px 0px;
+    }
     .landing-newsletter-container {
-        width: 90%;
+        width: 85%;
         padding: 24px 16px;
     }
     .landing-newsletter-heading h1 {
-        font-size: 24px;
+        font-size: 20px;
     }
     .landing-newsletter-form form {
         padding: 4px 8px;
