@@ -35,7 +35,7 @@
     font-size: 14px;
 }
 .hero-main-heading h1{
-    color:#121212;
+    color:#1c1623;
     font-family: 'Inter',sans-serif;
     font-weight: 700;
     font-size: 40px;
@@ -46,7 +46,7 @@
     font-size: 16px;
     width: 80%;
     line-height: 150%;
-    color: #313131;
+    color: #3f3f3f;
 }
 .hero-rating{
     display: flex;
@@ -95,6 +95,7 @@
     font-family: 'Inter',sans-serif;
     font-weight: 400;
     font-size: 16px;
+    color: #3f3f3f;
 }
 .platform-images{
     display: flex;
@@ -107,6 +108,7 @@
     font-family: 'Inter',sans-serif;
     font-weight: 600;
     font-size: 18px;
+    color:#1c1623;
 }
 
 
@@ -118,7 +120,7 @@
         width: 90%;
         flex-direction: column;
         align-items: center;
-        gap:1rem;
+        gap:1.5rem;
     }
     .hero-main-heading h1{
         font-size: 40px;
@@ -130,14 +132,20 @@
     .hero-sub{
         justify-content: flex-start;
         flex-direction: row;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, 169px); 
+        flex-wrap: wrap;
         gap:2.5rem;
     }
     .start-date, .level, .duration{
         font-size: 20px;
     }
 
+}
+@media only screen and (max-width:740px){
+    .hero-sub{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:2.5rem;
+    }
 }
 
 @media only screen and (max-width:600px){
@@ -148,7 +156,8 @@
         gap:1rem;
     }
     .hero-main, .hero-sub{
-        width: 95%;
+        padding: 24px;
+        width: 100%;
     }
     .hero-main{
         gap:1rem;
@@ -174,12 +183,19 @@
         width: max-content;
     }
 }
+@media only screen and (max-width:480px){
+    .hero-sub{
+        display: grid;
+        grid-template-columns: 1fr ;
+        gap:1.5rem;
+    }
+}
 
 
 /* -------------------------------------------------course-description------------------------------ */
 
 .course-description{
-    padding:60px 0px;
+    padding-top: 60px;
     display: flex;
     justify-content: center;
     background-color: #f9f7ff;
@@ -205,14 +221,14 @@
     font-size: 24px;
     font-weight: 600;
     font-family: 'Inter',sans-serif;
-    color:#121212;
+    color:#1c1623;
 }
 .about-course-description p{
     font-size: 16px;
     font-weight: 400px;
     font-family: 'Inter',sans-serif;
     line-height: 150%;
-    color: #313131;
+    color: #3f3f3f;
 }
 .course-tools{
     width: max-content;
@@ -245,7 +261,7 @@
     font-family: 'Inter',sans-serif;
     line-height: 150%;
     display: flex;
-    color: #313131;
+    color: #3f3f3f;
 }
 .course-skills-description li::before {
     content: "\2714"; /* Unicode tick mark character */
@@ -255,7 +271,9 @@
 
 
 @media only screen and  (max-width:1200px){
-    
+    .course-description{
+        padding: 60px 0px;
+    }
     .course-description-container{
         flex-direction: column;
         gap: 40px;
@@ -290,11 +308,17 @@
         width: 85%;
         gap:30px
     }
+    .left-description-container {
+        width: 100%;
+    }
+    .about-course {
+        gap:1rem;
+    }
 }
 
 /* ------------------------------------------------------course-syllabus------------------------------------- */
 .course-syllabus {
-    padding:60px 0px;
+    padding:90px 0px;
     display: flex;
     justify-content: center;
     background-color: #f9f7ff;
@@ -308,7 +332,7 @@
 }
 .course-syllabus-heading h1{
     font-size: 24px;
-    color:#121212;
+    color:#1c1623;
     font-weight: 600;
     font-family: 'Inter',sans-serif;
 }
@@ -339,14 +363,14 @@
     font-size: 16px;
     font-weight: 500;
     font-family: 'Inter',sans-serif;
-    color:#121212;
+    color:#1c1623;
 }
 .syllabus-accordion-contents p{
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
     font-family: 'Inter',sans-serif;
-    color: #313131;
+    color: #3f3f3f;
 }
 .rotated {
     transform: rotate(180deg);
@@ -357,13 +381,11 @@
         padding-left: 0;
     }
     .course-syllabus{
-        padding-bottom: 0;
+        padding:60px 0px;
     }
   }
   @media only screen and (max-width:600px){
-    .course-syllabus{
-        padding-top: 40px;
-    }
+    
     .course-syllabus-container{
         width: 85%;
         gap:1.5rem;
@@ -373,7 +395,7 @@
   /* --------------------------------------------------PRoject-section----------------------------------------- */
   .course-project{
     display: flex;
-    padding: 60px 0px;
+    padding: 90px 0px;
     justify-content: center;
     background-color: #fcfefe;
   }
@@ -388,12 +410,12 @@
     font-size: 24px;
     font-weight: 600;
     font-family: 'Inter', sans-serif;
-    color:#121212;
+    color:#1c1623;
   }
   .course-projects-contents{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap:1.5rem;
+    gap:2rem;
   }
   .project-box{
     width: 100%;
@@ -407,6 +429,8 @@
   }
   .project-box-heading{
     border-radius: 16px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius:0 ;
     border: 0;
     border-bottom: 1px solid #e4e4e4;
     max-height: 170px;
@@ -417,7 +441,7 @@
     font-weight: 600;
     font-family: 'Inter', sans-serif;
     padding: 16px;
-    color:#121212;
+    color:#1c1623;
   }
   .project-box-description{
   }
@@ -426,7 +450,7 @@
     font-weight: 400;
     font-family: 'Inter', sans-serif;
     line-height: 150%;
-    color: #313131;
+    color: #3f3f3f;
   }
   .project-view-btn{
     display: flex;
@@ -444,6 +468,9 @@
  
   
   @media only screen and (max-width: 1024px){
+    .course-project{
+        padding: 60px 0px;
+    }
     .course-project-container{
       width: 80%;
       padding-left: 0;
@@ -455,10 +482,7 @@
   }
   
   @media only screen and (max-width: 600px){
-    .course-project{
-        padding-top: 40px;
-        padding-bottom: 0;
-    }
+   
     .course-project-container{
         width: 85%;
         gap:1.5rem;
@@ -475,7 +499,7 @@
   .course-review{
     display: flex;
     justify-content: center;
-    padding:60px 0px;
+    padding:90px 0px;
     background-color: #f9f7ff;
   }
   .course-review-container{
@@ -490,7 +514,7 @@
     font-size: 24px;
     font-weight: 600;
     font-family: 'Inter',sans-serif;
-    color:#121212;
+    color:#1c1623;
   }
   .course-review-contents{
     display: grid;
@@ -515,16 +539,19 @@
     font-weight: 400px;
     font-family: 'Inter',sans-serif;
     line-height: 150%;
-    color: #313131;
+    color: #3f3f3f;
   }
   .review-box-name h2{
     font-size: 16px;
     font-weight: 500;
     font-family: 'Inter',sans-serif;
-    color:#121212;
+    color:#1c1623;
   }
  
   @media only screen and (max-width:1024px){
+    .course-review{
+        padding: 60px 0px;
+    }
     .course-review-container{
         padding-left: 0;
     }
@@ -539,10 +566,7 @@
     }
   }
   @media only screen and (max-width:620px){
-    .course-review{
-        padding-top: 40px;
-        padding-bottom: 0;
-    }
+   
     .course-review-container{
         width: 85%;
         gap: 1.5rem;
@@ -567,7 +591,7 @@
   .course-certificate{
     display: flex;
     justify-content: center;
-    padding:60px 0px;
+    padding:90px 0px;
     background-color: #f9f7ff;
   }
   .course-certificate-container{
@@ -581,7 +605,7 @@
     font-size: 20px;
     font-weight: 600;
     font-family: 'Inter',sans-serif;
-    color:#121212;
+    color:#1c1623;
   }
   .course-certificate-contents{
     /* display: flex;
@@ -615,12 +639,15 @@
     width: 90%;
     font-size: 16px;
     font-weight: 400;
-    color: #313131;
+    color: #3f3f3f;
     font-family: 'Inter',sans-serif;
     line-height: 150%;
   }
  
   @media only screen and (max-width:1024px){
+    .course-certificate{
+        padding: 60px 0px;
+    }
     .course-certificate-container{
         width: 85%;
         padding-left: 0;
@@ -636,6 +663,8 @@
     }
     .course-certificate-image img{
         border-radius: 16px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
   }
  
@@ -656,10 +685,10 @@
 
   /* ------------------------------------------------------course-faq------------------------------------- */
 .course-faq{
-    padding:60px 0px;
+    padding:90px 0px;
     display: flex;
     justify-content: center;
-    background-color: #f4f0ff;
+    background-color: #f9f7ff;
 }
 .course-faq-container{
     width: 80%;
@@ -672,7 +701,7 @@
     font-size: 24px;
     font-weight: 600;
     font-family: 'Inter',sans-serif;
-    color:#121212;
+    color:#1c1623;
 }
 .course-faq-accordion-container{
     display: flex;
@@ -698,12 +727,12 @@
     font-size: 16px;
     font-weight: 500;
     font-family: 'Inter',sans-serif;
-    color:#121212;
+    color:#1c1623;
 }
 .faq-accordion-contents p{
     font-size: 16px;
     font-weight: 400;
-    color:#313131;
+    color:#3f3f3f;
     line-height: 150%;
     font-family: 'Inter',sans-serif;
 }
@@ -712,6 +741,9 @@
   }
 
   @media only screen and (max-width:1024px){
+    .course-faq{
+        padding: 60px 0px;
+    }
     .course-faq-container{
         width: 85%;
         padding-left: 0;
@@ -721,7 +753,7 @@
   /* ---------------------------------------------Payment-section----------------------------------- */
 
   .course-payment{
-    padding:60px 0px;
+    padding:90px 0px;
     display: flex;
     justify-content: center;
     background-color: #f4f0ff;
@@ -737,7 +769,7 @@
     font-size: 24px;
     font-weight: 600;
     font-family: 'Inter',sans-serif;
-    color:#121212;
+    color:#1c1623;
 }
 .course-payment-contents{
     display: flex;
@@ -770,7 +802,7 @@
     font-size: 20px;
     font-weight: 600;
     font-family: 'Inter',sans-serif;
-    color:#121212;
+    color:#1c1623;
 }
 .payment-starting h1{
     padding-top: 8px;
@@ -783,7 +815,7 @@
     font-size: 16px;
     font-weight: 600;
     font-family: 'Inter',sans-serif;
-    color:#121212;
+    color:#1c1623;
 }
 .payment-points li{
     padding-top: 8px;
@@ -821,30 +853,29 @@
     padding-top: 8px;
     font-size: 20px;
     font-weight: 600;
-    color: #121212;
+    color: #1c1623;
     font-family: 'Inter',sans-serif;
 }
 .payment-options-container{
     display: flex;
     flex-direction: column;
-    gap:1rem;
+    gap:2rem;
 }
-.payment-options-container{
+.payment-options-contents{
     display: flex;
     flex-direction: column;
-    gap:0.5rem;
+    gap:1rem;
 }
 .payment-options-topic h3{
     font-size: 16px;
     font-weight: 500;
-    color: #121212;
+    color: #1c1623;
     font-family: 'Inter',sans-serif;
 }
 .payment-options-images{
     display: flex;
-    gap:1rem;
+    gap:1.5rem;
 }
 .payment-options-images img{
-    border-radius: 8px;
-    border: 1px solid #e4e4e4;
+    height: 30px;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/common/header/header.js";
 import Footer from "./components/common/footer/Footer.jsx";
+import LandingPage from "./pages/landing-page/landingPage.js";
 import {Routes, Route, Link} from "react-router-dom";
 import Signup from "./components/common/auth/signup/signup.jsx";
 import Login from "./components/common/auth/login/Login.jsx";
@@ -13,6 +14,7 @@ function App() {
      <Header/> 
      
       <Routes>
+      <Route path="/" element={<LandingPage/> }   />
         <Route path="/signup" element={<Signup/> }   />
         <Route path="/login" element={<Login/> }   />
         <Route path="/user-dashboard" element={<UserProfile/>} />

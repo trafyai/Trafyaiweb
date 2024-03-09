@@ -32,8 +32,9 @@
  .header-login,.header-signup{
     background-color: inherit;
     padding: 16px 16px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
+    color:#3f3f3f;
     border: 0;
  }
  
@@ -86,9 +87,9 @@
    gap:1rem;
  }
  .solutions-ui-heading h1,.solutions-ux-heading h1{
-    color: #121212;
+    color: #1c1623;
     font-size: 16px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
  }
  .solutions-ui ul, .solutions-ux ul{
@@ -97,13 +98,13 @@
   gap:1rem;
  }
  .solutions-ui a, .solutions-ux a{
-  color:#121212;
+  color:#3f3f3f;
  }
  .solutions-ui li, .solutions-ux li{
   list-style-type: none;
-  color: #121212;
+  color: #3f3f3f;
   font-size: 14px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
  }
  .header-drop-down{
     display: none;
@@ -125,7 +126,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 16px;
     background-color: inherit;
@@ -177,19 +178,19 @@
     border: 2px solid #121212;
     border-radius: 8px;
     padding: 8px 20px;
-    color: #121212;
+    color: #3f3f3f;
     padding-right: 24px; margin-left: 8px;
  }
  .header-signup{
   margin-left: 12px;
-    border: 2px solid #121212;
+    border: 2px solid #1c1623;
     border-radius: 8px;
-    background-color: #121212;
+    background-color: #1c1623;
     color: #fcfefe;
     padding: 8px 20px;
  }
  .header-login:hover{
-  background-color: #121212;
+  background-color: #1c1623;
     color: #fcfefe;
  }
  .header-signup:hover{
