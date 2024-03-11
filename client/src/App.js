@@ -19,7 +19,7 @@ function App() {
         <Route path="/signup" element={<Signup/> }   />
         <Route path="/login" element={<Login/> }   />
         <Route path="/user-dashboard" element={<UserProfile/>} />
-        <Route path="/courses" element={<Courses/>} />
+        <Route path="/course" element={<Courses/>} />
         <Route path="/uiux-course" element={<CoursePage/>} />
       </Routes>
 

@@ -7,8 +7,8 @@ export default function courseLandingPage(){
     return(
         <>
         <CourseAi/>
-        <CourseUiux/>
         <CourseDm/>
+        <CourseUiux/>
         
         </>
     )
