@@ -4,6 +4,7 @@ import LandingExplore from "../../components/landing-page/LandingExplore";
 import LandingOptimised from "../../components/landing-page/LandingOptimised";
 import LandingReview from "../../components/landing-page/LandingReview";
 import LandingNewsletter from "../../components/landing-page/LandingNewsletter";
+import LandingBetterTogether from "../../components/landing-page/LandingBetterTogether";
 
 export default function landingPage(){
     return(
@@ -12,6 +13,7 @@ export default function landingPage(){
         <LandingLearning/>
         <LandingExplore/>
         <LandingOptimised/>
+        <LandingBetterTogether/>
         <LandingReview/>
         <LandingNewsletter/>
         </>

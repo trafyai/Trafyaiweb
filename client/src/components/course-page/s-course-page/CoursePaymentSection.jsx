@@ -24,7 +24,7 @@ export default function CoursePaymentSection(){
                         <div className="payment-month"><p>3 months</p></div>
                         <div className="payment-starting">
                             <h2>Starting at</h2>
-                            <h1>INR 50,000</h1>
+                            <h1>INR 15,000</h1>
                         </div>
                         {/* <div className="payment-total"><p></p></div> */}
                         <hr />

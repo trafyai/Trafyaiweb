@@ -69,7 +69,7 @@ return(
 
       <div className="header-contents">
         <div className="header-contents-first">
-          <div className="solutions">
+          {/* <div className="solutions">
             <button className="header-solutions" onClick={solutionDropDown}>
               Solutions <img src={dropDown} alt="" />
             </button>
@@ -131,9 +131,9 @@ return(
               </div>
             </div>
           </div>
-        
+         */}
 
-        <button className="header-academy">Course</button>
+       <Link to="/course"><button className="header-academy">Course</button></Link> 
         <button className="header-resources">Resources</button>
         </div>
 

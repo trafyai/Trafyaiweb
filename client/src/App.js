@@ -21,6 +21,7 @@ function App() {
         <Route path="/user-dashboard" element={<UserProfile/>} />
         <Route path="/course" element={<Courses/>} />
         <Route path="/uiux-course" element={<CoursePage/>} />
+       
       </Routes>
 
       <Footer/>
