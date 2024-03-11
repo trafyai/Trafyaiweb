@@ -773,7 +773,7 @@
 }
 .course-payment-contents{
     display: flex;
-    gap:4rem;
+    gap:5rem;
 }
 .course-payment-box{
     width:370px;
@@ -824,7 +824,7 @@
     font-size: 16px;
     font-weight: 400;
     font-family: 'Inter',sans-serif;
-    color:#313131;
+    color:#3f3f3f;
 }
 .course-payment-enroll{
     margin-top: 24px;
@@ -878,4 +878,38 @@
 }
 .payment-options-images img{
     height: 30px;
+}
+
+@media only screen and (max-width:1024px){
+    .course-payment{
+        padding: 60px 0px;
+    }
+    .course-payment-container{
+        width: 85%;
+        padding-left: 0;
+    }
+}
+@media only screen and (max-width:820px){
+    .course-payment-contents{
+        flex-direction: column;
+        gap:2rem;
+    }
+}
+@media only screen and (max-width:600px){
+    .course-payment-container {
+        width: 90%;
+    }
+}
+@media only screen and (max-width:420px){
+    .course-payment-box {
+        width: 100%;
+        gap: 1rem;
+        padding: 16px;
+    }
+    .payment-starting h2{
+        font-size: 18px;
+    }
+    .payment-starting h1{
+        font-size: 20px;
+    }
 }

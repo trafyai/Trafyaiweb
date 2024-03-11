@@ -6,6 +6,11 @@ import Visa from '../../../assets/Images/course-page/payment-section/Visa.png';
 import Mastercard from '../../../assets/Images/course-page/payment-section/Mastercard.png';
 import Rupay from '../../../assets/Images/course-page/payment-section/rupay.png';
 import Upi from '../../../assets/Images/course-page/payment-section/UPI.png';
+import Airtel from '../../../assets/Images/course-page/payment-section/airtel payment bank.png';
+import Freecharge from '../../../assets/Images/course-page/payment-section/freecharge.png';
+import Mobikwik from '../../../assets/Images/course-page/payment-section/MobiKwik.png';
+import Ola from '../../../assets/Images/course-page/payment-section/ola money.png';
+import Jio from '../../../assets/Images/course-page/payment-section/jio money.png';
 
 export default function CoursePaymentSection(){
 
@@ -49,6 +54,16 @@ export default function CoursePaymentSection(){
                                     <img src={Visa} alt="" />
                                     <img src={Mastercard} alt="" />
                                     <img src={Rupay} alt="" />
+                                </div>
+                            </div>
+                            <div className="payment-options-contents">
+                                <div className="payment-options-topic"><h3>Wallet</h3></div>
+                                <div className="payment-options-images">
+                                    <img src={Mobikwik} alt="" />
+                                    <img src={Ola} alt="" />
+                                    <img src={Airtel} alt="" />
+                                    <img src={Freecharge} alt="" />
+                                    <img src={Jio} alt="" />
                                 </div>
                             </div>
                         </div>
