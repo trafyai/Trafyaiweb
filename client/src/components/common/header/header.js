@@ -178,8 +178,8 @@ function Header() {
   return (
     <header className="header">
       <div className="header-container">
-        <div className="logo">
-          <img src={blackLogo} alt="" />
+       <div className="logo">
+       <Link  to="/"> <img src={blackLogo} alt="" /></Link> 
         </div>
 
         <div className={`header-contents ${menuOpen ? 'show-contents' : ''}`}>
