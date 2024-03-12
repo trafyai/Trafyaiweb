@@ -6,9 +6,10 @@ import CourseDm from "../../../components/course-page/course-landing-page/Course
 export default function courseLandingPage(){
     return(
         <>
-        <CourseAi/>
-        <CourseDm/>
         <CourseUiux/>
+        <CourseDm/>
+        <CourseAi/>
+        
         
         </>
     )

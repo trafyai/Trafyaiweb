@@ -380,6 +380,9 @@
         align-items: flex-start;
         gap:1rem;
     }
+    .landing-learning-right-one{
+        width: 100%;
+    }
 }
 @media only screen and (max-width:400px){
     .landing-learning-right-one {
@@ -391,6 +394,7 @@
 
 .landing-explore{
     padding: 90px 0px;
+    padding-top: 40px;
     display: flex;
     justify-content: center;
     background-color: #F9F9F9;
@@ -405,7 +409,7 @@
     border: 1px solid #c1bfbf;
     background-color: #fcfefe;
     border-radius: 24px;
-    padding: 40px 32px;
+    padding: 60px 32px;
 }
 .landing-explore-left{
     display: flex;
@@ -452,6 +456,7 @@
 @media only screen and (max-width:1024px){
     .landing-explore{
         padding: 60px 0px;
+        padding-top: 20px;
     }
     .landing-explore-container{
         flex-direction: column;
@@ -471,8 +476,8 @@
 }
 @media only screen and (max-width:600px){
     .landing-explore {
-        padding: 40px 0px;
-        padding-bottom: 80px;
+        padding-top: 20px;
+        padding-bottom: 60px;
     }
     .landing-explore-container {
         padding: 24px;
@@ -488,7 +493,9 @@
     .landing-explore-ai, .landing-explore-uiux, .landing-explore-dm {
         padding: 12px;
     }    
-   
+    .landing-explore-ai h2, .landing-explore-uiux h2, .landing-explore-dm h2{
+        font-size: 16px;
+    }
 }
 
 /* ---------------------------------------optimised section------------------------------- */
@@ -620,6 +627,7 @@
 
 .landing-review{
     padding: 90px 0px;
+    padding-top: 40px;
     display: flex;
     justify-content: center;
     background-color: #F9F9F9;
@@ -721,6 +729,7 @@
 @media only screen and (max-width:600px){
     .landing-review {
         padding: 40px 0px;
+        padding-top: 20px;
     }
     .landing-review-container {
         gap:1.5rem;
@@ -752,6 +761,7 @@
 /* -----------------------------------------------Newsletter section---------------------------------------------- */
 .landing-newsletter{
     padding: 90px 0px;
+    padding-top: 40px;
     display: flex;
     justify-content: center;
     background-color: #F9F9F9;
@@ -845,6 +855,7 @@
 @media only screen and (max-width:600px){
     .landing-newsletter {
         padding: 40px 0px;
+        padding-top: 20px;
     }
     .landing-newsletter-container {
         width: 85%;
@@ -870,6 +881,7 @@
     padding: 90px 0px;
     display: flex;
     justify-content: center;
+    background-color: #F9F9F9;
 }
 .landing-better-container{
     width: 85%;
@@ -942,6 +954,9 @@
 @media only screen and (max-width:600px){
     .landing-better{
         padding: 40px 0px;
+    }
+    .landing-better-left h1{
+        font-size: 24px;
     }
     .landing-better-left p{
         width: 100%;
