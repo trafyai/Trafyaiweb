@@ -1,6 +1,6 @@
 import react from "react";
 import './LandingPage.css';
-import Comma from '../../assets/Images/comman/common/Comma.png';
+import Comma from '../../assets/Images/comman/common/comma_white.png';
 
 export default function LandingReview(){
     return(

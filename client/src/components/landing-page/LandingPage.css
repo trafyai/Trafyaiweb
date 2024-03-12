@@ -674,8 +674,7 @@
 }
 .landing-review-card img {
     height: 24px;
-    width: 34.23px;
-    transform: rotate(180deg);
+    width: 25.229999999999997px;
 }
 .landing-reviews{
     display: flex;
@@ -885,6 +884,9 @@
     width: 85%;
     display: flex;
     gap:3rem;
+    padding: 70px 32px;
+    border-radius: 24px;
+    background-color: #322a3b;
 }
 .landing-better-left{
     width: 50%;
@@ -899,7 +901,7 @@
     color: #fcf8fc;
 }
 .landing-better-left h1 {
-    font-size: 32px;
+    font-size: 40px;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     color: #fcf;

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import './LandingPage.css';
-import {Link} from "react-router-dom";
 
 const LandingHero = () => {
     const [userData, setUserData] = useState({
@@ -10,6 +9,7 @@ const LandingHero = () => {
     const [emptyDataError, setEmptyDataError] = useState(false);
     const [emailError, setEmailError] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
+    const [successMessage, setSuccessMessage] = useState(""); // New state for success message
 
     const postUserData = (event) => {
         const { name, value } = event.target;
@@ -24,7 +24,6 @@ const LandingHero = () => {
     };
 
     const validateEmail = (email) => {
-        // Regular expression for basic email validation
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(String(email).toLowerCase());
     };
@@ -66,12 +65,14 @@ const LandingHero = () => {
         });
 
         if (res.ok) {
+            setSuccessMessage("Thank You for Submitting the form"); // Set success message
             setUserData({ name: "", email: "" });
-            alert("Data Stored");
             setEmptyDataError(false);
             setEmailError(false);
+            window.location.reload();
         } else {
-            alert("Error storing data");
+            setSuccessMessage(""); // Clear success message
+            setErrorMessage("Error storing data");
         }
     };
 
@@ -82,7 +83,7 @@ const LandingHero = () => {
                     <div className="landing-hero-left">
                         <h1>Interactive Learning, Next Generation Courses.</h1>
                         <p>Gain knowledge of advanced concepts with our unique Interactive, Immersive, and Adaptive learning modules and accelerate your career.</p>
-                     <Link to="/course" >  <button>Explore</button></Link>
+                        <button>Explore</button>
                     </div>
 
                     <div className="landing-hero-right">
@@ -94,6 +95,7 @@ const LandingHero = () => {
                                     <input type="email" placeholder="Email" required autoComplete="off" name="email" className="landing-email" value={userData.email} onChange={postUserData} />
                                     {emptyDataError || emailError ? <p style={{ paddingTop: "4px", color: "red", fontFamily:"Inter", fontSize:"14px" }}>{errorMessage}</p> : null}
                                 </div>
+                                {successMessage && <p style={{ paddingTop: "4px", color: "green", fontFamily:"Inter", fontSize:"14px" }}>{successMessage}</p>} {/* Render success message */}
                                 <button className="landing-hero-form-btn" type="submit" onClick={submitData}>Submit</button>
                             </form>
                         </div>
