@@ -359,6 +359,7 @@
 @media only screen and (max-width:600px){
     .landing-learning {
         padding: 40px 0px;
+        padding-top: 20px;
     }
     .landing-learning-container {
         gap: 1.5rem;
@@ -471,7 +472,7 @@
 @media only screen and (max-width:600px){
     .landing-explore {
         padding-top: 20px;
-        padding-bottom: 60px;
+        padding-bottom: 40px;
     }
     .landing-explore-container {
         padding: 24px;
@@ -605,6 +606,7 @@
 @media only screen and (max-width:600px){
     .landing-optimised {
         padding: 40px 0px;
+        padding-top: 20px;
     }
     .landing-optimised-container {
         gap:1.5rem;
@@ -739,10 +741,7 @@
         width: 100%;
         height: 318px;
     }
-    .landing-review-card img {
-        height: 20px;
-        width: 30.229999999999997px;
-    }
+    
     .landing-review-top h1 {
         font-size: 24px;
         width: 100%;
@@ -954,6 +953,7 @@
 @media only screen and (max-width:600px){
     .landing-better{
         padding: 40px 0px;
+        padding-top: 20px;
     }
     .landing-better-left h1{
         font-size: 24px;
@@ -970,5 +970,22 @@
         max-height: 80px;
         min-height: auto;
     }
+    
 
+}
+@media only screen and (max-width:400px){
+    .landing-better-container {
+        padding: 50px 24px;
+    }
+    .landing-better-right{
+        gap:0.3rem;
+      }
+      .landing-better-image {
+        max-width: 70px;
+        min-width: auto;
+        max-height: 80px;
+        min-height: auto;
+        padding-left: 0;
+    }
+    
 }

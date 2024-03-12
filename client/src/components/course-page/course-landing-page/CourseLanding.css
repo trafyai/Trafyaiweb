@@ -120,11 +120,11 @@
 }
 
 @media only screen and (max-width:900px){
-    .course-landing-ai{
+    .course-landing-uiux{
         padding-top: 90px;
         padding-bottom: 40px;
     }
-    .course-landing-dm,.course-landing-uiux{
+    .course-landing-dm,.course-landing-ai{
         padding: 40px 0px;
     }
     .course-landing-ai-container{
@@ -138,11 +138,25 @@
     }
 }
 @media only screen and (max-width:400px){
-    .course-landing-ai{
+    .course-landing-uiux{
         padding-top: 90px;
         padding-bottom: 20px;
     }
-    .course-landing-dm,.course-landing-uiux{
+    .course-landing-dm,.course-landing-ai{
         padding: 20px 0px;
+    }
+    .course-landing-dm, .course-landing-ai {
+        padding-bottom: 40px;
+    }
+    .course-landing-ai-box {
+        width: 99%;
+        gap: 1rem;
+    }
+    .course-landing-dm-card-title {
+        padding: 24px 16px;
+    }
+    .course-landing-ai-contents {
+        padding: 16px;
+        padding-top: 0;
     }
 }
