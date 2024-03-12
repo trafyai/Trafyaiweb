@@ -120,7 +120,10 @@
    border-radius: 16px;
    
 }
-
+.landing-hero-live img, .landing-hero-training img, .landing-hero-placement img{
+    width: 60px;
+    
+}
 
 .landing-hero-live p, .landing-hero-training p, .landing-hero-placement p{
     font-size: 16px;
@@ -220,6 +223,9 @@
         width: 95%;
         gap: 1rem;   
     }
+    .landing-hero-live img, .landing-hero-training img, .landing-hero-placement img {
+        width: 51px;
+    }
    
 }
 @media only screen and (max-width:400px){
@@ -227,14 +233,24 @@
         flex-wrap: wrap;
     }
     .landing-hero-live, .landing-hero-training, .landing-hero-placement {
-        height: 60px;
+        flex-direction: row;
+        height: min-content;
         padding: 12px;
+        justify-content: space-around;
+    }
+    .landing-hero-live p, .landing-hero-training p, .landing-hero-placement p{
+        width: max-content;
+    }
+    .landing-hero-live img, .landing-hero-training img, .landing-hero-placement img{
+        width: 30px;
+        
     }
 }
 
 /* -----------------------------------------------------Learning section----------------------------------------------- */
 .landing-learning {
     padding: 90px 0px;
+    padding-top: 40px;
     display: flex;
     justify-content: center;
     background-color: #1c1623;
@@ -382,8 +398,8 @@
 }
 @media only screen and (max-width:400px){
     .landing-learning-right-one {
-        width: 260px;
-        height: 260px;
+        width: 100%;
+        height: max-content;
     }
 }
 /* ---------------------------------------explore section----------------------------------------------------- */
@@ -497,6 +513,7 @@
 
 .landing-optimised {
     padding: 90px 0px;
+    padding-top: 40px;
     display: flex;
     justify-content: center;
     background-color: #1c1623;
@@ -693,7 +710,7 @@
 .landing-reviews p{
     font-size: 16px;
     font-family: 'Inter', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     color: #fcf8fc;
     line-height: 150%;
 }
@@ -768,7 +785,7 @@
     border-radius: 24px;
     display: flex;
     gap:5rem;
-    background-color: #a685cc;
+    background-color: #c19eea;
 }
 .landing-newsletter-heading{
     width: 50%;
@@ -875,6 +892,7 @@
 
 .landing-better {
     padding: 90px 0px;
+    padding-top: 40px;
     display: flex;
     justify-content: center;
     background-color: #1c1623;
@@ -942,12 +960,16 @@
     }
     .landing-better-container{
         flex-direction: column;
+        padding: 42px 32px;
     }
     .landing-better-left, .landing-better-right{
         width: 100%;
     }
     .landing-better-right{
         justify-content: flex-start;
+    }
+    .landing-better-left h1{
+        font-size: 32px;
     }
 }
 @media only screen and (max-width:600px){

@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import './LandingPage.css';
+import Live from '../../assets/Images/landing-page/hero/live.png';
+import One from '../../assets/Images/landing-page/hero/1-1.png';
+import Placement from '../../assets/Images/landing-page/hero/placement.png';
 
 const LandingHero = () => {
     const [userData, setUserData] = useState({
@@ -101,15 +104,15 @@ const LandingHero = () => {
                         </div>
                         <div className="landing-hero-bottom">
                             <div className="landing-hero-live">
-                                <img src="" alt="" />
+                                <img src={Live} alt="" />
                                 <p>Live <br /> classes</p>
                             </div>
                             <div className="landing-hero-training">
-                                <img src="" alt="" />
+                                <img src={One} alt="" />
                                 <p>1:1<br /> training</p>
                             </div>
                             <div className="landing-hero-placement">
-                                <img src="" alt="" />
+                                <img src={Placement} alt="" />
                                 <p>Placement<br /> support</p>
                             </div>
                         </div>

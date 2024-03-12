@@ -15,34 +15,28 @@ export default function LandingReview(){
                         <div className="landing-review-card">
                             <div className="landing-reviews">
                             <img src={Comma} alt="" />
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui 
-                                blanditiis praesentium voluptatum deleniti atque corrupti quos dolores 
-                                et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                            <p>Comprehensive UI/UX course! Clear explanations, practical exercises, and great support. Perfect for beginners and professionals alike. Highly recommended! </p>
                             </div>
                             <div className="landing-review-name">
-                                <h3>John Doe</h3>
+                                <h3>Sindhuja Nair</h3>
                             </div>
                         </div>
                         <div className="landing-review-card">
                             <div className="landing-reviews">
                             <img src={Comma} alt="" />
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui 
-                                blanditiis praesentium voluptatum deleniti atque corrupti quos dolores 
-                                et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                            <p>Enriching spatial design course! Fosters creativity, insightful lectures, practical projects. Engaging instructors make learning enjoyable.</p>
                             </div>
                             <div className="landing-review-name">
-                                <h3>John Doe</h3>
+                                <h3>Priyanka Gauda</h3>
                             </div>
                         </div>
                         <div className="landing-review-card">
                             <div className="landing-reviews">
                             <img src={Comma} alt="" />
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui 
-                                blanditiis praesentium voluptatum deleniti atque corrupti quos dolores 
-                                et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                            <p>Informative UX course! Comprehensive curriculum, interactive assignments, valuable insights. Enhanced my understanding of user experience design. Friendly Tutor!</p>
                             </div>
                             <div className="landing-review-name">
-                                <h3>John Doe</h3>
+                                <h3>Bhavish Reddy</h3>
                             </div>
                         </div>
                     </div>

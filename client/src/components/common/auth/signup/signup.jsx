@@ -1,109 +1,182 @@
-
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import './Signup.css';
-import {Link} from 'react-router-dom';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/database';
+import { Link, useNavigate } from 'react-router-dom';
 
-export default function Signup() {
-    const [formData, setFormData] = useState({
-        fname: "",
-        lname: "",
-        email: "",
-        password: "",
-        cpassword: ""
-    });
+// Your web app's Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyCqL7lnooyjmNGAOB5nc4yZcb6FKu8e-2A",
+    authDomain: "trafyai-loginsignup.firebaseapp.com",
+    projectId: "trafyai-loginsignup",
+    storageBucket: "trafyai-loginsignup.appspot.com",
+    messagingSenderId: "344792634329",
+    appId: "1:344792634329:web:d343ac2461dd2a731dffc8"
+};
 
-    const [showPassword, setShowPassword] = useState(false);
-    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-    const [emailValid, setEmailValid] = useState(true);
-    const [errorMessageEmail, setErrorMessageEmail] = useState("");
-    const [errorMessagePassword, setErrorMessagePassword] = useState("");
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
-    };
+const Signup = () => {
+    const [fname, setFname] = useState('');
+    const [lname, setLname] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmpassword, setConfirmPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false); // State to toggle confirm password visibility
+    const [fnameError, setFnameError] = useState('');
+    const [lnameError, setLnameError] = useState('');
+    const [emailError, setEmailError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+    const [confirmPasswordError, setConfirmPasswordError] = useState('');
+    // eslint-disable-next-line
+    const [allFieldError, setAllFieldError] = useState('');
+    const navigate = useNavigate();
 
-    const handleTogglePasswordVisibility = () => {
-        setShowPassword(!showPassword);
-    };
-
-    const handleToggleConfirmPasswordVisibility = () => {
-        setShowConfirmPassword(!showConfirmPassword);
-    };
-
-    const passwordInputType = showPassword ? "text" : "password";
-    const confirmPasswordInputType = showConfirmPassword ? "text" : "password";
-
-    const validateEmail = (email) => {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    };
-
-    const validatePassword = (password) => {
-        return password.length >= 8;
-    };
-
-    const handleEmailBlur = () => {
-        setEmailValid(validateEmail(formData.email));
-        if (!validateEmail(formData.email)) {
-            setErrorMessageEmail("Invalid email address");
-        } else {
-            setErrorMessageEmail("");
-        }
-    };
-
-    const handleSubmit = (e) => {
+    const handleSumbit = async (e) => {
         e.preventDefault();
-        if (!validatePassword(formData.password)) {
-            setErrorMessagePassword("Password must be at least 8 characters long");
+
+        // Reset previous error messages
+        setFnameError('');
+        setLnameError('');
+        setEmailError('');
+        setPasswordError('');
+        setConfirmPasswordError('');
+        setAllFieldError('');
+
+        // Form validation
+        if (!fname.trim() || !lname.trim() || !email.trim() || !password.trim() || !confirmpassword.trim()) {
+            setAllFieldError("Please fill in all fields.");
             return;
         }
-        if (formData.password !== formData.cpassword) {
-            setErrorMessagePassword("Passwords do not match");
+
+        if (!/^[a-zA-Z]*$/.test(fname)) {
+            setFnameError("First name should contain only alphabets.");
             return;
         }
-        setErrorMessagePassword("");
-        // Proceed with form submission
-    };
+
+        if (!/^[a-zA-Z]*$/.test(lname)) {
+            setLnameError("Last name should contain only alphabets.");
+            return;
+        }
+
+        if (!/^\w+([-]?\w+)@\w+([-]?\w+)(\.\w{2,3})+$/.test(email)) {
+            setEmailError("Please enter a valid email address.");
+            return;
+        }
+
+        if (password.length < 8) {
+            setPasswordError("Password should be at least 8 characters long.");
+            return;
+        }
+
+        if (password !== confirmpassword) {
+            setConfirmPasswordError("Passwords do not match.");
+            return;
+        }
+
+        try {
+            const user = await firebase.auth().createUserWithEmailAndPassword(email, password);
+            if (user) {
+                alert("Account Created");
+                navigate('/login');
+            }
+        } catch (err) {
+            alert(err.message);
+        }
+    }
+
+    const handleGoogleSignIn = async () => {
+        try {
+            const provider = new firebase.auth.GoogleAuthProvider();
+            await firebase.auth().signInWithPopup(provider);
+            alert("Signed in with Google");
+            navigate('/dashboard'); // Redirect to dashboard after successful sign in
+        } catch (err) {
+            alert(err.message);
+        }
+    }
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    }
+
+    const toggleConfirmPasswordVisibility = () => {
+        setShowConfirmPassword(!showConfirmPassword);
+    }
 
     return (
         <div className="signup">
             <div className="signup-container">
                 <div className="signup-heading"><h1>Create Your Account</h1></div>
 
-                <form className="form" onSubmit={handleSubmit}>
+                <form className="form" onSubmit={handleSumbit}>
                     <div className="Name">
-                        <input type="text" placeholder="Enter first name" autoComplete="off" name="fname" className="fname-holder" value={formData.fname} onChange={handleChange} />
-                        <input type="text" placeholder="Enter last name" autoComplete="off" name="lname" className="lname-holder" value={formData.lname} onChange={handleChange} />
+                        <div className="fname"><input type="text" value={fname} placeholder="Enter first name" autoComplete="off" name="fname"
+                            className="fname-holder" onChange={(e) => setFname(e.target.value)} />
+                        {fnameError && <span className="error-message" style={{width:"100%"}}>{fnameError}</span>}</div>
+                        <div className="lname"><input type="text" value={lname} placeholder="Enter last name" autoComplete="off" name="lname"
+                            className="lname-holder" onChange={(e) => setLname(e.target.value)} />
+                        {lnameError && <span className="error-message">{lnameError}</span>}</div>
                     </div>
                     <div className="Email">
-                        <input type="text" placeholder="Enter email" required autoComplete="off" name="email" className={`email-holder ${!emailValid ? "error" : ""}`} value={formData.email} onChange={handleChange} onBlur={handleEmailBlur} />
-                        {errorMessageEmail && <div className="error-message">{errorMessageEmail}</div>}
+                        <input type="text" value={email} placeholder="Enter email" required autoComplete="off" name="email"
+                            className="email-holder" onChange={(e) => setEmail(e.target.value)} />
+                        {emailError && <span className="error-message">{emailError}</span>}
                     </div>
                     <div className="Password">
                         <div className="password-input">
-                            <input type={passwordInputType} placeholder="Enter password" required autoComplete="off" name="password" className="password-holder" value={formData.password} onChange={handleChange} />
-                            <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} onClick={handleTogglePasswordVisibility} className="eye" />
+                            <input 
+                                type={showPassword ? "text" : "password"} // Toggle input type based on showPassword state
+                                value={password} 
+                                placeholder="Enter password" 
+                                required autoComplete="off"
+                                name="password" 
+                                className="password-holder" 
+                                onChange={(e) => setPassword(e.target.value)} 
+                            />
+                            <span className="password-toggle" onClick={togglePasswordVisibility}>
+                                <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+                            </span>
                         </div>
-                        <div>
+                        {passwordError && <span className="error-message">{passwordError}</span>}
+                    </div>
+                    <div className="Password">
                         <div className="confirm-password-input">
-                            <input type={confirmPasswordInputType} placeholder="Confirm password" required autoComplete="off" name="cpassword" className={`password-holder ${errorMessagePassword ? "error" : ""}`} value={formData.cpassword} onChange={handleChange} />
-                            <FontAwesomeIcon icon={showConfirmPassword ? faEyeSlash : faEye} onClick={handleToggleConfirmPasswordVisibility} className="eye" />
-                        </div>  
-                            {errorMessagePassword && <div className="error-message">{errorMessagePassword}</div>}
+                            <input 
+                                type={showConfirmPassword ? "text" : "password"} // Toggle input type based on showConfirmPassword state
+                                value={confirmpassword} 
+                                placeholder="Confirm password" 
+                                required autoComplete="off"
+                                name="confirmpassword" 
+                                className="password-holder" 
+                                onChange={(e) => setConfirmPassword(e.target.value)} 
+                            />
+                            <span className="password-toggle" onClick={toggleConfirmPasswordVisibility}>
+                                <FontAwesomeIcon icon={showConfirmPassword ? faEyeSlash : faEye} />
+                            </span>
                         </div>
+                        {confirmPasswordError && <span className="error-message">{confirmPasswordError}</span>}
                     </div>
                     <div className="SignUp-button">
                         <button className="signup-btn" type="submit">Sign Up</button>
                     </div>
+
+                    <div className="divider"></div>
+
+                    <div className="google-signin">
+                    <Link to="/login">  <button type="button" className="login-with-google-btn" onClick={handleGoogleSignIn}>Sign up with Google</button></Link>
+                    </div>
+                    
                     <p>Already have an account? <Link to="/login"> Login </Link></p>
                 </form>
             </div>
         </div>
     );
 }
+
+export default Signup;

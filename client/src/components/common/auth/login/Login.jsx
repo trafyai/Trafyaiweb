@@ -1,70 +1,180 @@
+// import React, { useState } from "react";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+// import './Login.css';
+// import {Link} from 'react-router-dom';
+
+// export default function Login() {
+//     const [formData, setFormData] = useState({
+//         fname: "",
+//         lname: "",
+//         email: "",
+//         password: "",
+//         cpassword: ""
+//     });
+
+//     const [showPassword, setShowPassword] = useState(false);
+//     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+//     const [emailValid, setEmailValid] = useState(true);
+//     const [errorMessageEmail, setErrorMessageEmail] = useState("");
+//     const [errorMessagePassword, setErrorMessagePassword] = useState("");
+
+//     const handleChange = (e) => {
+//         const { name, value } = e.target;
+//         setFormData(prevState => ({
+//             ...prevState,
+//             [name]: value
+//         }));
+//     };
+
+//     const handleTogglePasswordVisibility = () => {
+//         setShowPassword(!showPassword);
+//     };
+
+
+//     const passwordInputType = showPassword ? "text" : "password";
+
+//     const validateEmail = (email) => {
+//         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//         return emailRegex.test(email);
+//     };
+
+//     const validatePassword = (password) => {
+//         return password.length >= 8;
+//     };
+
+//     const handleEmailBlur = () => {
+//         setEmailValid(validateEmail(formData.email));
+//         if (!validateEmail(formData.email)) {
+//             setErrorMessageEmail("Invalid email address");
+//         } else {
+//             setErrorMessageEmail("");
+//         }
+//     };
+
+//     const handleSubmit = (e) => {
+//         e.preventDefault();
+//         if (!validatePassword(formData.password)) {
+//             setErrorMessagePassword("Password must be at least 8 characters long");
+//             return;
+//         }
+//         if (formData.password !== formData.cpassword) {
+//             setErrorMessagePassword("Passwords do not match");
+//             return;
+//         }
+//         setErrorMessagePassword("");
+//         // Proceed with form submission
+//     };
+
+//     return (
+//         <div className="login">
+//             <div className="login-container">
+//                 <div className="login-heading"><h1>Login to Your Account</h1></div>
+
+//                 <form className="form" onSubmit={handleSubmit}>
+                    
+//                     <div className="Email">
+//                         <input type="text" placeholder="Enter email" required autoComplete="off" name="email" className={`email-holder ${!emailValid ? "error" : ""}`} value={formData.email} onChange={handleChange} onBlur={handleEmailBlur} />
+//                         {errorMessageEmail && <div className="error-message">{errorMessageEmail}</div>}
+//                     </div>
+//                     <div className="Password">
+//                         <div className="password-input">
+//                             <input type={passwordInputType} placeholder="Enter password" required autoComplete="off" name="password" className="password-holder" value={formData.password} onChange={handleChange} />
+//                             <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} onClick={handleTogglePasswordVisibility} className="eye" />
+//                         </div>
+//                     </div>
+//                     <div className="login-button">
+//                         <button className="signup-btn" type="submit">Login</button>
+//                     </div>
+//                     <p>Don't have an account? <Link to="/signup"> Signup</Link></p>
+//                 </form>
+//             </div>
+//         </div>
+//     );
+// }
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import './Login.css';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate } from 'react-router-dom';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
 
-export default function Login() {
-    const [formData, setFormData] = useState({
-        fname: "",
-        lname: "",
-        email: "",
-        password: "",
-        cpassword: ""
-    });
+const Login = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
+    const [emailError, setEmailError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+    const navigate = useNavigate();
 
-    const [showPassword, setShowPassword] = useState(false);
-    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-    const [emailValid, setEmailValid] = useState(true);
-    const [errorMessageEmail, setErrorMessageEmail] = useState("");
-    const [errorMessagePassword, setErrorMessagePassword] = useState("");
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
-    };
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            if (validateForm()) {
+                const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
+                // User successfully logged in
+                if (userCredential) {
+                    navigate('/uiux-course');
+                }
+            }
+        } catch (error) {
+            alert(error.message);
+        }
+    }
 
     const handleTogglePasswordVisibility = () => {
         setShowPassword(!showPassword);
-    };
-
-
-    const passwordInputType = showPassword ? "text" : "password";
+    }
 
     const validateEmail = (email) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
-    };
+    }
 
     const validatePassword = (password) => {
-        return password.length >= 8;
-    };
+        const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
+        return passwordRegex.test(password);
+    }
 
     const handleEmailBlur = () => {
-        setEmailValid(validateEmail(formData.email));
-        if (!validateEmail(formData.email)) {
-            setErrorMessageEmail("Invalid email address");
+        if (!validateEmail(email)) {
+            setEmailError('Invalid email address');
         } else {
-            setErrorMessageEmail("");
+            setEmailError('');
         }
-    };
+    }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (!validatePassword(formData.password)) {
-            setErrorMessagePassword("Password must be at least 8 characters long");
-            return;
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
+        if (!validatePassword(e.target.value)) {
+            setPasswordError('Password must contain at least 1 capital letter, 1 special character, 1 number, and be at least 8 characters long');
+        } else {
+            setPasswordError('');
         }
-        if (formData.password !== formData.cpassword) {
-            setErrorMessagePassword("Passwords do not match");
-            return;
+    }
+
+    const validateForm = () => {
+        let isValid = true;
+
+        // Email validation
+        if (!email || !validateEmail(email)) {
+            setEmailError('Invalid email address');
+            isValid = false;
+        } else {
+            setEmailError('');
         }
-        setErrorMessagePassword("");
-        // Proceed with form submission
-    };
+
+        // Password validation
+        if (!password || password.length < 8 || !validatePassword(password)) {
+            setPasswordError('Password must contain at least 1 capital letter, 1 special character, 1 number, and be at least 8 characters long');
+            isValid = false;
+        } else {
+            setPasswordError('');
+        }
+
+        return isValid;
+    }
 
     return (
         <div className="login">
@@ -74,21 +184,29 @@ export default function Login() {
                 <form className="form" onSubmit={handleSubmit}>
                     
                     <div className="Email">
-                        <input type="text" placeholder="Enter email" required autoComplete="off" name="email" className={`email-holder ${!emailValid ? "error" : ""}`} value={formData.email} onChange={handleChange} onBlur={handleEmailBlur} />
-                        {errorMessageEmail && <div className="error-message">{errorMessageEmail}</div>}
+                        <input type="email" placeholder="Enter email" required autoComplete="off" name="email" className={`email-holder ${emailError ? 'error' : ''}`} value={email} onChange={(e) => setEmail(e.target.value)} onBlur={handleEmailBlur}/>
+                        {emailError && <div className="error-message">{emailError}</div>}
                     </div>
                     <div className="Password">
                         <div className="password-input">
-                            <input type={passwordInputType} placeholder="Enter password" required autoComplete="off" name="password" className="password-holder" value={formData.password} onChange={handleChange} />
+                            <div><input type={showPassword ? "text" : "password"} placeholder="Enter password" required autoComplete="off" name="password" className={`password-holder ${passwordError ? 'error' : ''}`} value={password} onChange={handlePasswordChange} />
                             <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} onClick={handleTogglePasswordVisibility} className="eye" />
+                            </div>
+                            {passwordError && <div className="error-message">{passwordError}</div>}
                         </div>
+                        
                     </div>
                     <div className="login-button">
-                        <button className="signup-btn" type="submit">Login</button>
+                    <Link to="/">  <button className="signup-btn" type="submit">Login</button></Link>
                     </div>
+
                     <p>Don't have an account? <Link to="/signup"> Signup</Link></p>
                 </form>
             </div>
         </div>
     );
 }
+
+export default Login;
+
+
