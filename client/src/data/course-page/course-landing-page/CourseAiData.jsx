@@ -1,15 +1,14 @@
 export default [
     {
         title: "Artificial Intelligence",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam",
+        description: "Dive into emerging AI, learn core principles, its applications, use cases, and create AI projects.",
         label: {
-            one: "typography",
-            two: "designing",
-            three: "wire framing",
-            four: "prototyping",
+            one: "Machine Learning",
+            two: "Deep Learning",
+            three: "Neural Network"
         },
         rating: "4.5 (120 joined)",
-        level: "Beginner",
+        level: "Certification",
         duration: "2 weeks"
     }
 ]

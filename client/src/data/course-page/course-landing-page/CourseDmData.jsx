@@ -1,15 +1,15 @@
 export default [
     {
         title: "Digital Marketing",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam",
+        description: "Master digital marketing,  SEO, social media, content creation. Hands-on projects for real-world skills.",
         label: {
-            one: "unde omnis",
-            two: "voluptatem",
-            three: "Sed",
-            four: "totamprototyping",
+            one: "PPC’s",
+            two: " Retarget",
+            three: "Email",
+            four: "Campaigns",
         },
         rating: "4.5 (120 joined)",
-        level: "Beginner",
+        level: "Certification",
         duration: "2 weeks"
     }
 ]

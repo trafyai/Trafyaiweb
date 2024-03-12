@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './LandingPage.css';
-import ExpandMore from '../../assets/Images/course-page/syllabus-section/expand_more.svg';
+import ExpandMore from '../../assets/Images/comman/common/expand_more_white.png';
 
 export default function LandingOptimised() {
 
@@ -29,7 +29,7 @@ export default function LandingOptimised() {
                             <div className="landing-optimised-accordion-contents" onClick={() => openAccordion(1)}>
                                 <div className="landing-accordion-heading">
                                     <h1>For Students</h1>
-                                    <img src={ExpandMore} style={{ width: "13px", height: "19.200px" }} className={`accordion-icon ${accordionStates[1] ? 'rotated' : ''}`} />
+                                    <img src={ExpandMore}  className={`accordion-icon ${accordionStates[1] ? 'rotated' : ''}`} />
                                 </div>
                                 {accordionStates[1] && <div className="landing-accordion-contents">Hoping for a bright future? Want to get into the core company of your interest? 
                                 We got you covered. Our industry recognised career path will help you gain all the essential skills you need and land your first job with an attractive remuneration.
@@ -38,7 +38,7 @@ export default function LandingOptimised() {
                             <div className="landing-optimised-accordion-contents" onClick={() => openAccordion(2)}>
                                 <div className="landing-accordion-heading">
                                     <h1>For Professionals</h1>
-                                    <img src={ExpandMore} style={{ width: "13px", height: "19.200px" }} className={`accordion-icon ${accordionStates[2] ? 'rotated' : ''}`} />
+                                    <img src={ExpandMore}  className={`accordion-icon ${accordionStates[2] ? 'rotated' : ''}`} />
                                 </div>
                                 {accordionStates[2] && <div className="landing-accordion-contents">Feeling detached from the job you are passionate about? Want to transition your career to a treading and growing industry? 
                                 We at trafy are here to help. We know transitions are hard, but our career experts will help you choose a high demand course and guide you to get into trending jobs with good CTC</div>}

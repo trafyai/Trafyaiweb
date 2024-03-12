@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './LandingPage.css';
+import {Link} from "react-router-dom";
 
 const LandingHero = () => {
     const [userData, setUserData] = useState({
@@ -81,7 +82,7 @@ const LandingHero = () => {
                     <div className="landing-hero-left">
                         <h1>Interactive Learning, Next Generation Courses.</h1>
                         <p>Gain knowledge of advanced concepts with our unique Interactive, Immersive, and Adaptive learning modules and accelerate your career.</p>
-                        <button>Explore</button>
+                     <Link to="/course" >  <button>Explore</button></Link>
                     </div>
 
                     <div className="landing-hero-right">
