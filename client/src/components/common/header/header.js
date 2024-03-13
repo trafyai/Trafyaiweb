@@ -155,9 +155,9 @@
 
 import React, { useState } from "react";
 import './Header.css';
-import blackLogo from '../../../assets/Images/comman/header/blackLogo.png';
-import close from '../../../assets/Images/comman/header/close.svg';
-import hamburger from '../../../assets/Images/comman/header/hamburger.svg';
+import blackLogo from '../../../assets/Images/comman/header/whiteLogo.png';
+import close from '../../../assets/Images/comman/header/close_small.png';
+import hamburger from '../../../assets/Images/comman/header/hamburger-white.png';
 import dropDown from '../../../assets/Images/comman/header/drop-down-icon.svg'
 import { Link } from "react-router-dom";
 
@@ -194,7 +194,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <img src={hamburger} alt="" className={`hamburger ${menuOpen ? 'hide' : ''}`} onClick={toggleMenu} />
+      <img src={hamburger} alt="" className={`hamburger ${menuOpen ? 'hide' : ''}`} style={{height:"20px"}}  onClick={toggleMenu} />
       <img src={close} alt="" className={`exit-icon ${menuOpen ? 'show' : ''}`} onClick={toggleMenu} />
     </header>
   );

@@ -224,6 +224,14 @@
   color: #4b4949;
 }
 
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust as needed */
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
 .login-button{
     width: 100%;
 }

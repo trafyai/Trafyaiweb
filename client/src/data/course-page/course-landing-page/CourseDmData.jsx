@@ -8,8 +8,8 @@ export default [
             three: "Email",
             four: "Campaigns",
         },
-        rating: "4.5 (120 joined)",
+        rating: "4.5",
         level: "Certification",
-        duration: "2 weeks"
+        duration: "4 weeks"
     }
 ]

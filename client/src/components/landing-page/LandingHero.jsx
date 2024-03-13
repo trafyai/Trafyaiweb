@@ -105,15 +105,15 @@ const LandingHero = () => {
                         <div className="landing-hero-bottom">
                             <div className="landing-hero-live">
                                 <img src={Live} alt="" />
-                                <p>Live <br /> classes</p>
+                                <p>Live  classes</p>
                             </div>
                             <div className="landing-hero-training">
                                 <img src={One} alt="" />
-                                <p>1:1<br /> training</p>
+                                <p>1:1 training</p>
                             </div>
                             <div className="landing-hero-placement">
                                 <img src={Placement} alt="" />
-                                <p>Placement<br /> support</p>
+                                <p>Placement support</p>
                             </div>
                         </div>
                         <div className="landing-hero-last">

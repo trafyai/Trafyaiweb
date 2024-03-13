@@ -7,8 +7,8 @@ export default [
             two: "Deep Learning",
             three: "Neural Network"
         },
-        rating: "4.5 (120 joined)",
+        rating: "4.5",
         level: "Certification",
-        duration: "2 weeks"
+        duration: "8 weeks"
     }
 ]

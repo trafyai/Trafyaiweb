@@ -4,8 +4,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fcfefe;
-    border-bottom: 1px solid #c9c9ca;
+    background-color: #1c1623;
+    padding: 0px 8px;
+    border-bottom: 1px solid #454444;
     position: fixed;
     z-index: 100;
  }
@@ -34,10 +35,13 @@
     padding: 16px 16px;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    color:#3f3f3f;
+    color:#fdfdfd;
     border: 0;
  }
- 
+ .header-solutions:hover,.header-academy:hover,.header-resources:hover,
+ .header-login:hover,.header-signup:hover{
+  color:#c9c9ca;
+ }
  .solutions{
     display: flex;
     flex-direction: column;
@@ -175,27 +179,32 @@
     font-size: 14px;
  }
  .header-login{
-    border: 2px solid #121212;
+    border: 2px solid #fcfefe;
     border-radius: 8px;
     padding: 8px 20px;
-    color: #3f3f3f;
-    padding-right: 24px; margin-left: 8px;
+    color: #fdfdfd;
+    font-weight: 500;
+    padding-right: 24px;
+     margin-left: 8px;
  }
  .header-signup{
   margin-left: 12px;
-    border: 2px solid #1c1623;
+    border: 2px solid #fcfefe;
     border-radius: 8px;
-    background-color: #1c1623;
-    color: #fcfefe;
+    background-color: #fcfefe;
+    color: #1c1623;
+    font-weight: 500;
     padding: 8px 20px;
  }
  .header-login:hover{
-  background-color: #1c1623;
-    color: #fcfefe;
+    background-color: #fcfefe;
+    color: #1c1623;
+    font-weight: 500;
  }
  .header-signup:hover{
-  background-color: #fcfefe;
-  color: #121212;
+  font-weight: 500;
+  background-color: #1c1623;
+  color: #fcfefe;
  }
  .hamburger{
     display: none;
@@ -232,7 +241,7 @@
     top:56px;
     right:0;
    justify-content: space-between;
-    background-color: #f8f8ff;
+    background-color: #1c1623;
     padding: 24px;
     overflow-y: scroll;
     gap:4rem;
@@ -262,7 +271,8 @@
  }
  .header-solutions:hover,.header-academy:hover,.header-resources:hover{
   border-radius: 8px;
-  background-color: #f0ecff;
+  background-color: #e1c8f8;
+  color:#1c1623;
  }
  .header-solutions{
   justify-content: space-between;

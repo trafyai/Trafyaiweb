@@ -8,8 +8,8 @@ export default [
             three: "Spatial",
             four: "Responsive",
         },
-        rating: "4.5 (120 joined)",
+        rating: "4.5",
         level: "Certification",
-        duration: "2 weeks"
+        duration: "12 weeks"
     }
 ]

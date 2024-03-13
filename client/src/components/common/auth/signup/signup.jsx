@@ -94,8 +94,8 @@ const Signup = () => {
         try {
             const provider = new firebase.auth.GoogleAuthProvider();
             await firebase.auth().signInWithPopup(provider);
-            alert("Signed in with Google");
-            navigate('/dashboard'); // Redirect to dashboard after successful sign in
+            alert("Signup with Google Successfully");
+            navigate('/login'); // Redirect to dashboard after successful sign in
         } catch (err) {
             alert(err.message);
         }
@@ -169,7 +169,7 @@ const Signup = () => {
                     <div className="divider"></div>
 
                     <div className="google-signin">
-                    <Link to="/login">  <button type="button" className="login-with-google-btn" onClick={handleGoogleSignIn}>Sign up with Google</button></Link>
+                     <button type="button" className="login-with-google-btn" onClick={handleGoogleSignIn}>Sign up with Google</button>
                     </div>
                     
                     <p>Already have an account? <Link to="/login"> Login </Link></p>
