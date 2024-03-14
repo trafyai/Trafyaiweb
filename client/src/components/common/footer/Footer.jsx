@@ -51,12 +51,12 @@ function Footer(){
   
             <div className="footer-content">
               <div className="footer-content-heading"><h1>Compliance</h1></div>
-              <div className="footer-content-text"><a href="terms-and-conditions.html"><p>Terms of Service</p></a></div>
-              <div className="footer-content-text"><a href="privacy-policy.html"><p>Privacy Policy</p></a></div>
-              <div className="footer-content-text"><a href=""><p>Anti-Spam Policy</p></a></div>
-              <div className="footer-content-text"><a href="cookiee-policy.html"><p>Cookie Policy</p></a></div>
-              <div className="footer-content-text"><a href="refund-policy.html"><p>Refund Policy</p></a></div>
-              <div className="footer-content-text"><a href=""><p>Freelancers & Affiliate Policy</p></a></div>
+              <div className="footer-content-text"><p>Terms of Service</p></div>
+              <div className="footer-content-text"><p>Privacy Policy</p></div>
+              <div className="footer-content-text"><p>Anti-Spam Policy</p></div>
+              <div className="footer-content-text"><p>Cookie Policy</p></div>
+              <div className="footer-content-text"><p>Refund Policy</p></div>
+              <div className="footer-content-text"><p>Freelancers & Affiliate Policy</p></div>
             </div>
   
           </div>
