@@ -43,27 +43,27 @@ export default function CoursePaymentSection(){
                             <div className="payment-options-contents">
                                 <div className="payment-options-topic"><h3>UPI</h3></div>
                                 <div className="payment-options-images">
-                                    <img src={Gpay} alt="" />
-                                    <img src={PhonePe} alt="" />
-                                    <img src={Upi} alt="" />
+                                    <img src={Gpay} alt="gpay" />
+                                    <img src={PhonePe} alt="phonepe" />
+                                    <img src={Upi} alt="upi" />
                                 </div>
                             </div>
                             <div className="payment-options-contents">
                                 <div className="payment-options-topic"><h3>Card</h3></div>
                                 <div className="payment-options-images">
-                                    <img src={Visa} alt="" />
-                                    <img src={Mastercard} alt="" />
-                                    <img src={Rupay} alt="" />
+                                    <img src={Visa} alt="visa" />
+                                    <img src={Mastercard} alt="Mastercard" />
+                                    <img src={Rupay} alt="Rupay" />
                                 </div>
                             </div>
                             <div className="payment-options-contents">
                                 <div className="payment-options-topic"><h3>Wallet</h3></div>
                                 <div className="payment-options-images">
-                                    <img src={Mobikwik} alt="" />
-                                    <img src={Ola} alt="" />
-                                    <img src={Airtel} alt="" />
-                                    <img src={Freecharge} alt="" />
-                                    <img src={Jio} alt="" />
+                                    <img src={Mobikwik} alt="Mobikwik" />
+                                    <img src={Ola} alt="Ola" />
+                                    <img src={Airtel} alt="Airtel" />
+                                    <img src={Freecharge} alt="Freecharge" />
+                                    <img src={Jio} alt="Jio" />
                                 </div>
                             </div>
                         </div>

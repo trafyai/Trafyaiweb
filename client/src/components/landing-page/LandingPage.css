@@ -312,7 +312,7 @@
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     line-height: 150%;
-    color: #fcf8fc;
+    color: #e2e2e2;
 }
 .landing-learning-right{
     width: max-content;
@@ -356,7 +356,7 @@
     gap: 1.5rem;
     font-size: 16px;
     font-family: 'Inter', sans-serif;
-    color: #fcf8fc;
+    color: #e2e2e2;
     list-style-type: none;
     line-height: 150%;
 }
@@ -575,7 +575,7 @@
     font-size: 18px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    color: #fcf8fc;
+    color: #e2e2e2;
     line-height: 150%;
 }
 .landing-optimised-right{
@@ -707,7 +707,7 @@
     font-size: 18px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    color: #fcf8fc;
+    color: #e2e2e2;
     line-height: 150%;
 }
 .landing-review-bottom{
@@ -739,14 +739,14 @@
     font-size: 16px;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    color: #fcf8fc;
+    color: #e2e2e2;
     line-height: 150%;
 }
 .landing-reviews p{
     font-size: 16px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    color: #fcf8fc;
+    color: #e2e2e2;
     line-height: 150%;
 }
 @media only screen and (max-width:1024px){
@@ -980,7 +980,7 @@
     font-size: 16px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    color: #fcf8fc;
+    color: #e2e2e2;
     line-height: 150%;
 }
 .landing-better-right{
@@ -1040,15 +1040,18 @@
         gap: 2rem;
     }
     .landing-better-image {
-        max-width: 80px;
+        max-width: 100px;
         min-width: auto;
         max-height: 80px;
         min-height: auto;
     }
+    .landing-better-right{
+        gap:0.5rem;
+    }
     
 
 }
-@media only screen and (max-width:400px){
+@media only screen and (max-width:450px){
     .landing-better-container {
         padding: 50px 24px;
     }
@@ -1056,11 +1059,20 @@
         gap:0.3rem;
       }
       .landing-better-image {
-        max-width: 70px;
+        max-width: 100px;
         min-width: auto;
         max-height: 80px;
         min-height: auto;
         padding-left: 0;
     }
     
+}
+@media only screen and (max-width:420px){
+    .landing-better-image {
+        max-width: 80px;
+        min-width: auto;
+        max-height: 80px;
+        min-height: auto;
+        padding-left: 0;
+    }
 }

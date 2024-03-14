@@ -321,5 +321,8 @@
   .header-contents{
     width: 100%;
   }
+  .header-solutions, .header-academy, .header-resources, .header-login, .header-signup{
+    font-size: 16px;
+  }
  }
 

@@ -11,7 +11,7 @@ export default function CourseUiux(){
                     <div className="course-landing-ai-heading"><h1>UI/UX Course</h1></div>
                     <div className="course-landing-ai-box-container">
                     {CourseUiuxData.map((item, index) => (
-                     <Link to="/uiux-course">   
+                    //  <Link to="/uiux-course">   
                     
                      <div className="course-landing-ai-box" key={index}>
 
@@ -35,7 +35,7 @@ export default function CourseUiux(){
                                 <hr />
 
                                 <div className="landing-ai-card-ratings">
-                                    <img src="" alt="" />
+                                    <img src={item.image} alt="" />
                                     <p>{item.rating}</p>
                                 </div>
 
@@ -46,7 +46,8 @@ export default function CourseUiux(){
 
                             </div>
 
-                        </div></Link>
+                        </div>
+                        // </Link>
                         ))}
 
                     </div>

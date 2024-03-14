@@ -32,7 +32,7 @@ export default function CourseDm(){
                                 <hr />
 
                                 <div className="landing-ai-card-ratings">
-                                    <img src="" alt="" />
+                                   < img src={item.image} alt="" />
                                     <p>{item.rating}</p>
                                 </div>
 

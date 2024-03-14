@@ -1,3 +1,4 @@
+import Halfstar from '../../../assets/Images/comman/common/star_half.svg';
 export default [
     {
         title: "Digital Marketing",
@@ -10,6 +11,7 @@ export default [
         },
         rating: "4.5",
         level: "Certification",
-        duration: "4 weeks"
+        duration: "4 weeks",
+        image:Halfstar
     }
 ]

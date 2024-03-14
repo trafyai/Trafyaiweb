@@ -50,11 +50,11 @@ export default function CourseHeroSection(){
                         <div className="hero-platform">
                             <div className="platform-heading">Learn</div>
                             <div className="platform-images">
-                                <img src={Phone} alt="" />
-                                <img src={Macbook} alt="" />
-                                <img src={Tab} alt="" />
-                                <img src={Vision} alt="" />
-                                <img src={Watch} alt="" />
+                                <img src={Phone} alt="iphone" />
+                                <img src={Macbook} alt="imac" />
+                                <img src={Tab} alt="ipad" />
+                                <img src={Vision} alt="vison" />
+                                <img src={Watch} alt="iwatch" />
 
                             </div>
                         </div>

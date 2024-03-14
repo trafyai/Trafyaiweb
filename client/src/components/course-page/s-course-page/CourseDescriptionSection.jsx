@@ -26,11 +26,11 @@ export default function CourseDescriptionSection(){
                         <div className="course-tools">
                             <div className="tools-covered"><h1>Tools Covered</h1></div>
                             <div className="tools-img">
-                                <img src={Figma} alt="" />
-                                <img src={Miro} alt="" />
-                                <img src={Chatgpt} alt="" />
-                                <img src={Gemini} alt="" />
-                                <img src={Framer} alt="" />
+                                <img src={Figma} alt="Figma" />
+                                <img src={Miro} alt="Miro" />
+                                <img src={Chatgpt} alt="Chatgpt" />
+                                <img src={Gemini} alt="Gemini" />
+                                <img src={Framer} alt="Framer" />
                             </div>
                         </div>
                     </div>

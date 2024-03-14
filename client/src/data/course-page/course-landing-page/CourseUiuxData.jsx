@@ -1,3 +1,4 @@
+import Halfstar from '../../../assets/Images/comman/common/star_half.svg';
 export default [
     {
         title: "UI/UX Designing",
@@ -8,8 +9,9 @@ export default [
             three: "Spatial",
             four: "Responsive",
         },
-        rating: "4.5",
+        rating: "4.8",
         level: "Certification",
-        duration: "12 weeks"
+        duration: "12 weeks",
+        image:Halfstar
     }
 ]

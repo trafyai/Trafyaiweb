@@ -1,3 +1,4 @@
+import Halfstar from '../../../assets/Images/comman/common/star_half.svg';
 export default [
     {
         title: "Artificial Intelligence",
@@ -7,8 +8,9 @@ export default [
             two: "Deep Learning",
             three: "Neural Network"
         },
-        rating: "4.5",
+        rating: "4.7",
         level: "Certification",
-        duration: "8 weeks"
+        duration: "8 weeks",
+        image:Halfstar
     }
 ]

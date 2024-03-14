@@ -177,9 +177,9 @@ function Header() {
 
   return (
     <header className="header">
-      <div className="header-container">
+      <nav className="header-container">
        <div className="logo">
-       <Link  to="/"> <img src={blackLogo} alt="" /></Link> 
+       <Link  to="/"> <img src={blackLogo} alt="trafy logo" /></Link> 
         </div>
 
         <div className={`header-contents ${menuOpen ? 'show-contents' : ''}`}>
@@ -193,7 +193,7 @@ function Header() {
             <Link to="/signup" onClick={handleNavigation}><button className="header-signup">Sign Up Free</button></Link>
           </div>
         </div>
-      </div>
+      </nav>
       <img src={hamburger} alt="" className={`hamburger ${menuOpen ? 'hide' : ''}`} style={{height:"20px"}}  onClick={toggleMenu} />
       <img src={close} alt="" className={`exit-icon ${menuOpen ? 'show' : ''}`} onClick={toggleMenu} />
     </header>

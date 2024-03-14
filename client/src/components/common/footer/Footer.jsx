@@ -7,7 +7,7 @@ import twitter from '../../../assets/Images/comman/footer/twitter (1).png';
 import behance from '../../../assets/Images/comman/footer/behance.png';
 function Footer(){
     return(
-        <section className="footer">
+        <footer className="footer">
         <div className="footer-container">
   
           <div className="footer-container-contents">
@@ -66,11 +66,11 @@ function Footer(){
           <div className="social-section">
             <div className="footer-logo"><img src="Images/Logo/Trafy Logo_Workspace Logo.png" alt=""/></div>
             <div className="socials">
-              <a href="https://www.linkedin.com/company/trafypro/"><img src={linkedin} alt=""/></a>
-              <a href="https://www.facebook.com/trafyproint"><img src={facebook} alt=""/></a>
-              <a href="https://www.instagram.com/trafypro/"><img src={instagram} alt=""/></a>
-              <a href="https://twitter.com/trafyproint"><img src={twitter} alt=""/></a>
-              <a href="https://www.behance.net/dmerztech"><img src={behance} alt=""/></a>
+              <a href="https://www.linkedin.com/company/trafypro/"><img src={linkedin} alt="linkedin"/></a>
+              <a href="https://www.facebook.com/trafyproint"><img src={facebook} alt="facebook"/></a>
+              <a href="https://www.instagram.com/trafypro/"><img src={instagram} alt="instagram"/></a>
+              <a href="https://twitter.com/trafyproint"><img src={twitter} alt="twitter"/></a>
+              <a href="https://www.behance.net/dmerztech"><img src={behance} alt="behance"/></a>
             </div>
           </div>
   
@@ -79,7 +79,7 @@ function Footer(){
           </div>
   
         </div>
-      </section>
+      </footer>
     )
 }
 export default Footer;
