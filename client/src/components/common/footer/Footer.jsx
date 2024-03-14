@@ -5,6 +5,7 @@ import facebook from '../../../assets/Images/comman/footer/facebook.png';
 import instagram from '../../../assets/Images/comman/footer/instagram (2).png';
 import twitter from '../../../assets/Images/comman/footer/twitter (1).png';
 import behance from '../../../assets/Images/comman/footer/behance.png';
+import WhiteLogo from '../../../assets/Images/comman/header/whiteLogo.png';
 function Footer(){
     return(
         <footer className="footer">
@@ -15,7 +16,7 @@ function Footer(){
             <div className="footer-content">
               <div className="footer-content-heading"><h1>Solutions</h1></div>
               <div className="footer-content-text"><p>UI/UX Audit</p></div>
-              <div className="footer-content-text"><a href=""><p>Research & Design</p></a></div>
+              <div className="footer-content-text"><p>Research & Design</p></div>
               <div className="footer-content-text"><a href=""><p>Market Analysis</p></a></div>
               <div className="footer-content-text"><a href=""><p>Strategy & Automation</p></a></div>
               <div className="footer-content-text"><a href=""><p>Data Visualisation</p></a></div>
@@ -64,7 +65,9 @@ function Footer(){
           <hr className="footer-line"/>
   
           <div className="social-section">
-            <div className="footer-logo"><img src="Images/Logo/Trafy Logo_Workspace Logo.png" alt=""/></div>
+            <div className="footer-logo">
+            <img src={WhiteLogo} alt="trafy logo" />
+            </div>
             <div className="socials">
               <a href="https://www.linkedin.com/company/trafypro/"><img src={linkedin} alt="linkedin"/></a>
               <a href="https://www.facebook.com/trafyproint"><img src={facebook} alt="facebook"/></a>

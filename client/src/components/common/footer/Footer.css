@@ -67,6 +67,7 @@
   .copyrights{
     display: flex;
     justify-content:flex-end;
+    align-items: center;
     row-gap: 4px;
     margin-bottom: 20px;
   }
