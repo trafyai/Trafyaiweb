@@ -191,7 +191,47 @@
     }
 }
 
+/* --------------------------------------share--------------------- */
 
+.course-share{
+    max-width:400px ;
+    min-width: 200px;
+    height: max-content;
+    padding: 24px;
+    border-radius: 24px;
+    background-color: #fcfefe;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+}
+.course-share-exit{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-share-exit p{
+    font-family: 'Inter',sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+.course-share-container{
+    padding: 0px 4px;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+.course-share-socials{
+    display: flex;
+    gap:1.5rem;
+}
+.course-share-socials img{
+    height: 40px;
+}
 /* -------------------------------------------------course-description------------------------------ */
 
 .course-description{

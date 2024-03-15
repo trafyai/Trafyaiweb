@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './CoursePage.css';
 import Share from "../../../assets/Images/course-page/hero-section/share.svg";
 import RatingStar from "../../../assets/Images/course-page/hero-section/rating-star.svg";
@@ -7,11 +7,20 @@ import Macbook from "../../../assets/Images/course-page/hero-section/iMac.png";
 import Tab from "../../../assets/Images/course-page/hero-section/iTab.png";
 import Vision from "../../../assets/Images/course-page/hero-section/iVision.png";
 import Watch from "../../../assets/Images/course-page/hero-section/iWatch.png";
-
+import Whatsapp from '../../../assets/Images/comman/common/socials/whatsapp.png';
+import Facebook from '../../../assets/Images/comman/common/socials/facebook.png';
+import Linkedin from '../../../assets/Images/comman/common/socials/linkedin.png';
+import X from '../../../assets/Images/comman/common/socials/twitter.png';
+import close from '../../../assets/Images/comman/header/close.svg';
 
 
 export default function CourseHeroSection(){
 
+    const [showShare, setShowShare] = useState(false);
+
+    function courseShare(){
+        setShowShare(!showShare);
+    }
 
     return(
 
@@ -24,8 +33,29 @@ export default function CourseHeroSection(){
                         <div className="hero-category">UI/UX</div>
                         <div className="hero-popularity">Popular</div>
                         <div className="share">
-                            <img src={Share} alt="" />
+                            <img src={Share} alt="" onClick={courseShare}/>
                         </div>
+                        {/* ------------------------------share---------------------- */}
+                     {showShare &&  
+                        <div className="course-share">
+                            <div className="course-share-exit">
+                                <p>Share</p>
+                                <img src={close} alt="" onClick={courseShare}/></div>
+                            <div className="course-share-container">
+                                <div className="course-share-socials">
+                                   <img src={Whatsapp} alt="whatsapp" />
+                                   <img src={Facebook} alt="facebook" />
+                                   <img src={Linkedin} alt="linkedin" />
+                                   <img src={X} alt="x" />
+                                </div>
+                                <div className="course-share-link">
+                                    <input type="text" />
+
+                                </div>
+                            </div>
+                        </div>
+                        } 
+                        {/* ---------------------------------------------------------------- */}
                     </div>
                     <div className="hero-main-heading">
                         <h1>Learn Cross Platform UI/UX design and development </h1>
