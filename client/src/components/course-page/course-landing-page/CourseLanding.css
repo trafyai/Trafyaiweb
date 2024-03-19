@@ -99,13 +99,23 @@
 }
 .landing-ai-card-ratings{
     display: flex;
+    align-items: center;
     gap:0.5rem;
+}
+.landing-ai-card-ratings .halfstar{
+    width: 18px;
+    height: 17px;
+}
+.landing-ai-card-ratings .fullstar{
+    width: 19px;
+    height: 19px;
 }
 .landing-ai-card-ratings p{
     font-size: 14px;
     font-weight: 400;
     font-family: 'Inter',sans-serif;
     color:#3f3f3f;
+    padding-left: 4px;
 }
 .landing-ai-card-level{
     width: 100%;

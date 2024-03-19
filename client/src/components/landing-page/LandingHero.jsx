@@ -12,7 +12,7 @@ const LandingHero = () => {
     const [emptyDataError, setEmptyDataError] = useState(false);
     const [emailError, setEmailError] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
-    const [successMessage, setSuccessMessage] = useState(""); // New state for success message
+    const [successMessage, setSuccessMessage] = useState(""); 
 
     const postUserData = (event) => {
         const { name, value } = event.target;
@@ -51,14 +51,6 @@ const LandingHero = () => {
             return;
         }
 
-        // const emailExists = await checkEmailExistence();
-        // if (emailExists) {
-        //     setEmptyDataError(false);
-        //     setEmailError(true);
-        //     setErrorMessage("Email already exists.");
-        //     return;
-        // }
-
         const res = await fetch('https://freeconslu-form-default-rtdb.firebaseio.com/userDataRecords.json', {
             method: "POST",
             headers: {
@@ -68,14 +60,39 @@ const LandingHero = () => {
         });
 
         if (res.ok) {
-            setSuccessMessage("Thank You for Submitting the form"); // Set success message
+            setSuccessMessage("Thank You for Submitting the form"); 
             setUserData({ name: "", email: "" });
             setEmptyDataError(false);
             setEmailError(false);
-            window.location.reload();
         } else {
-            setSuccessMessage(""); // Clear success message
             setErrorMessage("Error storing data");
+        }
+    };
+
+    // Function to render the form or success message
+    const renderFormOrMessage = () => {
+        if (successMessage) {
+            return(
+             <div className="landing-hero-form-submit-message">
+                <p className="landing-hero-form-submit-message-heading">Thank you</p> 
+                <p className="landing-hero-form-submit-message-description"> Our team will contact you soon.</p> 
+            </div>
+            );
+            
+        } else {
+            return (
+                <div className="landing-hero-top">
+                <h1>Get a free career consultation</h1>
+                <form className="landing-hero-form">
+                    <input type="text" placeholder="Name" required autoComplete="off" name="name" className="landing-name" value={userData.name} onChange={postUserData} />
+                    <div>
+                        <input type="email" placeholder="Email" required autoComplete="off" name="email" className="landing-email" value={userData.email} onChange={postUserData} />
+                        {emptyDataError || emailError ? <p style={{ paddingTop: "4px", color: "red", fontFamily:"Inter", fontSize:"14px" }}>{errorMessage}</p> : null}
+                    </div>
+                    <button className="landing-hero-form-btn" type="submit" onClick={submitData}>Submit</button>
+                </form>
+                </div>
+            );
         }
     };
 
@@ -91,16 +108,8 @@ const LandingHero = () => {
 
                     <div className="landing-hero-right">
                         <div className="landing-hero-top">
-                            <h1>Get a free career consultation</h1>
-                            <form className="landing-hero-form">
-                                <input type="text" placeholder="Name" required autoComplete="off" name="name" className="landing-name" value={userData.name} onChange={postUserData} />
-                                <div>
-                                    <input type="email" placeholder="Email" required autoComplete="off" name="email" className="landing-email" value={userData.email} onChange={postUserData} />
-                                    {emptyDataError || emailError ? <p style={{ paddingTop: "4px", color: "red", fontFamily:"Inter", fontSize:"14px" }}>{errorMessage}</p> : null}
-                                </div>
-                                {successMessage && <p style={{ paddingTop: "4px", color: "green", fontFamily:"Inter", fontSize:"14px" }}>{successMessage}</p>} {/* Render success message */}
-                                <button className="landing-hero-form-btn" type="submit" onClick={submitData}>Submit</button>
-                            </form>
+                            
+                            {renderFormOrMessage()}
                         </div>
                         <div className="landing-hero-bottom">
                             <div className="landing-hero-live">

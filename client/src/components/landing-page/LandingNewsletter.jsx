@@ -6,6 +6,7 @@ const LandingNewsletter = () => {
         email: ""
     });
     const [errorMessage, setErrorMessage] = useState("");
+    const [subscribed, setSubscribed] = useState(false); // State to track if the user has subscribed
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
@@ -34,7 +35,8 @@ const LandingNewsletter = () => {
             });
 
             if (response.ok) {
-                alert("Thank you for subscribing!");
+                setSubscribed(true); // Set subscribed state to true
+                setErrorMessage(""); // Clear error message
                 setUserData({ email: "" }); // Clear the input field
             } else {
                 setErrorMessage("Error submitting the form. Please try again later.");
@@ -45,29 +47,48 @@ const LandingNewsletter = () => {
         }
     };
 
+    // Function to render the form or the thank you message
+    const renderFormOrMessage = () => {
+        if (subscribed) {
+            return (
+                <div className="landing-newsletter-heading">
+                    <h1>Thank you for subscribing to our newsletter!</h1>
+                </div>
+            );
+        }
+        
+        else {
+            return (
+                <div className="landing-newsletter-container-inner">
+                    <div className="landing-newsletter-heading">
+                        <h1>Get instant alerts on new breakthroughs and openings in your industry.</h1>
+                   </div>
+                   <div className="landing-newsletter-form">
+                      <form onSubmit={handleSubmit}>
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            value={userData.email}
+                            onChange={handleInputChange}
+                            required
+                            autoComplete="off"
+                            name="email"
+                            className="landing-newsletter-email"
+                        />
+                        {errorMessage && <p className="error-message">{errorMessage}</p>}
+                        <button type="submit">Submit</button>
+                     </form>
+                </div>
+                </div>
+            );
+        }
+    };
+
     return (
         <main>
             <div className="landing-newsletter">
                 <div className="landing-newsletter-container">
-                    <div className="landing-newsletter-heading">
-                        <h1>Get instant alerts on new breakthroughs and openings in your industry.</h1>
-                    </div>
-                    <div className="landing-newsletter-form">
-                        <form onSubmit={handleSubmit}>
-                            <input
-                                type="email"
-                                placeholder="Email"
-                                value={userData.email}
-                                onChange={handleInputChange}
-                                required
-                                autoComplete="off"
-                                name="email"
-                                className="landing-newsletter-email"
-                            />
-                            {errorMessage && <p className="error-message">{errorMessage}</p>}
-                            <button type="submit">Submit</button>
-                        </form>
-                    </div>
+                {renderFormOrMessage()} {/* Render form or thank you message */}
                 </div>
             </div>
         </main>

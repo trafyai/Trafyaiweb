@@ -1,4 +1,5 @@
 import Halfstar from '../../../assets/Images/comman/common/star_half.svg';
+import Fullstar from '../../../assets/Images/comman/common/star_full.png';
 export default [
     {
         title: "UI/UX Designing",
@@ -12,6 +13,7 @@ export default [
         rating: "4.8",
         level: "Certification",
         duration: "12 weeks",
-        image:Halfstar
+        halfstar:Halfstar,
+        fullstar:Fullstar
     }
 ]

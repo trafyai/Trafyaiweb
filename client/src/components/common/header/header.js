@@ -184,7 +184,7 @@ function Header() {
 
         <div className={`header-contents ${menuOpen ? 'show-contents' : ''}`}>
           <div className="header-contents-first">
-            <Link to="/course" onClick={handleNavigation}><button className="header-academy">Course</button></Link>
+            <Link to="/courses" onClick={handleNavigation}><button className="header-academy">Courses</button></Link>
             <button className="header-resources">Resources</button>
           </div>
 

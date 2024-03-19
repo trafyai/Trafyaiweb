@@ -35,7 +35,11 @@ export default function CourseUiux(){
                                 <hr />
 
                                 <div className="landing-ai-card-ratings">
-                                    <img src={item.image} alt="" />
+                                <img src={item.fullstar} alt=""  className="fullstar"/>
+                                    <img src={item.fullstar} alt="" className="fullstar"/>
+                                    <img src={item.fullstar} alt="" className="fullstar"/>
+                                    <img src={item.fullstar} alt="" className="fullstar"/>
+                                    <img src={item.fullstar} alt="" className="fullstar"/>
                                     <p>{item.rating}</p>
                                 </div>
 

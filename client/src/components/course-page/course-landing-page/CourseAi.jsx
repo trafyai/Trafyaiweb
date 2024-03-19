@@ -32,7 +32,11 @@ export default function CourseAi(){
                                 <hr />
 
                                 <div className="landing-ai-card-ratings">
-                                    <img src={item.image} alt="" />
+                                    <img src={item.fullstar} alt="" className="fullstar"/>
+                                    <img src={item.fullstar} alt="" className="fullstar"/>
+                                    <img src={item.fullstar} alt="" className="fullstar"/>
+                                    <img src={item.fullstar} alt="" className="fullstar"/>
+                                    <img src={item.halfstar} alt="" className="halfstar"/>
                                     <p>{item.rating}</p>
                                 </div>
 

@@ -1,4 +1,5 @@
 import Halfstar from '../../../assets/Images/comman/common/star_half.svg';
+import Fullstar from '../../../assets/Images/comman/common/star_full.png';
 export default [
     {
         title: "Artificial Intelligence",
@@ -11,6 +12,7 @@ export default [
         rating: "4.7",
         level: "Certification",
         duration: "8 weeks",
-        image:Halfstar
+        halfstar:Halfstar,
+        fullstar:Fullstar
     }
 ]

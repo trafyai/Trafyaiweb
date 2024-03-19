@@ -70,11 +70,11 @@ function Footer() {
         <div className="social-section">
           <div className="footer-logo"><img src={WhiteLogo} alt="trafy logo" /></div>
           <div className="socials">
-            <img src={linkedin} alt="linkedin" />
-            <img src={facebook} alt="facebook" />
-            <img src={instagram} alt="instagram" />
-            <img src={twitter} alt="twitter" />
-            <img src={behance} alt="behance" />
+           <a href="https://www.linkedin.com/company/trafyai"><img src={linkedin} alt="linkedin" /></a>
+            <a href="https://www.facebook.com/trafyai"><img src={facebook} alt="facebook" /></a>
+            <a href="https://www.instagram.com/trafyai"><img src={instagram} alt="instagram" /></a>
+            <a href="https://twitter.com/trafyai"><img src={twitter} alt="twitter" /></a>
+            <a href="https://www.behance.net/trafy"><img src={behance} alt="behance" /></a>
           </div>
         </div>
 

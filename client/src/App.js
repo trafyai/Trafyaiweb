@@ -8,6 +8,8 @@ import Login from "./components/common/auth/login/Login.jsx";
 import UserProfile from "./pages/auth/user-profile/user-profile.js";
 import CoursePage from "./pages/course-page/course-page-single/coursePage.js";
 import Courses from "./pages/course-page/coursepage-landing/courseLandingPage.js";
+import BlogLanding from "./pages/blog/blog-landing/blogLanding.js";
+import BlogPage from "./pages/blog/blog-single/blogPage.js";
 
 function App() {
   return (
@@ -19,8 +21,10 @@ function App() {
         <Route path="/signup" element={<Signup/> }   />
         <Route path="/login" element={<Login/> }   />
         <Route path="/user-dashboard" element={<UserProfile/>} />
-        <Route path="/course" element={<Courses/>} />
+        <Route path="/courses" element={<Courses/>} />
         <Route path="/uiux-course" element={<CoursePage/>} />
+        <Route path="/resources" element={<BlogLanding/>} />
+        <Route path="/resources/:id" element={<BlogPage/>} />
        
       </Routes>
 
