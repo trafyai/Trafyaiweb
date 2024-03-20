@@ -8,8 +8,8 @@
     margin: 0;
 }
 .blog-page-hero-section{
-    padding-top: 100px;
-    padding-bottom: 40px;
+    padding-top: 120px;
+    padding-bottom: 60px;
 width: 100%;
 display: flex;
 justify-content: center;
@@ -156,7 +156,7 @@ justify-content: center;
 .blog-newsletter-container-inner{
     border-radius: 16px;
     border: 1px solid #d4cfcf;
-    padding: 32px;
+    padding: 48px 32px;
     display: flex;
     flex-direction: column;
     gap:1.5rem;
@@ -171,7 +171,7 @@ justify-content: center;
 .blog-newsletter-form input{
     border: 1px solid #d4cfcf;
     border-radius: 8px;
-    width: 300px;
+    width: 380px;
     height: 35px;
     padding: 4px 8px;
     font-size: 14px;

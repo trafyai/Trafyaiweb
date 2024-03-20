@@ -3,6 +3,7 @@ import './LandingPage.css';
 import Live from '../../assets/Images/landing-page/hero/live.png';
 import One from '../../assets/Images/landing-page/hero/1-1.png';
 import Placement from '../../assets/Images/landing-page/hero/placement.png';
+import {Link} from 'react-router-dom';
 
 const LandingHero = () => {
     const [userData, setUserData] = useState({
@@ -103,7 +104,7 @@ const LandingHero = () => {
                     <div className="landing-hero-left">
                         <h1>Interactive Learning, Next Generation Courses.</h1>
                         <p>Gain knowledge of advanced concepts with our unique Interactive, Immersive, and Adaptive learning modules and accelerate your career.</p>
-                        <button>Explore</button>
+                      <Link to="/courses">  <button>Explore</button> </Link>
                     </div>
 
                     <div className="landing-hero-right">
