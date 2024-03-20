@@ -12,7 +12,7 @@ export default function courseLandingPage(){
         <title>Courses</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href={currentPageUrl} />
-        <meta name="description" content="Gain knowledge of advanced concepts with our unique Interactive, Immersive, and Adaptive learning modules and accelerate your career." />
+        <meta name="description" content="Explore UI/UX designing, artificial intelligence, and digital marketing career courses with live training, certification, placement support and more." />
       </Helmet>
         <CourseUiux/>
         <CourseDm/>

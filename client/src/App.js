@@ -1,8 +1,9 @@
 import React from "react";
 import Header from "./components/common/header/header.js";
 import Footer from "./components/common/footer/Footer.jsx";
+import ErrorPage from "./pages/error-page/errorPage.js";
 import LandingPage from "./pages/landing-page/landingPage.js";
-import {Routes, Route, Link} from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Signup from "./components/common/auth/signup/signup.jsx";
 import Login from "./components/common/auth/login/Login.jsx";
 import UserProfile from "./pages/auth/user-profile/user-profile.js";
@@ -25,6 +26,7 @@ function App() {
         <Route path="/uiux-course" element={<CoursePage/>} />
         <Route path="/resources" element={<BlogLanding/>} />
         <Route path="/resources/:id" element={<BlogPage/>} />
+        <Route path="*" element={<ErrorPage />} />
        
       </Routes>
 
