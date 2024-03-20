@@ -83,8 +83,7 @@
 //     );
 // }
 
-
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./BlogPage.css";
 import BlogPageData from "../../../data/blog/blog-page/BlogPageData";
 import { useParams } from "react-router-dom";
@@ -92,6 +91,12 @@ import { useParams } from "react-router-dom";
 export default function BlogPage() {
   const { id } = useParams();
   const contentRef = useRef(null);
+
+  const [userData, setUserData] = useState({
+    email: ""
+  });
+  const [errorMessage, setErrorMessage] = useState("");
+  const [subscribed, setSubscribed] = useState(false); // State to track if the user has subscribed
 
   const postData = BlogPageData.find((item) => item.id === id);
 
@@ -103,6 +108,81 @@ export default function BlogPage() {
     const headingElement = document.getElementById(headingId);
     if (headingElement) {
       headingElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setUserData({ ...userData, [name]: value });
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const { email } = userData;
+
+    if (!email) {
+      setErrorMessage("Please fill in the required fields.");
+      return;
+    }
+
+    // Validation of email format can be added here if needed
+
+    try {
+      const response = await fetch('https://newsletter-form-9e6c9-default-rtdb.firebaseio.com/NewsLetterForm.json', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ email })
+      });
+
+      if (response.ok) {
+        setSubscribed(true); // Set subscribed state to true
+        setErrorMessage(""); // Clear error message
+        setUserData({ email: "" }); // Clear the input field
+      } else {
+        setErrorMessage("Error submitting the form. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error submitting the form:", error);
+      setErrorMessage("Error submitting the form. Please try again later.");
+    }
+  };
+
+  // Function to render the form or the thank you message
+  const renderFormOrMessage = () => {
+    if (subscribed) {
+      return (
+        <div className="blog-newsletter-heading">
+          <h1>Thank you for subscribing to our newsletter!</h1>
+        </div>
+      );
+    } else {
+      return (
+        <div className="blog-newsletter-container-inner">
+          <div className="blog-newsletter-heading">
+            <h1>Subscribe to our newsletter</h1>
+          </div>
+          <div className="blog-newsletter-form">
+            <form onSubmit={handleSubmit}>
+              <input
+                type="email"
+                placeholder="Email"
+                value={userData.email}
+                onChange={handleInputChange}
+                required
+                autoComplete="off"
+                name="email"
+                className="blog-newsletter-email"
+              />
+              {errorMessage && <p className="error-message">{errorMessage}</p>}
+              
+            </form>
+          </div>
+          <button type="submit">Submit</button>
+        </div>
+      );
     }
   };
 
@@ -151,7 +231,20 @@ export default function BlogPage() {
                   <img src={postData.facebook} alt="" />
                   <img src={postData.twitter} alt="" />
                 </div>
+                {/* ////////////////////////////////description//////////////////// */}
+                {Array.isArray(postData.description) ? (
+                  postData.description.map((desc, descIndex) => (
+                    <div className="blog-page-article-socials-description" key={descIndex}>
+                      <p>{desc}</p>
+                    </div>
+                  ))
+                ) : (
+                  <div className="blog-page-article-socials-description">
+                    <p>{postData.description}</p>
+                  </div>
+                )}
 
+                {/*////////////////////article////////////////////////////////  */}
                 {Object.keys(postData.mainArticle).map((key, mainIndex) => (
                   <div className="blog-page-article-main-contents" key={mainIndex}>
                     <h1 id={key}>{postData.mainArticle[key].heading}</h1>
@@ -165,6 +258,12 @@ export default function BlogPage() {
                   </div>
                 ))}
               </div>
+            </div>
+          </section>
+
+          <section className="blog-newsletter">
+            <div className="blog-newsletter-container">
+              {renderFormOrMessage()} {/* Render form or thank you message */}
             </div>
           </section>
         </div>
