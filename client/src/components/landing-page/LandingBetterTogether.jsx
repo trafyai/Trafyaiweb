@@ -18,7 +18,7 @@ export default function LandingBetterTogether(){
                 <div className="landing-better-container">
                     <div className="landing-better-left">
                         <h3>Expand with trafy</h3>
-                        <h1>Better Together</h1>
+                        <h4>Better Together</h4>
                         <p>Harness the power of collaboration and watch your business growth with our integrated solutions. 
                             A new era of expansion begins here!</p>
                     </div>

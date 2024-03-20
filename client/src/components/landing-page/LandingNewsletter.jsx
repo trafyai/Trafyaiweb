@@ -52,7 +52,7 @@ const LandingNewsletter = () => {
         if (subscribed) {
             return (
                 <div className="landing-newsletter-heading">
-                    <h1>Thank you for subscribing to our newsletter!</h1>
+                    <p>Thank you for subscribing to our newsletter!</p>
                 </div>
             );
         }
@@ -61,7 +61,7 @@ const LandingNewsletter = () => {
             return (
                 <div className="landing-newsletter-container-inner">
                     <div className="landing-newsletter-heading">
-                        <h1>Get instant alerts on new breakthroughs and openings in your industry.</h1>
+                        <p>Get instant alerts on new breakthroughs and openings in your industry.</p>
                    </div>
                    <div className="landing-newsletter-form">
                       <form onSubmit={handleSubmit}>

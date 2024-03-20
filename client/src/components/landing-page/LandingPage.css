@@ -66,7 +66,7 @@
     align-items: center;
     gap:2rem;
 }
-.landing-hero-top h1{
+.landing-hero-top h3{
     font-size: 24px;
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
@@ -187,7 +187,7 @@
     line-height: 150%;
     color:#1c1623;
 }
-.landing-hero-last-interactive p{
+.landing-hero-last-interactive h2{
     font-size: 18px;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
@@ -216,7 +216,7 @@
     .landing-hero-left h1{
         font-size: 40px;
     }
-    .landing-hero-top h1 {
+    .landing-hero-top h3 {
         font-size: 24px;
     }
     .landing-hero-live, .landing-hero-training, .landing-hero-placement{
@@ -257,7 +257,7 @@
     .landing-hero-top {
         padding: 16px;
     }
-    .landing-hero-top h1 {
+    .landing-hero-top h3 {
         font-size: 20px;
     }
     .landing-hero-form {
@@ -321,7 +321,7 @@
     flex-direction: column;
     gap:1rem;
 }
-.landing-learning-left h1 {
+.landing-learning-left h2 {
     font-size: 40px;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -357,7 +357,7 @@
     flex-direction: column;
     gap:1rem;
 }
-.learning-right-one-heading h1 {
+.learning-right-one-heading h3 {
     font-size: 18px;
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
@@ -404,7 +404,7 @@
         padding: 60px 0px;
         padding-top: 30px;
     }
-    .landing-learning-left h1{
+    .landing-learning-left h2{
         font-size: 32px;
         width: 80%;
     }
@@ -438,7 +438,7 @@
     .landing-learning-left {
         gap: 0.5rem;
     }
-    .landing-learning-left h1 {
+    .landing-learning-left h2 {
         font-size: 24px;
         width: 100%;
     }
@@ -483,7 +483,7 @@
     flex-direction: column;
     gap:2rem;
 }
-.landing-explore-left h1 {
+.landing-explore-left h2 {
     font-size: 40px;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -512,7 +512,7 @@
     background-color:#ecbb7a;
 }
 
-.landing-explore-ai h2, .landing-explore-uiux h2, .landing-explore-dm h2{
+.landing-explore-ai h3, .landing-explore-uiux h3, .landing-explore-dm h3{
     font-size: 20px;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
@@ -529,14 +529,14 @@
         align-items: flex-start;
         gap: 2rem;
     }
-    .landing-explore-left h1{
+    .landing-explore-left h2{
         font-size: 32px;
     }
     .landing-explore-right{
         width: 100%;
         gap:1.5rem;
     }
-    .landing-explore-ai h2, .landing-explore-uiux h2, .landing-explore-dm h2 {
+    .landing-explore-ai h3, .landing-explore-uiux h3, .landing-explore-dm h3 {
         font-size: 18px;
     }
 }
@@ -549,7 +549,7 @@
         padding: 24px;
         gap:1.5rem;
     }
-    .landing-explore-left h1 {
+    .landing-explore-left h2 {
         font-size: 24px;
     }
     .landing-explore-right {
@@ -559,7 +559,7 @@
     .landing-explore-ai, .landing-explore-uiux, .landing-explore-dm {
         padding: 12px;
     }    
-    .landing-explore-ai h2, .landing-explore-uiux h2, .landing-explore-dm h2{
+    .landing-explore-ai h3, .landing-explore-uiux h3, .landing-explore-dm h3{
         font-size: 16px;
     }
 }
@@ -585,7 +585,7 @@
     flex-direction: column;
     gap:1rem;
 }
-.landing-optimised-left h1 {
+.landing-optimised-left h3 {
     font-size: 40px;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -629,7 +629,7 @@
     width: 13px;
     height: 9px;
 }
-.landing-accordion-heading h1{
+.landing-accordion-heading h4{
     font-size: 24px;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
@@ -656,7 +656,7 @@
         width: 100%;
         gap:1rem;
     }
-    .landing-optimised-left h1{
+    .landing-optimised-left h3{
         width: 80%;
         font-size: 32px;
     }
@@ -669,7 +669,7 @@
     .landing-optimised-accordion{
         gap:1rem;
     }
-    .landing-accordion-heading h1{
+    .landing-accordion-heading h4{
         font-size: 18px;
     }
     .landing-accordion-contents {
@@ -684,14 +684,14 @@
     .landing-optimised-container {
         gap:1.5rem;
     }
-    .landing-optimised-left h1 {
+    .landing-optimised-left h3 {
         font-size: 24px;
         width: 100%;
     }  
     .landing-optimised-right {
         width: 100%;
     }
-    .landing-accordion-heading h1{
+    .landing-accordion-heading h4{
         font-size: 16px;
     }
    
@@ -717,7 +717,7 @@
     flex-direction: column;
     gap:0.5rem;
 }
-.landing-review-top h1 {
+.landing-review-top h2 {
     font-size: 40px;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -756,7 +756,7 @@
     flex-direction: column;
     gap:2rem;
 }
-.landing-review-name h3 {
+.landing-review-name p {
     font-size: 16px;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
@@ -792,7 +792,7 @@
         width: 261px;
         height: 345px;
     }
-    .landing-review-top h1{
+    .landing-review-top h2{
         font-size: 32px;
     }
     .landing-review-top p {
@@ -816,14 +816,14 @@
         height: 318px;
     }
     
-    .landing-review-top h1 {
+    .landing-review-top h2 {
         font-size: 24px;
         width: 100%;
     } 
     .landing-reviews p {
         font-size: 14px;
     }
-    .landing-review-name h3 {
+    .landing-review-name p {
         font-size: 14px;
     }
    
@@ -855,7 +855,7 @@
     flex-direction: column;
     gap:0.5rem;
 }
-.landing-newsletter-heading h1{
+.landing-newsletter-heading p{
     font-size: 32px;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -932,7 +932,7 @@
     .landing-newsletter-heading{
         width: 80%;
     }
-    .landing-newsletter-heading h1 {
+    .landing-newsletter-heading p {
         font-size: 24px;
         text-align: center;
     }
@@ -953,7 +953,7 @@
     .landing-newsletter-container-inner{
         align-items: flex-start;
     }
-    .landing-newsletter-heading h1 {
+    .landing-newsletter-heading p {
         font-size: 20px;
         text-align: left;
     }
@@ -1004,7 +1004,7 @@
     font-weight: 600;
     color: #fcf8fc;
 }
-.landing-better-left h1 {
+.landing-better-left h4{
     font-size: 40px;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -1056,7 +1056,7 @@
     .landing-better-right{
         justify-content: flex-start;
     }
-    .landing-better-left h1{
+    .landing-better-left h4{
         font-size: 32px;
     }
 }
@@ -1065,7 +1065,7 @@
         padding: 40px 0px;
         padding-top: 20px;
     }
-    .landing-better-left h1{
+    .landing-better-left h4{
         font-size: 24px;
     }
     .landing-better-left p{

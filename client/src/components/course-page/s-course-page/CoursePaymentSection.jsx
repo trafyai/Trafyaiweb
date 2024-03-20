@@ -18,17 +18,17 @@ export default function CoursePaymentSection(){
         <main>
            <div className="course-payment">
             <div className="course-payment-container">
-                <div className="course-payment-heading"><h1>Course Fee</h1></div>
+                <div className="course-payment-heading"><h2>Course Fee</h2></div>
                 <div className="course-payment-contents">
                     <div className="course-payment-box">
                         <div className="payment-month"><p>3 months</p></div>
                         <div className="payment-starting">
-                            <h2>Starting at</h2>
-                            <h1>INR 15,000</h1>
+                            <p>Starting at</p>
+                            <h3>INR 15,000</h3>
                         </div>
                         {/* <div className="payment-total"><p></p></div> */}
                         <hr />
-                        <div className="payment-points"><h2>Including</h2>
+                        <div className="payment-points"><p>Including</p>
                         <ul>
                             <li>voluptate velit esse cillum dolore eu fugiat </li>
                             <li>voluptate velit esse cillum dolore eu fugiat </li>
@@ -38,10 +38,10 @@ export default function CoursePaymentSection(){
                         <button className="course-payment-enroll">Enroll now</button>
                     </div>
                     <div className="course-payment-option">
-                        <div className="payment-option-heading"><h1>Payment options</h1></div>
+                        <div className="payment-option-heading"><h3>Payment options</h3></div>
                         <div className="payment-options-container">
                             <div className="payment-options-contents">
-                                <div className="payment-options-topic"><h3>UPI</h3></div>
+                                <div className="payment-options-topic"><h4>UPI</h4></div>
                                 <div className="payment-options-images">
                                     <img src={Gpay} alt="gpay" />
                                     <img src={PhonePe} alt="phonepe" />
@@ -49,7 +49,7 @@ export default function CoursePaymentSection(){
                                 </div>
                             </div>
                             <div className="payment-options-contents">
-                                <div className="payment-options-topic"><h3>Card</h3></div>
+                                <div className="payment-options-topic"><h4>Card</h4></div>
                                 <div className="payment-options-images">
                                     <img src={Visa} alt="visa" />
                                     <img src={Mastercard} alt="Mastercard" />
@@ -57,7 +57,7 @@ export default function CoursePaymentSection(){
                                 </div>
                             </div>
                             <div className="payment-options-contents">
-                                <div className="payment-options-topic"><h3>Wallet</h3></div>
+                                <div className="payment-options-topic"><h4>Wallet</h4></div>
                                 <div className="payment-options-images">
                                     <img src={Mobikwik} alt="Mobikwik" />
                                     <img src={Ola} alt="Ola" />

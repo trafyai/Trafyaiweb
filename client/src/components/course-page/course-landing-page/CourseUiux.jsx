@@ -8,7 +8,7 @@ export default function CourseUiux(){
         <main>
             <div className="course-landing-uiux">
                 <div className="course-landing-ai-container">
-                    <div className="course-landing-ai-heading"><h1>UI/UX Course</h1></div>
+                    <div className="course-landing-ai-heading"><h2>UI/UX Course</h2></div>
                     <div className="course-landing-ai-box-container">
                     {CourseUiuxData.map((item, index) => (
                     //  <Link to="/uiux-course">   
@@ -16,7 +16,7 @@ export default function CourseUiux(){
                      <div className="course-landing-ai-box" key={index}>
 
                             <div className="course-landing-uiux-card-title">
-                                <h1>{item.title} </h1>
+                                <h3>{item.title} </h3>
                             </div>
 
                             <div className="course-landing-ai-contents">
@@ -27,7 +27,7 @@ export default function CourseUiux(){
                                 <div className="landing-ai-card-labels">
                                     <div className="landing-ai-card-labels-contents">
                                         {Object.values(item.label).map((label, index) => (
-                                            <h3 key={index}>{label}</h3>
+                                            <p key={index}>{label}</p>
                                         ))}
                                     </div>
                                 </div>
@@ -35,11 +35,11 @@ export default function CourseUiux(){
                                 <hr />
 
                                 <div className="landing-ai-card-ratings">
-                                <img src={item.fullstar} alt=""  className="fullstar"/>
-                                    <img src={item.fullstar} alt="" className="fullstar"/>
-                                    <img src={item.fullstar} alt="" className="fullstar"/>
-                                    <img src={item.fullstar} alt="" className="fullstar"/>
-                                    <img src={item.fullstar} alt="" className="fullstar"/>
+                                <img src={item.fullstar} alt="rating"  className="fullstar"/>
+                                    <img src={item.fullstar} alt="rating" className="fullstar"/>
+                                    <img src={item.fullstar} alt="rating" className="fullstar"/>
+                                    <img src={item.fullstar} alt="rating" className="fullstar"/>
+                                    <img src={item.fullstar} alt="rating" className="fullstar"/>
                                     <p>{item.rating}</p>
                                 </div>
 

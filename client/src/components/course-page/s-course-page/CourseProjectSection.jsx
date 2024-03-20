@@ -19,7 +19,7 @@ export default function CourseProjectSection() {
       <div className="course-project">
         <div className="course-project-container">
           <div className="course-project-heading">
-            <h1>Projects</h1>
+            <h2>Projects</h2>
           </div>
           <div className="course-projects-contents">
             {CourseProjectData.map((item, index) => (
@@ -30,7 +30,7 @@ export default function CourseProjectSection() {
                 // onMouseLeave={handleMouseLeave}
               >
                 <div className="project-box-heading" style={{ transition: "opacity 100s ease" }}>
-                <h2 style={{ opacity: 1, backgroundColor: item.bg_color }}>{item.title}</h2>
+                <h3 style={{ opacity: 1, backgroundColor: item.bg_color }}>{item.title}</h3>
                   {/* {hoveredIndex === index ? (
                     <h2 style={{ opacity: 1, backgroundColor: item.bg_color }}>{item.title}</h2>
                   ) : (

@@ -25,7 +25,7 @@
     gap:0.8rem;
     align-items: center;
 }
-.hero-category, .hero-popularity{
+.hero-category p, .hero-popularity p{
     padding: 8px 16px;
     color:#121212;
     border: 1px solid #121212;
@@ -91,7 +91,7 @@
     flex-direction: column;
     gap:0.6rem;
 }
-.platform-heading, .start-date-heading, .level-heading, .duration-heading{
+.platform-heading p, .start-date-heading p, .level-heading p, .duration-heading p{
     font-family: 'Inter',sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -104,7 +104,7 @@
 .platform-images img{
     height: 28px;
 }
-.start-date, .level, .duration{
+.start-date p, .level p, .duration p{
     font-family: 'Inter',sans-serif;
     font-weight: 600;
     font-size: 18px;
@@ -135,7 +135,7 @@
         flex-wrap: wrap;
         gap:2.5rem;
     }
-    .start-date, .level, .duration{
+    .start-date p, .level p, .duration p{
         font-size: 20px;
     }
 
@@ -176,7 +176,7 @@
         gap:1.5rem;
         column-gap: 2.5rem;
     }
-    .start-date, .level, .duration{
+    .start-date p, .level p, .duration p{
         font-size: 18px;
     }
     .hero-enroll{
@@ -318,7 +318,7 @@
     flex-direction: column;
     gap:1.5rem;
 }
-.about-course-heading h1, .course-skills-heading h1, .tools-covered h1{
+.about-course-heading h2, .course-skills-heading h2, .tools-covered h2{
     font-size: 24px;
     font-weight: 600;
     font-family: 'Inter',sans-serif;
@@ -431,7 +431,7 @@
     gap:2rem;
     padding-left: 24px;
 }
-.course-syllabus-heading h1{
+.course-syllabus-heading h2{
     font-size: 24px;
     color:#1c1623;
     font-weight: 600;
@@ -507,7 +507,7 @@
     flex-direction: column;
     gap: 2rem;
   }
-  .course-project-heading h1{
+  .course-project-heading h2{
     font-size: 24px;
     font-weight: 600;
     font-family: 'Inter', sans-serif;
@@ -611,7 +611,7 @@
     gap:2rem;
    
   }
-  .course-review-heading h1{
+  .course-review-heading h12{
     font-size: 24px;
     font-weight: 600;
     font-family: 'Inter',sans-serif;
@@ -642,7 +642,7 @@
     line-height: 150%;
     color: #3f3f3f;
   }
-  .review-box-name h2{
+  .review-box-name p{
     font-size: 16px;
     font-weight: 500;
     font-family: 'Inter',sans-serif;
@@ -702,7 +702,7 @@
    padding-left: 24px;
 
   }
-  .course-certificate-heading h1{
+  .course-certificate-heading h2{
     font-size: 20px;
     font-weight: 600;
     font-family: 'Inter',sans-serif;
@@ -798,7 +798,7 @@
     gap:2rem;
     padding-left: 24px;
 }
-.course-faq-heading h1{
+.course-faq-heading h2{
     font-size: 24px;
     font-weight: 600;
     font-family: 'Inter',sans-serif;
@@ -866,7 +866,7 @@
     gap:2rem;
     padding-left: 24px;
 }
-.course-payment-heading h1{
+.course-payment-heading h2{
     font-size: 24px;
     font-weight: 600;
     font-family: 'Inter',sans-serif;
@@ -899,20 +899,20 @@
     font-weight: 400;
     font-size: 14px;
 }
-.payment-starting h2{
+.payment-starting p{
     font-size: 20px;
     font-weight: 600;
     font-family: 'Inter',sans-serif;
     color:#1c1623;
 }
-.payment-starting h1{
+.payment-starting h3{
     padding-top: 8px;
     font-size: 24px;
     font-weight: 700;
     font-family: 'Inter',sans-serif;
     color:#6D28D9;
 }
-.payment-points h2{
+.payment-points p{
     font-size: 16px;
     font-weight: 600;
     font-family: 'Inter',sans-serif;
@@ -950,7 +950,7 @@
     justify-content: center;
     gap:2rem;
 }
-.payment-option-heading h1{
+.payment-option-heading h3{
     padding-top: 8px;
     font-size: 20px;
     font-weight: 600;
@@ -967,7 +967,7 @@
     flex-direction: column;
     gap:1rem;
 }
-.payment-options-topic h3{
+.payment-options-topic h4{
     font-size: 16px;
     font-weight: 500;
     color: #1c1623;
@@ -1007,10 +1007,10 @@
         gap: 1rem;
         padding: 16px;
     }
-    .payment-starting h2{
+    .payment-starting p{
         font-size: 18px;
     }
-    .payment-starting h1{
+    .payment-starting h3{
         font-size: 20px;
     }
 }

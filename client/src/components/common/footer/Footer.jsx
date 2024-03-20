@@ -17,7 +17,7 @@ function Footer() {
         <div className="footer-container-contents">
 
           <div className="footer-content">
-            <div className="footer-content-heading"><h1>Solutions</h1></div>
+            <div className="footer-content-heading"><h2>Solutions</h2></div>
             <div className="footer-content-text"><p>UI/UX Audit</p></div>
             <div className="footer-content-text"><p>Research & Design</p></div>
             <div className="footer-content-text"><p>Market Analysis</p></div>
@@ -27,7 +27,7 @@ function Footer() {
           </div>
 
           <div className="footer-content">
-            <div className="footer-content-heading"><h1>Resource</h1></div>
+            <div className="footer-content-heading"><h2>Resource</h2></div>
             <div className="footer-content-text"><p>Blogs</p></div>
             <div className="footer-content-text"><p>Trending</p></div>
             <div className="footer-content-text"><p>Insights & Reports</p></div>
@@ -36,7 +36,7 @@ function Footer() {
           </div>
 
           <div className="footer-content">
-            <div className="footer-content-heading"><h1>Academy</h1></div>
+            <div className="footer-content-heading"><h2>Academy</h2></div>
             <div className="footer-content-text"><p>Certification Courses</p></div>
             <div className="footer-content-text"><p>Webinars</p></div>
             <div className="footer-content-text"><p>Masterclass</p></div>
@@ -44,7 +44,7 @@ function Footer() {
           </div>
 
           <div className="footer-content">
-            <div className="footer-content-heading"><h1>Company</h1></div>
+            <div className="footer-content-heading"><h2>Company</h2></div>
             <div className="footer-content-text"><p>Our Story</p></div>
             <div className="footer-content-text"><p>Careers</p></div>
             <div className="footer-content-text"><p>Investor Relation</p></div>
@@ -54,7 +54,7 @@ function Footer() {
           </div>
 
           <div className="footer-content">
-            <div className="footer-content-heading"><h1>Compliance</h1></div>
+            <div className="footer-content-heading"><h2>Compliance</h2></div>
             <div className="footer-content-text"><p>Terms of Service</p></div>
             <div className="footer-content-text"><p>Privacy Policy</p></div>
             <div className="footer-content-text"><p>Anti-Spam Policy</p></div>

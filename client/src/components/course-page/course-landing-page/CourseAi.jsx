@@ -7,13 +7,13 @@ export default function CourseAi(){
         <main>
             <div className="course-landing-ai">
                 <div className="course-landing-ai-container">
-                    <div className="course-landing-ai-heading"><h1>Artificial Intelligence Course</h1></div>
+                    <div className="course-landing-ai-heading"><h2>Artificial Intelligence Course</h2></div>
                     <div className="course-landing-ai-box-container">
                     {CourseAiData.map((item, index) => (
                         <div className="course-landing-ai-box" key={index}>
 
                             <div className="course-landing-ai-card-title">
-                                <h1>{item.title} </h1>
+                                <h3>{item.title} </h3>
                             </div>
 
                             <div className="course-landing-ai-contents">
@@ -24,7 +24,7 @@ export default function CourseAi(){
                                 <div className="landing-ai-card-labels">
                                     <div className="landing-ai-card-labels-contents">
                                         {Object.values(item.label).map((label, index) => (
-                                            <h3 key={index}>{label}</h3>
+                                            <p key={index}>{label}</p>
                                         ))}
                                     </div>
                                 </div>
@@ -32,11 +32,11 @@ export default function CourseAi(){
                                 <hr />
 
                                 <div className="landing-ai-card-ratings">
-                                    <img src={item.fullstar} alt="" className="fullstar"/>
-                                    <img src={item.fullstar} alt="" className="fullstar"/>
-                                    <img src={item.fullstar} alt="" className="fullstar"/>
-                                    <img src={item.fullstar} alt="" className="fullstar"/>
-                                    <img src={item.halfstar} alt="" className="halfstar"/>
+                                    <img src={item.fullstar} alt="rating" className="fullstar"/>
+                                    <img src={item.fullstar} alt="rating" className="fullstar"/>
+                                    <img src={item.fullstar} alt="rating" className="fullstar"/>
+                                    <img src={item.fullstar} alt="rating" className="fullstar"/>
+                                    <img src={item.halfstar} alt="rating" className="halfstar"/>
                                     <p>{item.rating}</p>
                                 </div>
 

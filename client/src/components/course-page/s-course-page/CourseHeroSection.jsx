@@ -69,8 +69,8 @@ function shareToLinkedIn() {
 
                     <div className="hero-main">
                         <div className="hero-label">
-                            <div className="hero-category">UI/UX</div>
-                            <div className="hero-popularity">Popular</div>
+                            <div className="hero-category"><p>UI/UX</p></div>
+                            <div className="hero-popularity"><p>Popular</p></div>
                             <div className="share">
                                 <img src={Share} alt="" onClick={courseShare} />
                             </div>
@@ -130,16 +130,16 @@ function shareToLinkedIn() {
                             </div>
                         </div>
                         <div className="hero-start-date">
-                            <div className="start-date-heading">Start date</div>
-                            <div className="start-date">March 1, 2024</div>
+                            <div className="start-date-heading"><p>Start date</p></div>
+                            <div className="start-date"><p>March 1, 2024</p></div>
                         </div>
                         <div className="hero-level">
-                            <div className="level-heading">Level</div>
-                            <div className="level">Advanced</div>
+                            <div className="level-heading"><p>Level</p></div>
+                            <div className="level"><p>Advanced</p></div>
                         </div>
                         <div className="hero-duration">
-                            <div className="duration-heading">Duration</div>
-                            <div className="duration">3 Months</div>
+                            <div className="duration-heading"><p>Duration</p></div>
+                            <div className="duration"><p>3 Months</p></div>
                         </div>
 
                     </div>

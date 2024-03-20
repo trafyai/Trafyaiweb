@@ -21,14 +21,14 @@ export default function LandingOptimised() {
             <div className="landing-optimised">
                 <div className="landing-optimised-container">
                     <div className="landing-optimised-left">
-                        <h1>Optimised for students and working professionals</h1>
+                        <h3>Optimised for students and working professionals</h3>
                         <p>Our AI powered curriculum builds personalized education goals</p>
                     </div>
                     <div className="landing-optimised-right">
                         <div className="landing-optimised-accordion">
                             <div className="landing-optimised-accordion-contents" onClick={() => openAccordion(1)}>
                                 <div className="landing-accordion-heading">
-                                    <h1>For Students</h1>
+                                    <h4>For Students</h4>
                                     <img src={ExpandMore}  className={`accordion-icon ${accordionStates[1] ? 'rotated' : ''}`} />
                                 </div>
                                 {accordionStates[1] && <div className="landing-accordion-contents">Hoping for a bright future? Want to get into the core company of your interest? 
@@ -37,7 +37,7 @@ export default function LandingOptimised() {
                             </div>
                             <div className="landing-optimised-accordion-contents" onClick={() => openAccordion(2)}>
                                 <div className="landing-accordion-heading">
-                                    <h1>For Professionals</h1>
+                                    <h4>For Professionals</h4>
                                     <img src={ExpandMore}  className={`accordion-icon ${accordionStates[2] ? 'rotated' : ''}`} />
                                 </div>
                                 {accordionStates[2] && <div className="landing-accordion-contents">Feeling detached from the job you are passionate about? Want to transition your career to a treading and growing industry? 

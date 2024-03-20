@@ -8,7 +8,7 @@ export default function LandingReview(){
             <div className="landing-review">
                 <div className="landing-review-container">
                     <div className="landing-review-top">
-                        <h1>Created to Transform Lives</h1>
+                        <h2>Created to Transform Lives</h2>
                         <p>Know what our precious learners have said about the course</p>
                     </div>
                     <div className="landing-review-bottom">
@@ -18,7 +18,7 @@ export default function LandingReview(){
                             <p>Comprehensive UI/UX course! Clear explanations, practical exercises, and great support. Perfect for beginners and professionals alike. Highly recommended! </p>
                             </div>
                             <div className="landing-review-name">
-                                <h3>Sindhuja Nair</h3>
+                                <p>Sindhuja Nair</p>
                             </div>
                         </div>
                         <div className="landing-review-card">
@@ -27,7 +27,7 @@ export default function LandingReview(){
                             <p>Enriching spatial design course! Fosters creativity, insightful lectures, practical projects. Engaging instructors make learning enjoyable.</p>
                             </div>
                             <div className="landing-review-name">
-                                <h3>Priyanka Gauda</h3>
+                                <p>Priyanka Gauda</p>
                             </div>
                         </div>
                         <div className="landing-review-card">
@@ -36,7 +36,7 @@ export default function LandingReview(){
                             <p>Informative UX course! Comprehensive curriculum, interactive assignments, valuable insights. Enhanced my understanding of user experience design. Friendly Tutor!</p>
                             </div>
                             <div className="landing-review-name">
-                                <h3>Bhavish Reddy</h3>
+                                <p>Bhavish Reddy</p>
                             </div>
                         </div>
                     </div>

@@ -17,7 +17,7 @@
     flex-direction: column;
     gap: 2rem;
 }
-.course-landing-ai-heading h1{
+.course-landing-ai-heading h2{
     padding-top: 8px;
     font-size: 24px;
     font-weight: 600;
@@ -57,7 +57,7 @@
     border-top-right-radius: 24px;
     background-color: #D9CEFB;
 }
-.course-landing-ai-card-title h1,.course-landing-dm-card-title h1,.course-landing-uiux-card-title h1{
+.course-landing-ai-card-title h3,.course-landing-dm-card-title h3,.course-landing-uiux-card-title h3{
     padding-top: 8px;
     font-size: 18px;
     font-weight: 500;
@@ -84,7 +84,7 @@
     flex-wrap: wrap;
     gap: 0.5rem;
 }
-.landing-ai-card-labels-contents h3{
+.landing-ai-card-labels-contents p{
     padding: 4px 12px;
     border: 1px solid #e4e4e4;
     border-radius: 16px;

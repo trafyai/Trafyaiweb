@@ -7,16 +7,14 @@ export default function LandingLearning(){
             <div className="landing-learning">
                 <div className="landing-learning-container">
                     <div className="landing-learning-left">
-                        <h1>Personalized Mentored 
-                            Learning Paths
-                        </h1>
+                        <h2>Personalized Mentored Learning Paths</h2>
                         <p>Learn from industry professionals and experts of the field. 
                             Connect with mentors personally and have unlimited doubt clearing sessions. Each session will be curated to help you learn better.</p>
                     </div>
                     <div className="landing-learning-right">
                         <div className="landing-learning-right-one">
                             <div className="learning-right-one-heading">
-                                <h1>Education</h1>
+                                <h3>Education</h3>
                                 <hr />
                             </div>
                             <div className="learning-right-one-contents">
@@ -29,7 +27,7 @@ export default function LandingLearning(){
                         </div>
                         <div className="landing-learning-right-one">
                             <div className="learning-right-one-heading">
-                                <h1>Carrer</h1>
+                                <h3>Carrer</h3>
                                 <hr />
                             </div>
                             <div className="learning-right-one-contents">

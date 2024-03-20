@@ -19,7 +19,7 @@ export default function CourseSyllabusSection() {
         <main>
             <div className="course-syllabus">
                 <div className="course-syllabus-container">
-                    <div className="course-syllabus-heading"><h1>Course Syllabus</h1></div>
+                    <div className="course-syllabus-heading"><h2>Course Syllabus</h2></div>
                     <div className="course-syllabus-accordion-container">
                         {[
                             { title: "De Finibus Bonorum et Malorum", content: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident" },

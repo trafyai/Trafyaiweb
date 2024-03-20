@@ -7,7 +7,7 @@ export default function CourseReviewSection(){
              <div className="course-review">
                 <div className="course-review-container">
                     <div className="course-review-heading">
-                        <h1>Review</h1>
+                        <h2>Review</h2>
                     </div>
                    <div className="course-review-contents">
                    {[
@@ -20,7 +20,7 @@ export default function CourseReviewSection(){
                               <div className="review-box-description">
                                 <p>{item.content}</p>
                               </div>
-                              <div className="review-box-name"><h2>{item.name}</h2></div>
+                              <div className="review-box-name"><p>{item.name}</p></div>
                            </div>
 
                         ))}

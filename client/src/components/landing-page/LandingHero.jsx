@@ -83,7 +83,7 @@ const LandingHero = () => {
         } else {
             return (
                 <div className="landing-hero-top">
-                <h1>Get a free career consultation</h1>
+                <h3>Get a free career consultation</h3>
                 <form className="landing-hero-form">
                     <input type="text" placeholder="Name" required autoComplete="off" name="name" className="landing-name" value={userData.name} onChange={postUserData} />
                     <div>
@@ -128,7 +128,7 @@ const LandingHero = () => {
                         </div>
                         <div className="landing-hero-last">
                             <div className="landing-hero-last-heading"><p>Upcoming Events:</p></div>
-                            <div className="landing-hero-last-interactive"><p>Masterclass on responsive design</p></div>
+                            <div className="landing-hero-last-interactive"><h2>Masterclass on responsive design</h2></div>
                         </div>
                     </div>
                 </div>

@@ -14,7 +14,7 @@ export default function CourseDescriptionSection(){
                 <div className="course-description-container">
                     <div className="left-description-container">
                     <div className="about-course">
-                        <div className="about-course-heading"><h1>About the Course</h1></div>
+                        <div className="about-course-heading"><h2>About the Course</h2></div>
                         <div className="about-course-description">
                             <p>Cross Platform UI/UX development curriculum is built on deep core 
                             values of designing like user research, usability, testing, designing 
@@ -24,7 +24,7 @@ export default function CourseDescriptionSection(){
                         </div>
                     </div>
                         <div className="course-tools">
-                            <div className="tools-covered"><h1>Tools Covered</h1></div>
+                            <div className="tools-covered"><h2>Tools Covered</h2></div>
                             <div className="tools-img">
                                 <img src={Figma} alt="Figma" />
                                 <img src={Miro} alt="Miro" />
@@ -36,7 +36,7 @@ export default function CourseDescriptionSection(){
                     </div>
 
                     <div className="course-skills">
-                        <div className="course-skills-heading"><h1>Skills you will Master</h1></div>
+                        <div className="course-skills-heading"><h2>Skills you will Master</h2></div>
                         <div className="course-skills-description">
                             <ul>
                                 <li>

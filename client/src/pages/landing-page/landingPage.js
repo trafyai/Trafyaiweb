@@ -8,14 +8,14 @@ import LandingBetterTogether from "../../components/landing-page/LandingBetterTo
 import { Helmet } from 'react-helmet';
 
 export default function landingPage(){
-    const currentPageUrl = 'http://www.trafyai.com/';
+    const currentPageUrl = 'https://www.trafyai.com';
     return(
         <>
          <Helmet>
-        <title>Trafy</title>
+        <title>Trafy | Interactive Learning, Next Generation Courses.</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href={currentPageUrl} />
-        <meta name="description" content="Gain knowledge of advanced concepts with our unique Interactive, Immersive, and Adaptive learning modules and accelerate your career." />
+        <meta name="description" content="Learn UI/UX designing, artificial intelligence, and digital marketing with our interactive courses and accelerate your career with expert guidance" />
       </Helmet>
         <LandingHero/>
         <LandingLearning/>

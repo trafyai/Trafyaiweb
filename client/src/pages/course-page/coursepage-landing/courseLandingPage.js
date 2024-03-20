@@ -5,7 +5,7 @@ import CourseDm from "../../../components/course-page/course-landing-page/Course
 import { Helmet } from 'react-helmet';
 
 export default function courseLandingPage(){
-    const currentPageUrl = 'http://www.trafyai.com/courses';
+    const currentPageUrl = 'https://www.trafyai.com/courses';
     return(
         <>
         <Helmet>
