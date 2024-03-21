@@ -6,7 +6,7 @@ export default function errorPage(){
     return(
         <>
         <Helmet>
-        <title>Error 404 (Not Found) </title>
+        <title>Error 404 (Not Found)</title>
         </Helmet>
         <ErrorPage/>
         </>
