@@ -3,7 +3,7 @@
     padding-bottom: 90px;
     display: flex;
     justify-content: center;
-    background-color: #1c1623;
+    background-color:var(--h-text-b-clr);
 }
 .landing-hero-container{
     width: 95%;
@@ -24,32 +24,32 @@
 }
 .landing-hero-left h1{
     font-size: 52px;
-    font-family: 'Raleway', sans-serif;
+    font-family: var( --h-font);
     font-weight: 700;
-    color: #fcfefe;
+    color: var( --h-text-w-clr);
     line-height: 130%;
 }
 .landing-hero-left p{
     font-size: 16px;
     width: 80%;
-    font-family: 'Inter', sans-serif;
+    font-family:var( --p-font);
     font-weight: 400;
     line-height: 150%;
-    color:#fcfefe;
+    color:var( --h-text-w-clr);
 }
 .landing-hero-left button{
     margin-top: 8px;
     width: max-content;
     padding: 8px 16px;
-    border: 1px solid #fcfefe;
+    border: 1px solid var( --h-text-w-clr);
     background-color:inherit;
     border-radius: 8px;
-    color:#fcfefe;
+    color:var( --h-text-w-clr);
     font-size: 16px;
 }
 .landing-hero-left button:hover{
-    color: #1c1623;
-    background-color:#fcfefe;
+    color: var(--h-text-b-clr);
+    background-color:var( --h-text-w-clr);
 }
 .landing-hero-right{
     width: 40%;
@@ -68,9 +68,9 @@
 }
 .landing-hero-top h3{
     font-size: 24px;
-    font-family: 'Raleway', sans-serif;
+    font-family: var( --h-font);
     font-weight: 500;
-    color: #1c1623;
+    color: var(--h-text-b-clr);
     text-align: center;
 }
 .landing-hero-form{
@@ -84,22 +84,22 @@
     height: 40px;
     padding: 8px;
     border: 1px solid #c1bfbf;
-    background-color: #fcfefe;
+    background-color: var( --h-text-w-clr);
     border-radius: 8px;
-    font-family: 'Inter', sans-serif;
+    font-family: var( --p-font);
     font-size: 16px;
 }
 .landing-hero-form-btn{
     width: max-content;
     padding: 8px 16px;
     border: 2px solid #47424d;
-    background-color:#1c1623;
+    background-color:var(--h-text-b-clr);
     border-radius: 8px;
-    color: #fcfefe;
+    color: var( --h-text-w-clr);
     font-size: 14px;
 }
 .landing-hero-form-btn:hover{
-    color: #1c1623;
+    color: var(--h-text-b-clr);
     background-color: inherit;
 }
 .landing-hero-bottom {
@@ -120,16 +120,16 @@
 }
 .landing-hero-form-submit-message-heading{
     font-size: 24px;
-    font-family: 'Inter', sans-serif;
+    font-family: var( --p-font);
     font-weight: 500;
-    color:#1c1623;
+    color:var(--h-text-b-clr);
     text-align: center;
 }
 .landing-hero-form-submit-message-description{
     font-size: 18px;
-    font-family: 'Inter', sans-serif;
+    font-family: var( --p-font);
     font-weight: 400;
-    color:#1c1623;
+    color:var(--h-text-b-clr);
     text-align: center;
 }
 .landing-hero-live, .landing-hero-training, .landing-hero-placement{
@@ -161,10 +161,10 @@
 .landing-hero-live p, .landing-hero-training p, .landing-hero-placement p{
     font-size: 16px;
     width: 50%;
-    font-family: 'Inter', sans-serif;
+    font-family: var( --p-font);
     font-weight: 500;
     line-height: 150%;
-    color:#1c1623;
+    color:var(--h-text-b-clr);
     text-align: center;
 }
 .landing-hero-placement p{
@@ -182,17 +182,17 @@
 }
 .landing-hero-last-heading p{
     font-size: 16px;
-    font-family: 'Inter', sans-serif;
+    font-family: var( --p-font);
     font-weight: 400;
     line-height: 150%;
-    color:#1c1623;
+    color:var(--h-text-b-clr);
 }
 .landing-hero-last-interactive h2{
     font-size: 18px;
-    font-family: 'Inter', sans-serif;
+    font-family:var( --p-font);
     font-weight: 600;
     line-height: 150%;
-    color:#1c1623;
+    color:var(--h-text-b-clr);
 }
 
 @media only screen and (max-width:1100px){
@@ -307,7 +307,7 @@
     padding-top: 40px;
     display: flex;
     justify-content: center;
-    background-color: #1c1623;
+    background-color: var(--h-text-b-clr);
 }
 .landing-learning-container{
     width: 85%;
@@ -323,17 +323,17 @@
 }
 .landing-learning-left h2 {
     font-size: 40px;
-    font-family: 'Raleway', sans-serif;
+    font-family: var( --h-font);
     font-weight: 700;
     line-height: 150%;
-    color: #fcfe;
+    color: var(--landing-heading-clr);
 }
 .landing-learning-left p {
     font-size: 18px;
-    font-family: 'Inter', sans-serif;
+    font-family: var( --p-font);
     font-weight: 400;
     line-height: 150%;
-    color: #e2e2e2;
+    color: var(--p-text-w-clr);
 }
 .landing-learning-right{
     width: max-content;
@@ -359,7 +359,7 @@
 }
 .learning-right-one-heading h3 {
     font-size: 18px;
-    font-family: 'Raleway', sans-serif;
+    font-family: var( --h-font);
     font-weight: 500;
     color: #fcf8fc;
 }
@@ -376,8 +376,8 @@
     align-items: center;
     gap: 1.5rem;
     font-size: 16px;
-    font-family: 'Inter', sans-serif;
-    color: #e2e2e2;
+    font-family: var( --p-font);
+    color: var(--p-text-w-clr);
     list-style-type: none;
     line-height: 150%;
 }
@@ -464,7 +464,7 @@
     padding-top: 40px;
     display: flex;
     justify-content: center;
-    background-color: #1c1623;
+    background-color: var(--h-text-b-clr);
 }
 .landing-explore-container {
     width: 85%;
@@ -485,9 +485,9 @@
 }
 .landing-explore-left h2 {
     font-size: 40px;
-    font-family: 'Raleway', sans-serif;
+    font-family: var( --h-font);
     font-weight: 700;
-    color: #ffccfc;
+    color: var(--landing-heading-clr);
     line-height: 150%;
 }
 .landing-explore-right{
@@ -514,9 +514,9 @@
 
 .landing-explore-ai h3, .landing-explore-uiux h3, .landing-explore-dm h3{
     font-size: 20px;
-    font-family: 'Inter', sans-serif;
+    font-family: var( --p-font);
     font-weight: 500;
-    color: #1c1623;
+    color: var(--h-text-b-clr);
     line-height: 150%;
 }
 @media only screen and (max-width:1024px){
@@ -571,7 +571,7 @@
     padding-top: 40px;
     display: flex;
     justify-content: center;
-    background-color: #1c1623;
+    background-color: var(--h-text-b-clr);
 }
 .landing-optimised-container{
     width: 85%;
@@ -587,16 +587,16 @@
 }
 .landing-optimised-left h3 {
     font-size: 40px;
-    font-family: 'Raleway', sans-serif;
+    font-family: var( --h-font);
     font-weight: 700;
-    color: #fcf;
+    color: var(--landing-heading-clr);
     line-height: 150%;
 }
 .landing-optimised-left p {
     font-size: 18px;
-    font-family: 'Inter', sans-serif;
+    font-family:var( --p-font);
     font-weight: 400;
-    color: #e2e2e2;
+    color: var(--p-text-w-clr);
     line-height: 150%;
 }
 .landing-optimised-right{
@@ -631,14 +631,14 @@
 }
 .landing-accordion-heading h4{
     font-size: 24px;
-    font-family: 'Raleway', sans-serif;
+    font-family: var( --h-font);
     font-weight: 600;
     color: #fcf8fc;
     line-height: 150%;
 }
 .landing-accordion-contents{
     font-size: 16px;
-    font-family: 'Inter',sans-serif;
+    font-family: var( --p-font);
     color: #fcf8fc;
     line-height: 150%;
 }
@@ -703,7 +703,7 @@
     padding-top: 40px;
     display: flex;
     justify-content: center;
-    background-color: #1c1623;
+    background-color: var(--h-text-b-clr);
 }
 .landing-review-container{
     width: 85%;
@@ -719,16 +719,16 @@
 }
 .landing-review-top h2 {
     font-size: 40px;
-    font-family: 'Raleway', sans-serif;
+    font-family: var( --h-font);
     font-weight: 700;
-    color: #fcf;
+    color: var(--landing-heading-clr);
     line-height: 150%;
 }
 .landing-review-top p {
     font-size: 18px;
-    font-family: 'Inter', sans-serif;
+    font-family: var( --p-font);
     font-weight: 400;
-    color: #e2e2e2;
+    color: var(--p-text-w-clr);
     line-height: 150%;
 }
 .landing-review-bottom{
@@ -758,16 +758,16 @@
 }
 .landing-review-name p {
     font-size: 16px;
-    font-family: 'Inter', sans-serif;
+    font-family:var( --p-font);
     font-weight: 500;
-    color: #e2e2e2;
+    color: var(--p-text-w-clr);
     line-height: 150%;
 }
 .landing-reviews p{
     font-size: 16px;
-    font-family: 'Inter', sans-serif;
+    font-family: var( --p-font);
     font-weight: 400;
-    color: #e2e2e2;
+    color: var(--p-text-w-clr);
     line-height: 150%;
 }
 @media only screen and (max-width:1024px){
@@ -834,7 +834,7 @@
     padding-top: 40px;
     display: flex;
     justify-content: center;
-    background-color: #1c1623;
+    background-color: var(--h-text-b-clr);
 }
 .landing-newsletter-container{
     width: 70%;
@@ -857,9 +857,9 @@
 }
 .landing-newsletter-heading p{
     font-size: 32px;
-    font-family: 'Raleway', sans-serif;
+    font-family: var( --h-font);
     font-weight: 700;
-    color: #1c1623;
+    color: var(--h-text-b-clr);
     line-height: 150%;
 }
 .landing-newsletter-form{
@@ -872,7 +872,7 @@
     display: flex;
     align-items: center;
     border-radius: 8px;
-    border: 2px solid #1c1623;
+    border: 2px solid var(--h-text-b-clr);
     padding: 4px 8px;
 }
 .landing-newsletter-form input{
@@ -884,7 +884,7 @@
     border-top-left-radius:8px ;
     border-bottom-left-radius:8px ;
     font-size: 16px;
-    color:#1c1623;
+    color:var(--h-text-b-clr);
 }
 .landing-newsletter-email::placeholder {
     color:#3f3f3f;
@@ -898,16 +898,16 @@
     width: max-content;
     padding: 8px 14px;
     font-size: 14px;
-    font-family: 'Inter', sans-serif;
-    background-color: #1c1623;
-    border: 2px solid #1c1623;
+    font-family:var( --p-font);
+    background-color: var(--h-text-b-clr);
+    border: 2px solid var(--h-text-b-clr);
     border-radius: 8px;
-    color: #fcfefe;
+    color: var( --h-text-w-clr);
     margin-left:8px;
 }
 .landing-newsletter-form button:hover{
     background-color: inherit;
-    color: #1c1623;
+    color: var(--h-text-b-clr);
     font-weight: 500;
 }
 
@@ -982,7 +982,7 @@
     padding-top: 40px;
     display: flex;
     justify-content: center;
-    background-color: #1c1623;
+    background-color: var(--h-text-b-clr);
 }
 .landing-better-container{
     width: 85%;
@@ -1000,20 +1000,20 @@
 }
 .landing-better-left h3 {
     font-size: 16px;
-    font-family: 'Inter', sans-serif;
+    font-family:var( --p-font);
     font-weight: 600;
     color: #fcf8fc;
 }
 .landing-better-left h4{
     font-size: 40px;
-    font-family: 'Raleway', sans-serif;
+    font-family: var( --h-font);
     font-weight: 700;
-    color: #fcf;
+    color: var(--landing-heading-clr);
 }
 .landing-better-left p {
     width: 80%;
     font-size: 16px;
-    font-family: 'Inter', sans-serif;
+    font-family:var( --p-font);
     font-weight: 400;
     color: #e2e2e2;
     line-height: 150%;

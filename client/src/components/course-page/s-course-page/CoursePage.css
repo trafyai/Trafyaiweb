@@ -2,7 +2,7 @@
     padding-top: 120px;
     display: flex;
     justify-content: center;
-    background-color: #f9f7ff;
+    background-color: var(--uiux-bg-clr);
 }
 .hero-section-container{
     width: 80%;
@@ -30,30 +30,30 @@
     color:#121212;
     border: 1px solid #121212;
     border-radius: 8px;
-    font-family: 'Inter',sans-serif;
+    font-family:var( --p-font);
     font-weight: 400;
     font-size: 14px;
 }
 .hero-main-heading h1{
-    color:#1c1623;
-    font-family: 'Inter',sans-serif;
+    color:var(--h-text-b-clr);
+    font-family: var( --p-font);
     font-weight: 700;
     font-size: 40px;
 }
 .hero-description p{
-    font-family: 'Inter',sans-serif;
+    font-family: var( --p-font);
     font-weight: 400;
     font-size: 16px;
     width: 80%;
     line-height: 150%;
-    color: #3f3f3f;
+    color: var(--p-text-b-clr);
 }
 .hero-rating{
     display: flex;
     gap:0.5rem;
 }
 .hero-rating-number{
-    font-family: 'Inter',sans-serif;
+    font-family:var( --p-font);
     font-weight: 500;
     font-size: 15px;
 }
@@ -64,18 +64,18 @@
 }
 .hero-enroll{
     padding: 8px 24px;
-    border: 2px solid #6D28D9;
+    border: 2px solid var(--trafy-purple);
     border-radius: 8px;
-    background-color: #6D28D9;
+    background-color: var(--trafy-purple);
     color:#f8f8ff;
     font-size: 16px;
 }
 .hero-enroll:hover{
     background-color: inherit;
-    color: #6D28D9;
+    color: var(--trafy-purple);
 }
 .hero-enrolled{
-    font-family: 'Inter',sans-serif;
+    font-family: var( --p-font);
     font-weight: 500;
     font-size: 15px;
 }
@@ -92,10 +92,10 @@
     gap:0.6rem;
 }
 .platform-heading p, .start-date-heading p, .level-heading p, .duration-heading p{
-    font-family: 'Inter',sans-serif;
+    font-family: var( --p-font);
     font-weight: 400;
     font-size: 16px;
-    color: #3f3f3f;
+    color: var(--p-text-b-clr);
 }
 .platform-images{
     display: flex;
@@ -105,10 +105,10 @@
     height: 28px;
 }
 .start-date p, .level p, .duration p{
-    font-family: 'Inter',sans-serif;
+    font-family:var( --p-font);
     font-weight: 600;
     font-size: 18px;
-    color:#1c1623;
+    color:var(--h-text-b-clr);
 }
 
 
@@ -199,7 +199,7 @@
     height: max-content;
     padding: 24px;
     border-radius: 24px;
-    background-color: #fcfefe;
+    background-color: var( --h-text-w-clr);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -217,7 +217,7 @@
     justify-content: space-between;
 }
 .course-share-exit p{
-    font-family: 'Inter',sans-serif;
+    font-family: var( --p-font);
     font-size: 16px;
     font-weight: 400;
 }
@@ -246,16 +246,16 @@
     width: 100%;
     height:30px;
     border-radius: 8px;
-    font-family: 'Inter',sans-serif;
+    font-family: var( --p-font);
     font-size: 16px;
 }
 .course-share-link button{
     width: max-content;
-    border: 2px solid #1c1623;
-    color:#fcfefe;
+    border: 2px solid var(--h-text-b-clr);
+    color:var( --h-text-w-clr);
     border-radius: 8px;
     padding: 4px 12px;
-    background-color: #1c1623;
+    background-color: var(--h-text-b-clr);
 }
 .alert {
     position: fixed;
@@ -263,11 +263,11 @@
     left: 20px;
     transform: translateY(-50%);
     padding: 10px;
-    background-color: #1c1623;
-    color: #fcfefe;
+    background-color: var(--h-text-b-clr);
+    color: var( --h-text-w-clr);
     font-size: 14px;
     border-radius: 8px;
-    font-family: 'Inter',sans-serif;
+    font-family: var( --p-font);
     z-index: 9999;
 }
 
@@ -299,7 +299,7 @@
     padding-top: 60px;
     display: flex;
     justify-content: center;
-    background-color: #f9f7ff;
+    background-color: var(--uiux-bg-clr);
 }
 .course-description-container{
     width: 80%;
@@ -321,15 +321,15 @@
 .about-course-heading h2, .course-skills-heading h2, .tools-covered h2{
     font-size: 24px;
     font-weight: 600;
-    font-family: 'Inter',sans-serif;
-    color:#1c1623;
+    font-family:var( --p-font);
+    color:var(--h-text-b-clr);
 }
 .about-course-description p{
     font-size: 16px;
     font-weight: 400px;
-    font-family: 'Inter',sans-serif;
+    font-family: var( --p-font);
     line-height: 150%;
-    color: #3f3f3f;
+    color: var(--p-text-b-clr);
 }
 .course-tools{
     width: max-content;
@@ -359,10 +359,10 @@
     list-style-type: none;
     font-size: 16px;
     font-weight: 400px;
-    font-family: 'Inter',sans-serif;
+    font-family: var( --p-font);
     line-height: 150%;
     display: flex;
-    color: #3f3f3f;
+    color: var(--p-text-b-clr);
 }
 .course-skills-description li::before {
     content: "\2714"; /* Unicode tick mark character */
@@ -422,7 +422,7 @@
     padding:90px 0px;
     display: flex;
     justify-content: center;
-    background-color: #f9f7ff;
+    background-color: var(--uiux-bg-clr);
 }
 .course-syllabus-container{
     width: 80%;
@@ -433,15 +433,15 @@
 }
 .course-syllabus-heading h2{
     font-size: 24px;
-    color:#1c1623;
+    color:var(--h-text-b-clr);
     font-weight: 600;
-    font-family: 'Inter',sans-serif;
+    font-family: var( --p-font);
 }
 .course-syllabus-accordion-container{
     display: flex;
     flex-direction: column;
     border: 1px solid #e4e4e4;
-    background-color: #fcfefe;
+    background-color: var( --h-text-w-clr);
     border-radius: 16px;
 }
 .course-syllabus-accordion{
@@ -463,15 +463,15 @@
 .syllabus-accordion-title h2{
     font-size: 16px;
     font-weight: 500;
-    font-family: 'Inter',sans-serif;
-    color:#1c1623;
+    font-family: var( --p-font);
+    color:var(--h-text-b-clr);
 }
 .syllabus-accordion-contents p{
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
-    font-family: 'Inter',sans-serif;
-    color: #3f3f3f;
+    font-family:var( --p-font);
+    color: var(--p-text-b-clr);
 }
 .rotated {
     transform: rotate(180deg);
@@ -498,7 +498,7 @@
     display: flex;
     padding: 90px 0px;
     justify-content: center;
-    background-color: #fcfefe;
+    background-color: var( --h-text-w-clr);
   }
   .course-project-container{
     width: 80%;
@@ -510,8 +510,8 @@
   .course-project-heading h2{
     font-size: 24px;
     font-weight: 600;
-    font-family: 'Inter', sans-serif;
-    color:#1c1623;
+    font-family: var( --p-font);
+    color:var(--h-text-b-clr);
   }
   .course-projects-contents{
     display: grid;
@@ -523,7 +523,7 @@
     max-height: 350px;
     min-height: 250px;
     border: 1px solid #e4e4e4;
-    background-color: #fcfefe;
+    background-color: var( --h-text-w-clr);
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -537,21 +537,21 @@
     max-height: 170px;
     overflow: hidden;
   }
-  .project-box h2{
+  .project-box h3{
     font-size: 16px;
     font-weight: 600;
-    font-family: 'Inter', sans-serif;
+    font-family: var( --p-font);
     padding: 16px;
-    color:#1c1623;
+    color:var(--h-text-b-clr);
   }
   .project-box-description{
   }
   .project-box-description p{
     font-size: 16px;
     font-weight: 400;
-    font-family: 'Inter', sans-serif;
+    font-family: var( --p-font);
     line-height: 150%;
-    color: #3f3f3f;
+    color: var(--p-text-b-clr);
   }
   .project-view-btn{
     display: flex;
@@ -560,7 +560,7 @@
   }
   .project-view-btn p{
     width: max-content;
-    font-family: 'Inter', sans-serif;
+    font-family: var( --p-font);
     font-size: 14px;
   }
   .project-view-btn:hover{
@@ -601,7 +601,7 @@
     display: flex;
     justify-content: center;
     padding:90px 0px;
-    background-color: #f9f7ff;
+    background-color: var(--uiux-bg-clr);
   }
   .course-review-container{
     width: 80%;
@@ -611,11 +611,11 @@
     gap:2rem;
    
   }
-  .course-review-heading h12{
+  .course-review-heading h2{
     font-size: 24px;
     font-weight: 600;
-    font-family: 'Inter',sans-serif;
-    color:#1c1623;
+    font-family: var( --p-font);
+    color:var(--h-text-b-clr);
   }
   .course-review-contents{
     display: grid;
@@ -627,7 +627,7 @@
     max-height: 350px;
     min-height: 250px;
     border: 1px solid #e4e4e4;
-    background-color: #fcfefe;
+    background-color: var( --h-text-w-clr);
     border-radius: 24px;
     display: flex;
     flex-direction: column;
@@ -638,15 +638,15 @@
   .review-box-description p{
     font-size: 16px;
     font-weight: 400px;
-    font-family: 'Inter',sans-serif;
+    font-family:var( --p-font);
     line-height: 150%;
-    color: #3f3f3f;
+    color: var(--p-text-b-clr);
   }
   .review-box-name p{
     font-size: 16px;
     font-weight: 500;
-    font-family: 'Inter',sans-serif;
-    color:#1c1623;
+    font-family: var( --p-font);
+    color:var(--h-text-b-clr);
   }
  
   @media only screen and (max-width:1024px){
@@ -693,7 +693,7 @@
     display: flex;
     justify-content: center;
     padding:90px 0px;
-    background-color: #f9f7ff;
+    background-color: var(--uiux-bg-clr);
   }
   .course-certificate-container{
     width: 80%;
@@ -705,8 +705,8 @@
   .course-certificate-heading h2{
     font-size: 20px;
     font-weight: 600;
-    font-family: 'Inter',sans-serif;
-    color:#1c1623;
+    font-family: var( --p-font);
+    color:var(--h-text-b-clr);
   }
   .course-certificate-contents{
     /* display: flex;
@@ -716,7 +716,7 @@
     height: max-content;
     border: 1px solid #e4e4e4;
     border-radius: 16px;
-    background-color: #fcfefe;
+    background-color: var( --h-text-w-clr);
   }
   .course-certificate-image{
     width:100%;
@@ -740,8 +740,8 @@
     width: 90%;
     font-size: 16px;
     font-weight: 400;
-    color: #3f3f3f;
-    font-family: 'Inter',sans-serif;
+    color: var(--p-text-b-clr);
+    font-family: var( --p-font);
     line-height: 150%;
   }
  
@@ -789,7 +789,7 @@
     padding:90px 0px;
     display: flex;
     justify-content: center;
-    background-color: #f9f7ff;
+    background-color: var(--uiux-bg-clr);
 }
 .course-faq-container{
     width: 80%;
@@ -801,8 +801,8 @@
 .course-faq-heading h2{
     font-size: 24px;
     font-weight: 600;
-    font-family: 'Inter',sans-serif;
-    color:#1c1623;
+    font-family:var( --p-font);
+    color:var(--h-text-b-clr);
 }
 .course-faq-accordion-container{
     display: flex;
@@ -815,7 +815,7 @@
     display: flex;
     flex-direction: column;
     border: 1px solid #e4e4e4;
-    background-color: #fcfefe;
+    background-color: var( --h-text-w-clr);
     border-radius: 16px;
     gap:1rem;
 }
@@ -827,15 +827,15 @@
 .faq-accordion-title h2{
     font-size: 16px;
     font-weight: 500;
-    font-family: 'Inter',sans-serif;
-    color:#1c1623;
+    font-family: var( --p-font);
+    color:var(--h-text-b-clr);
 }
 .faq-accordion-contents p{
     font-size: 16px;
     font-weight: 400;
-    color:#3f3f3f;
+    color:var(--p-text-b-clr);
     line-height: 150%;
-    font-family: 'Inter',sans-serif;
+    font-family:var( --p-font);
 }
 .rotated {
     transform: rotate(180deg);
@@ -857,7 +857,7 @@
     padding:90px 0px;
     display: flex;
     justify-content: center;
-    background-color: #f4f0ff;
+    background-color: var(--uiux-o-bg-clr);
 }
 .course-payment-container{
     width: 80%;
@@ -869,8 +869,8 @@
 .course-payment-heading h2{
     font-size: 24px;
     font-weight: 600;
-    font-family: 'Inter',sans-serif;
-    color:#1c1623;
+    font-family:var( --p-font);
+    color:var(--h-text-b-clr);
 }
 .course-payment-contents{
     display: flex;
@@ -879,7 +879,7 @@
 .course-payment-box{
     width:370px;
     border-radius: 16px;
-    background-color: #fcfefe;
+    background-color: var( --h-text-w-clr);
     display: flex;
     flex-direction: column;
     padding: 24px;
@@ -895,28 +895,28 @@
     color:#121212;
     border: 1px solid #121212;
     border-radius: 8px;
-    font-family: 'Inter',sans-serif;
+    font-family: var( --p-font);
     font-weight: 400;
     font-size: 14px;
 }
 .payment-starting p{
     font-size: 20px;
     font-weight: 600;
-    font-family: 'Inter',sans-serif;
-    color:#1c1623;
+    font-family: var( --p-font);
+    color:var(--h-text-b-clr);
 }
 .payment-starting h3{
     padding-top: 8px;
     font-size: 24px;
     font-weight: 700;
-    font-family: 'Inter',sans-serif;
-    color:#6D28D9;
+    font-family: var( --p-font);
+    color:var(--trafy-purple);
 }
 .payment-points p{
     font-size: 16px;
     font-weight: 600;
-    font-family: 'Inter',sans-serif;
-    color:#1c1623;
+    font-family: var( --p-font);
+    color:var(--h-text-b-clr);
 }
 .payment-points li{
     padding-top: 8px;
@@ -924,24 +924,24 @@
     line-height: 150%;
     font-size: 16px;
     font-weight: 400;
-    font-family: 'Inter',sans-serif;
-    color:#3f3f3f;
+    font-family: var( --p-font);
+    color:var(--p-text-b-clr);
 }
 .course-payment-enroll{
     margin-top: 24px;
     height: min-content;
     padding: 8px 16px;
-    border: 2px solid #6D28D9;
+    border: 2px solid var(--trafy-purple);
     border-radius: 8px;
-    background-color: #6D28D9;
-    color: #fcfefe;
+    background-color: var(--trafy-purple);
+    color: var( --h-text-w-clr);
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Inter',sans-serif;
+    font-family: var( --p-font);
 }
 .course-payment-enroll:hover{
-    background-color: #fcfefe;
-    color: #6D28D9;
+    background-color: var( --h-text-w-clr);
+    color: var(--trafy-purple);
     font-weight: 500px;
 }
 .course-payment-option{
@@ -954,8 +954,8 @@
     padding-top: 8px;
     font-size: 20px;
     font-weight: 600;
-    color: #1c1623;
-    font-family: 'Inter',sans-serif;
+    color: var(--h-text-b-clr);
+    font-family: var( --p-font);
 }
 .payment-options-container{
     display: flex;
@@ -970,8 +970,8 @@
 .payment-options-topic h4{
     font-size: 16px;
     font-weight: 500;
-    color: #1c1623;
-    font-family: 'Inter',sans-serif;
+    color: var(--h-text-b-clr);
+    font-family: var( --p-font);
 }
 .payment-options-images{
     display: flex;

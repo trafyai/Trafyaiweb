@@ -43,7 +43,7 @@
     font-weight: 400;
     border: 1px solid #cacaca;
     border-radius: 8px;
-    background-color: #fcfefe; 
+    background-color: var( --h-text-w-clr); 
 }
 .enquiry-message{
     width: 100%;
@@ -53,7 +53,7 @@
     font-weight: 400;
     border: 1px solid #cacaca;
     border-radius: 8px;
-    background-color: #fcfefe; 
+    background-color:  var( --h-text-w-clr);  
     height: 100px;
 }
 .enquiry-fname:focus, .enquiry-lname:focus, .enquiry-email:focus, .enquiry-phone:focus, .enquiry-message:focus{
@@ -63,9 +63,9 @@ outline-style: none;
     width: 100%;
     height: max-content;
     padding: 8px 16px;
-    border: 2px solid #1c1623;
-    background-color: #1c1623;
-    color: #fcfefe;
+    border: 2px solid  var( --h-text-b-clr); 
+    background-color: var( --h-text-b-clr); 
+    color:  var( --h-text-w-clr); 
     border-radius: 8px;
     font-size: 16px;
     font-family: 500;
@@ -73,7 +73,7 @@ outline-style: none;
 }
 .course-enquiry-button:hover{
     background-color: inherit;
-    color: #1c1623;
+    color:  var( --h-text-b-clr); 
 }
 @media only screen and (max-width:1200px){
     .course-enquiry-form-contents{

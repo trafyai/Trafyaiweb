@@ -2,7 +2,7 @@
     width: 100%;
     padding-top: 120px;
     padding-bottom: 60px;
-    background-color: #f8f8ff;
+    background-color: var(--h-text-w-clr);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +48,7 @@
    font-weight: 400;
    border: 1px solid grey;
    border-radius: 8px;
-   background-color: #f8f8ff;
+   background-color: var(--h-text-w-clr);
 }
 .Email{
     width: 100%;
@@ -101,7 +101,7 @@
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
     
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
-    background-color: #f8f8ff;
+    background-color: var(--h-text-w-clr);
     background-repeat: no-repeat;
     background-position: 12px 11px;
     
@@ -144,17 +144,17 @@
 .signup-btn{
     width: 100%;
     padding: 8px 16px;
-    color: #f8f8ff;
-    background-color: #121212;
-    border: 2px solid #121212;
+    color: var(--h-text-w-clr);
+    background-color: var(--h-text-b-clr);
+    border: 2px solid var(--h-text-b-clr);
     border-radius: 8px;
     font-size: 16px;
    font-family: "Roboto", sans-serif;
    font-weight: 400;
 }
 .signup-btn:hover{
-    color: #121212;
-    background-color: #f8f8ff;
+    color: var(--h-text-b-clr);
+    background-color: var(--h-text-w-clr);
 }
 .form p{
     font-size: 14px;

@@ -3,7 +3,7 @@
     width: 100%;
     padding-top: 120px;
     padding-bottom: 60px;
-    background-color: #f8f8ff;
+    background-color: var(--h-text-w-clr);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +49,7 @@
    font-weight: 400;
    border: 1px solid grey;
    border-radius: 8px;
-   background-color: #f8f8ff; 
+   background-color: var(--h-text-w-clr);
 }
 .fname-holder:focus,.lname-holder:focus, .email-holder:focus ,.password-holder:focus{
     outline-style: none;
@@ -105,17 +105,17 @@
 .login-btn{
     width: 100%;
     padding: 8px 16px;
-    color: #f8f8ff;
-    background-color: #121212;
-    border: 2px solid #121212;
+    color: var(--h-text-w-clr);
+    background-color: var(--h-text-b-clr);
+    border: 2px solid var(--h-text-b-clr);
     border-radius: 8px;
     font-size: 16px;
    font-family: "Roboto", sans-serif;
    font-weight: 400;
 }
 .login-btn:hover{
-    color: #121212;
-    background-color: #f8f8ff;
+    color: var(--h-text-b-clr);
+    background-color: var(--h-text-w-clr);
 }
 .form p{
     font-size: 14px;

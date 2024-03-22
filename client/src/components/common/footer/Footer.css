@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     row-gap: 16px;
-    background-color: #1c1623;
+    background-color: var(--h-text-b-clr);
     padding: 16px 48px;
     padding-top:48px;
     border-top: 1px solid #322E3A; 
@@ -29,7 +29,7 @@
     font-size: 16px;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
-    color: #f8f8ff;
+    color: var(--h-text-w-clr);
   }
   .footer-content-text a{
     list-style-type: none;
@@ -45,7 +45,7 @@
     margin: 0;
   }
   .footer-content-text p:hover{
-    color:#f8f8ff;
+    color:var(--h-text-w-clr);
   }
   .social-section{
     display: flex;
@@ -75,7 +75,7 @@
     height: 32px;
   }
   .copyright-text{
-    color: #f8f8ff;
+    color: var(--h-text-w-clr);
     font-size: 12px;
     font-family: 'Roboto', sans-serif;
     list-style-type: none;

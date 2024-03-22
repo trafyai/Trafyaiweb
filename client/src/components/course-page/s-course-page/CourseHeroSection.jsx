@@ -119,7 +119,7 @@ function shareToLinkedIn() {
                     }
                     <div className="hero-sub">
                         <div className="hero-platform">
-                            <div className="platform-heading">Learn</div>
+                            <div className="platform-heading"><p>Learn</p></div>
                             <div className="platform-images">
                                 <img src={Phone} alt="iphone" />
                                 <img src={Macbook} alt="imac" />

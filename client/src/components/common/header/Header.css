@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1c1623;
+    background-color:  var( --h-text-b-clr);
     padding: 0px 8px;
     border-bottom: 1px solid #454444;
     position: fixed;
@@ -35,7 +35,7 @@
     padding: 16px 16px;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    color:#fdfdfd;
+    color:var(--h-text-w-alt-clr);
     border: 0;
  }
  .header-solutions:hover,.header-academy:hover,.header-resources:hover,
@@ -74,7 +74,7 @@
   position: absolute;
   top:60px;
   right:300px;
-  background-color: #fcfefe;
+  background-color: var( --h-text-w-clr);
   border-radius: 8px;
   box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
  }
@@ -91,7 +91,7 @@
    gap:1rem;
  }
  .solutions-ui-heading h1,.solutions-ux-heading h1{
-    color: #1c1623;
+    color:  var( --h-text-b-clr);
     font-size: 16px;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
@@ -117,7 +117,7 @@
     top:60px;
     right:490px;
     padding: 16px;
-    background-color: #fcfefe;
+    background-color: var( --h-text-w-clr);
     box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.12);
     border-radius: 8px;
  }
@@ -179,32 +179,32 @@
     font-size: 14px;
  }
  .header-login{
-    border: 2px solid #fcfefe;
+    border: 2px solid var( --h-text-w-clr);
     border-radius: 8px;
     padding: 8px 20px;
-    color: #fdfdfd;
+    color: var(--h-text-w-alt-clr);
     font-weight: 500;
     padding-right: 24px;
      margin-left: 8px;
  }
  .header-signup{
   margin-left: 12px;
-    border: 2px solid #fcfefe;
+    border: 2px solid var( --h-text-w-clr);
     border-radius: 8px;
-    background-color: #fcfefe;
-    color: #1c1623;
+    background-color: var( --h-text-w-clr);
+    color:  var( --h-text-b-clr);
     font-weight: 500;
     padding: 8px 20px;
  }
  .header-login:hover{
-    background-color: #fcfefe;
-    color: #1c1623;
+    background-color: var( --h-text-w-clr);
+    color:  var( --h-text-b-clr);
     font-weight: 500;
  }
  .header-signup:hover{
   font-weight: 500;
-  background-color: #1c1623;
-  color: #fcfefe;
+  background-color:  var( --h-text-b-clr);
+  color: var( --h-text-w-clr);
  }
  .hamburger{
     display: none;
@@ -241,7 +241,7 @@
     top:56px;
     right:0;
    justify-content: space-between;
-    background-color: #1c1623;
+    background-color: var( --h-text-b-clr);
     padding: 24px;
     overflow-y: scroll;
     gap:4rem;
@@ -272,7 +272,7 @@
  .header-solutions:hover,.header-academy:hover,.header-resources:hover{
   border-radius: 8px;
   background-color: #e1c8f8;
-  color:#1c1623;
+  color: var( --h-text-b-clr);
  }
  .header-solutions{
   justify-content: space-between;

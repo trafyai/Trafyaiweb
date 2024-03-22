@@ -32,17 +32,17 @@
     width: max-content;
     height: max-content;
     padding: 8px 16px;
-    border: 2px solid #1c1623;
+    border: 2px solid var(--h-text-b-clr);
     border-radius: 8px;
-    background-color: #1c1623;
-    color: #fcfefe;
+    background-color: var(--h-text-b-clr);
+    color: var(--h-text-b-clr);
     font-size: 16px;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
 }
 .back-to-home:hover{
-    color: #1c1623;
-    background-color: #fcfefe;
+    color: var(--h-text-b-clr);
+    background-color: var(--h-text-b-clr);
 }
 
 @media only screen and (max-width:600px){

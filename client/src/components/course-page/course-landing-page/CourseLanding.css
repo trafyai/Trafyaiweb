@@ -3,13 +3,13 @@
     padding-bottom: 40px;
     display: flex;
    justify-content: center;
-   background-color:#fdfdfd;
+   background-color:var(--h-text-w-alt-clr);
 }
 .course-landing-dm, .course-landing-ai{
     padding:40px 0px;
     display: flex;
    justify-content: center;
-   background-color:#fdfdfd;
+   background-color:var(--h-text-w-alt-clr);
 }
 .course-landing-ai-container{
     width: 80%;
@@ -21,8 +21,8 @@
     padding-top: 8px;
     font-size: 24px;
     font-weight: 600;
-    color: #1c1623;
-    font-family: 'Inter',sans-serif;
+    color: var(--h-text-b-clr);
+    font-family: var( --h-font);
 }
 .course-landing-ai-box-container{
     display: flex;
@@ -32,7 +32,7 @@
 .course-landing-ai-box{
     width: 350px;
     border:1px solid #d8d8d8;
-    background-color: #fcfefe;
+    background-color: var(--h-text-w-clr);
     border-radius: 24px;
     height: max-content;
     display: flex;
@@ -61,8 +61,8 @@
     padding-top: 8px;
     font-size: 18px;
     font-weight: 500;
-    color: #1c1623;
-    font-family: 'Inter',sans-serif;
+    color: var(--h-text-b-clr);
+    font-family: var( --h-font);
 }
 .course-landing-ai-contents{
     padding: 24px;
@@ -75,8 +75,8 @@
     line-height: 150%;
     font-size: 16px;
     font-weight: 400;
-    font-family: 'Inter',sans-serif;
-    color:#3f3f3f;
+    font-family: var( --p-font);
+    color:var(--p-text-b-clr);
 }
 .landing-ai-card-labels-contents{
     display: flex;
@@ -90,7 +90,7 @@
     border-radius: 16px;
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Inter',sans-serif;
+    font-family: var( --p-font);
     color:#3f3f3f;
 }
 .course-landing-ai-box hr{
@@ -113,8 +113,8 @@
 .landing-ai-card-ratings p{
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Inter',sans-serif;
-    color:#3f3f3f;
+    font-family: var( --p-font);
+    color:var(--p-text-b-clr);
     padding-left: 4px;
 }
 .landing-ai-card-level{
@@ -125,8 +125,8 @@
 .landing-ai-card-level p{
     font-size: 16px;
     font-weight: 400;
-    font-family: 'Inter',sans-serif;
-    color:#1c1623;
+    font-family: var( --p-font);
+    color:var(--h-text-b-clr);
 }
 
 @media only screen and (max-width:900px){
