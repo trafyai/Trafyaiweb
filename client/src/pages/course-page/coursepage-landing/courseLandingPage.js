@@ -7,7 +7,7 @@ import { Helmet } from 'react-helmet';
 export default function courseLandingPage(){
     const currentPageUrl = 'https://www.trafyai.com/courses';
     return(
-        <>
+        <div style={{display: "flex"}}>
         <Helmet>
         <title>Courses</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,6 +19,6 @@ export default function courseLandingPage(){
         <CourseAi/>
         
         
-        </>
+        </div>
     )
 }
