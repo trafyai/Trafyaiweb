@@ -5,6 +5,7 @@ import './Login.css';
 import { Link, useNavigate } from 'react-router-dom';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
+import { Helmet } from 'react-helmet';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -71,6 +72,12 @@ const Login = () => {
 
     return (
         <div className="login">
+            <Helmet>
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://www.trafyai.com/login" />
+      
+      </Helmet>
             <div className="login-container">
                 <div className="login-heading"><h1>Login to Your Account</h1></div>
 

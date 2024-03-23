@@ -6,11 +6,18 @@ import CourseReviewSection from "../../../components/course-page/s-course-page/C
 import CourseCertificateSection from "../../../components/course-page/s-course-page/CourseCertificateSection";
 import CourseFaqSection from "../../../components/course-page/s-course-page/CourseFaqSection";
 import CoursePaymentSection from "../../../components/course-page/s-course-page/CoursePaymentSection";
+import { Helmet } from 'react-helmet';
 
 export default function coursePage(){
 
     return(
          <>
+         <Helmet>
+        <title>Courses</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://www.trafyai.com/uiux-course" />
+      
+      </Helmet>
        <CourseHeroSection/>
        <CourseDescriptionSection/>
        <CourseSyllabusSection/>

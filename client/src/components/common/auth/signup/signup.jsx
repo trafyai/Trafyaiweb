@@ -6,6 +6,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/database';
 import { Link, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -111,6 +112,12 @@ const Signup = () => {
 
     return (
         <div className="signup">
+            <Helmet>
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://www.trafyai.com/login" />
+      
+      </Helmet>
             <div className="signup-container">
                 <div className="signup-heading"><h1>Create Your Account</h1></div>
 
