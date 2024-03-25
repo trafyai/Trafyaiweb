@@ -12,7 +12,7 @@ export default function landingPage(){
     return(
         <>
         <Helmet>
-            <title>Trafy | Interactive Learning, Next Generation Courses.</title>
+            <title>trafy | Interactive Learning, Next Generation Courses.</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <link rel="canonical" href={currentPageUrl} />
             <meta name="description" content="Learn UI/UX designing, artificial intelligence, and digital marketing with our interactive courses and accelerate your career with expert guidance" />
