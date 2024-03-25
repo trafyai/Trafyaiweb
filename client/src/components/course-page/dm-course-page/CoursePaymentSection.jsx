@@ -1,5 +1,6 @@
 import React from "react";
 import './CoursePage.css';
+import {Link } from 'react-router-dom';
 import Gpay from '../../../assets/Images/course-page/payment-section/Gpay.png';
 import PhonePe from '../../../assets/Images/course-page/payment-section/Phonepe.png';
 import Visa from '../../../assets/Images/course-page/payment-section/Visa.png';
@@ -21,7 +22,7 @@ export default function CoursePaymentSection(){
                 <div className="course-payment-heading"><h2>Course Fee</h2></div>
                 <div className="course-payment-contents">
                     <div className="course-payment-box">
-                        <div className="payment-month"><p>3 months</p></div>
+                        <div className="payment-month"><p>3 weeks</p></div>
                         <div className="payment-starting">
                             <p>Starting at</p>
                             <h3>INR 15,000</h3>
@@ -30,12 +31,12 @@ export default function CoursePaymentSection(){
                         <hr />
                         <div className="payment-points"><p>Including</p>
                         <ul>
-                            <li>voluptate velit esse cillum dolore eu fugiat </li>
-                            <li>voluptate velit esse cillum dolore eu fugiat </li>
-                            <li>voluptate velit esse cillum dolore eu fugiat </li>
+                        <li>Lifetime access to course materials</li>
+                            <li>Doubt clearing sessions</li>
+                            <li>Career guidance and Mock Interviews</li>
                         </ul>
                         </div>
-                        <button className="course-payment-enroll">Enroll now</button>
+                        <Link to="/course-enquiry"><button className="course-payment-enroll">Enroll now</button></Link>
                     </div>
                     <div className="course-payment-option">
                         <div className="payment-option-heading"><h3>Payment options</h3></div>

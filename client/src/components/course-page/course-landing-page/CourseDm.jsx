@@ -1,5 +1,6 @@
 import React from "react";
 import './CourseLanding.css';
+import {Link} from "react-router-dom";
 import CourseDmData from "../../../data/course-page/course-landing-page/CourseDmData";
 
 export default function CourseDm(){
@@ -10,6 +11,7 @@ export default function CourseDm(){
                     <div className="course-landing-ai-heading"><h2>Digital Marketing Course</h2></div>
                     <div className="course-landing-ai-box-container">
                     {CourseDmData.map((item, index) => (
+                        <Link to="/digital-marketing-course"> 
                         <div className="course-landing-ai-box" key={index}>
 
                             <div className="course-landing-dm-card-title">
@@ -48,6 +50,7 @@ export default function CourseDm(){
                             </div>
 
                         </div>
+                        </Link>
                         ))}
 
                     </div>

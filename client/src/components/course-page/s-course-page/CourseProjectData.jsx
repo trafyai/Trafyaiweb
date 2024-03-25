@@ -1,7 +1,7 @@
  import image from '../../../assets/Images/course-page/project-section/Rectangle 14.png';
  export default [
     {
-        title:"Landing Page for freelancing and agency",
+        title:"Agency Landing Page ",
         description:"Craft a sleek, professional landing page showcasing your services or agency expertise, with clear calls-to-action to drive conversions.",
         project_image: image,
         bg_color:""

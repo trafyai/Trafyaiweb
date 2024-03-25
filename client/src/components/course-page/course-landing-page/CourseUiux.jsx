@@ -11,7 +11,7 @@ export default function CourseUiux(){
                     <div className="course-landing-ai-heading"><h2>UI/UX Course</h2></div>
                     <div className="course-landing-ai-box-container">
                     {CourseUiuxData.map((item, index) => (
-                    //  <Link to="/courses/uiux-course">   
+                     <Link to="/uiux-course">   
                     
                      <div className="course-landing-ai-box" key={index}>
 
@@ -51,7 +51,7 @@ export default function CourseUiux(){
                             </div>
 
                         </div>
-                        // </Link>
+                         </Link>
                         ))}
 
                     </div>

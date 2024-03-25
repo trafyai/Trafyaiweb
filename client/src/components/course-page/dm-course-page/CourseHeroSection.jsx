@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom';
 import './CoursePage.css';
 import Share from "../../../assets/Images/course-page/hero-section/share.svg";
 import RatingStar from "../../../assets/Images/course-page/hero-section/rating-star.svg";
@@ -69,7 +70,7 @@ function shareToLinkedIn() {
 
                     <div className="hero-main">
                         <div className="hero-label">
-                            <div className="hero-category"><p>UI/UX</p></div>
+                            <div className="hero-category"><p>Digital Marketing</p></div>
                             <div className="hero-popularity"><p>Popular</p></div>
                             <div className="share">
                                 <img src={Share} alt="" onClick={courseShare} />
@@ -77,7 +78,7 @@ function shareToLinkedIn() {
 
                         </div>
                         <div className="hero-main-heading">
-                            <h1>Learn Cross Platform UI/UX design and development </h1>
+                            <h1>Learn AI Powered Digital Marketing</h1>
                         </div>
                         <div className="hero-description">
                             <p>Gain deep understanding of digital marketing principles, strategies, and practices and develop practical skills in SEO, content creation, social media, email campaigns, and paid advertising. </p>
@@ -89,7 +90,7 @@ function shareToLinkedIn() {
                             </div>
                         </div>
                         <div className="hero-cta">
-                            <button className="hero-enroll">Join now</button>
+                            <Link to="/course-enquiry"><button className="hero-enroll">Join now</button></Link>
                             <p className="hero-enrolled">126 Enrolled in last week</p>
                         </div>
                     </div>
@@ -130,7 +131,7 @@ function shareToLinkedIn() {
                         </div>
                         <div className="hero-start-date">
                             <div className="start-date-heading"><p>Start date</p></div>
-                            <div className="start-date"><p>March 1, 2024</p></div>
+                            <div className="start-date"><p>April 1, 2024</p></div>
                         </div>
                         <div className="hero-level">
                             <div className="level-heading"><p>Level</p></div>

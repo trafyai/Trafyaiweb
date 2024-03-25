@@ -24,7 +24,7 @@ export default function CourseProjectSection() {
           <div className="course-projects-contents">
             {CourseProjectData.map((item, index) => (
               <div
-                className="project-box"
+                className="project-box-s"
                 key={index}
                 // onMouseEnter={() => handleMouseEnter(index)}
                 // onMouseLeave={handleMouseLeave}

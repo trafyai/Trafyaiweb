@@ -12,7 +12,7 @@ export default [
         },
         rating: "4.8",
         level: "Certification",
-        duration: "12 weeks",
+        duration: "6 weeks",
         halfstar:Halfstar,
         fullstar:Fullstar
     }

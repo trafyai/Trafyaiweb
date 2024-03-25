@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom';
 import './CoursePage.css';
 import Share from "../../../assets/Images/course-page/hero-section/share.svg";
 import RatingStar from "../../../assets/Images/course-page/hero-section/rating-star.svg";
@@ -83,13 +84,13 @@ function shareToLinkedIn() {
                             <p>Explore the principles, material guidelines and core concepts behind cross platform responsive UI/UX development process.</p>
                         </div>
                         <div className="hero-rating">
-                            <div className="hero-rating-number">4.5</div>
+                            <div className="hero-rating-number">4.8</div>
                             <div className="hero-rating-star">
                                 <img src={RatingStar} alt="" />
                             </div>
                         </div>
                         <div className="hero-cta">
-                            <button className="hero-enroll">Join now</button>
+                         <Link to="/course-enquiry"> <button className="hero-enroll">Join now</button> </Link>
                             <p className="hero-enrolled">126 Enrolled in last week</p>
                         </div>
                     </div>
@@ -130,7 +131,7 @@ function shareToLinkedIn() {
                         </div>
                         <div className="hero-start-date">
                             <div className="start-date-heading"><p>Start date</p></div>
-                            <div className="start-date"><p>March 1, 2024</p></div>
+                            <div className="start-date"><p>April 1, 2024</p></div>
                         </div>
                         <div className="hero-level">
                             <div className="level-heading"><p>Level</p></div>
@@ -138,7 +139,7 @@ function shareToLinkedIn() {
                         </div>
                         <div className="hero-duration">
                             <div className="duration-heading"><p>Duration</p></div>
-                            <div className="duration"><p>3 Months</p></div>
+                            <div className="duration"><p>6 weeks</p></div>
                         </div>
 
                     </div>

@@ -553,6 +553,7 @@
     overflow: hidden;
   }
   .project-box h3{
+    background-color: #fad5a4;
     font-size: 16px;
     font-weight: 600;
     font-family: var( --p-font);
