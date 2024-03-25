@@ -14,6 +14,7 @@ import Courses from "./pages/course-page/coursepage-landing/courseLandingPage.js
 import CourseEnquiry from "./pages/auth/enquiry/courseEnquiry.js";
 import BlogLanding from "./pages/blog/blog-landing/blogLanding.js";
 import BlogPage from "./pages/blog/blog-single/blogPage.js";
+import DmCoursePage from "./pages/course-page/course-page-single/dmCoursePage.js";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/courses" element={<Courses />} />
         <Route path="/course-enquiry" element={<CourseEnquiry/> }/>
         <Route path="/uiux-course" element={<CoursePage />} />
+        <Route path="/digital-marketing-course" element={<DmCoursePage />} />
         <Route path="/resources" element={<BlogLanding />} />
         <Route path="/resources/:id" element={<BlogPage />} />
         <Route path="*" element={<ErrorPage />} />

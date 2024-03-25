@@ -1,10 +1,13 @@
 import React from "react";
 import './CoursePage.css';
-import Figma from "../../../assets/Images/course-page/hero-section/Figma.png";
-import Miro from "../../../assets/Images/course-page/hero-section/Miro.png";
+
+import GTM from "../../../assets/Images/course-page/hero-section/GTM.png";
+import Analytics from "../../../assets/Images/course-page/hero-section/analytics.png";
 import Chatgpt from "../../../assets/Images/course-page/hero-section/ChatGPT.png";
-import Gemini from "../../../assets/Images/course-page/hero-section/Gemini.png";
-import Framer from "../../../assets/Images/course-page/hero-section/Framer.png";
+import Mailchimp from "../../../assets/Images/course-page/hero-section/mailchimp.png";
+import Hubspot from "../../../assets/Images/course-page/hero-section/hubspot.png";
+
+
 
 export default function CourseDescriptionSection(){
     return(
@@ -25,11 +28,16 @@ export default function CourseDescriptionSection(){
                         <div className="course-tools">
                             <div className="tools-covered"><h2>Tools Covered</h2></div>
                             <div className="tools-img">
-                            <img src={Figma} alt="Figma" />
+                                {/* <img src={Figma} alt="Figma" />
                                 <img src={Miro} alt="Miro" />
                                 <img src={Chatgpt} alt="Chatgpt" />
                                 <img src={Gemini} alt="Gemini" />
-                                <img src={Framer} alt="Framer" />
+                                <img src={Framer} alt="Framer" /> */}
+                                <img src={GTM} alt="Figma" />
+                                <img src={Analytics} alt="Miro" />
+                                <img src={Chatgpt} alt="Chatgpt" />
+                                <img src={Mailchimp} alt="Gemini" />
+                                <img src={Hubspot} alt="Framer" />
                             </div>
                         </div>
                     </div>
