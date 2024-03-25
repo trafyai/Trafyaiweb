@@ -41,7 +41,7 @@
     font-weight: 500;
 }
 .back-to-home:hover{
-    color: var(--h-text-b-clr);
+    color: var(--h-text-w-clr);
     background-color: var(--h-text-b-clr);
 }
 
