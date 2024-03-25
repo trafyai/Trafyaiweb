@@ -35,7 +35,7 @@
     border: 2px solid var(--h-text-b-clr);
     border-radius: 8px;
     background-color: var(--h-text-b-clr);
-    color: var(--h-text-b-clr);
+    color: var(--h-text-w-clr);
     font-size: 16px;
     font-family: 'Inter', sans-serif;
     font-weight: 500;

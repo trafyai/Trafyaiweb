@@ -27,10 +27,11 @@ function App() {
         <Route path="/user-dashboard" element={<UserProfile />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/course-enquiry" element={<CourseEnquiry/> }/>
-        <Route path="/uiux-course" element={<CoursePage />} />
+        <Route path="uiux-course" element={<CoursePage />} />
         <Route path="/resources" element={<BlogLanding />} />
         <Route path="/resources/:id" element={<BlogPage />} />
         <Route path="*" element={<ErrorPage />} />
+        <Route path="/user" element={<UserProfile />} />
       </Routes>
       <Footer />
     </>
