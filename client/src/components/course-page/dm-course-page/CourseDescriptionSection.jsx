@@ -18,11 +18,7 @@ export default function CourseDescriptionSection(){
                     <div className="about-course">
                         <div className="about-course-heading"><h2>About the Course</h2></div>
                         <div className="about-course-description">
-                            <p>Cross Platform UI/UX development curriculum is built on deep core 
-                            values of designing like user research, usability, testing, designing 
-                            for modern technologies like VR and AR, and Gamification of UX. This 
-                            course helps you build a progressive career in UI/UX industry and increase
-                            your skill and potential as an UI/UX designer.</p>
+                            <p>This course is structured to explore the core pillars of digital marketing, from SEO and content creation to social media strategy and email campaigns. Learn how to leverage paid advertising effectively and optimize your efforts through analytics, ensuring a strong online presence and measurable results. Ideal for marketers and entrepreneurs seeking to excel in the digital landscape.</p>
                         </div>
                     </div>
                         <div className="course-tools">
@@ -48,23 +44,23 @@ export default function CourseDescriptionSection(){
                             <ul>
                                 <li>
                                     
-                                    Emotional Design
+                                SEO
                                 </li>
                                 <li>
                                     
-                                    Spatial Design
+                                Content creation
                                 </li>
                                 <li>
                                  
-                                    Accessibility and Inclusive Design
+                                Social media marketing 
                                 </li>
                                 <li>
                                     
-                                    Designing for Virtual Reality
+                                Email campaigns
                                 </li>
                                 <li>
                                     
-                                    Creating Dynamic User Experience
+                                PPC
                                 </li>
                                 <li>
                                     

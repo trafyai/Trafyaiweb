@@ -1,6 +1,6 @@
 import React from "react";
 import './CoursePage.css';
-import Image from '../../../assets/Images/course-page/certificate/download (26).jpeg';
+import Image from '../../../assets/Images/course-page/certificate/Digital Marketing.jpg';
 
 export default function CourseCertificateSection(){
     return(

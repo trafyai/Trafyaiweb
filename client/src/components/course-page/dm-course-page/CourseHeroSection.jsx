@@ -80,8 +80,7 @@ function shareToLinkedIn() {
                             <h1>Learn Cross Platform UI/UX design and development </h1>
                         </div>
                         <div className="hero-description">
-                            <p>Explore the principles, material guidelines and core concepts of
-                            behind cross platform responsive UI/UX development process.</p>
+                            <p>Gain deep understanding of digital marketing principles, strategies, and practices and develop practical skills in SEO, content creation, social media, email campaigns, and paid advertising. </p>
                         </div>
                         <div className="hero-rating">
                             <div className="hero-rating-number">4.5</div>
@@ -139,7 +138,7 @@ function shareToLinkedIn() {
                         </div>
                         <div className="hero-duration">
                             <div className="duration-heading"><p>Duration</p></div>
-                            <div className="duration"><p>3 Months</p></div>
+                            <div className="duration"><p>4 weeks</p></div>
                         </div>
 
                     </div>

@@ -11,9 +11,9 @@ export default function CourseReviewSection(){
                     </div>
                    <div className="course-review-contents">
                    {[
-                            { name: "De Finibus Bonorum et Malorum", content: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident" },
-                            {name: "De Finibus Bonorum et Malorum", content: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident" },
-                            { name: "De Finibus Bonorum et Malorum", content: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident" },
+                            { name: "Karthik Raj", content: "This course exceeded my expectations! The instructors provided clear explanations and practical exercises that helped me level up my design skills. Highly recommended for anyone serious about pursuing a career in UI/UX design." },
+                            {name: "Payal Singh", content: "As someone with a background in graphic design, I found this course to be valuable in expanding my skill set. The lessons on user research and prototyping were especially too good. I feel more confident in my ability to create designs that not only look great but also prioritize user needs." },
+                            { name: "Deepanjali", content: "I've taken several online courses on UI/UX design, but none have been as comprehensive and engaging as this one. The instructors break down complex concepts, making it easy to follow along. Plus, the projects are fun and challenging—I've already started building my portfolio!" },
                             
                         ].map((item, index) => (
                            <div className="review-box" key={index}>

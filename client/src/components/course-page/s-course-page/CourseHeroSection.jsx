@@ -77,11 +77,10 @@ function shareToLinkedIn() {
 
                         </div>
                         <div className="hero-main-heading">
-                            <h1>Learn Cross Platform UI/UX design and development </h1>
+                            <h1>Learn Advanced AI Powered UX/UX design with Figma</h1>
                         </div>
                         <div className="hero-description">
-                            <p>Explore the principles, material guidelines and core concepts of
-                            behind cross platform responsive UI/UX development process.</p>
+                            <p>Explore the principles, material guidelines and core concepts behind cross platform responsive UI/UX development process.</p>
                         </div>
                         <div className="hero-rating">
                             <div className="hero-rating-number">4.5</div>
