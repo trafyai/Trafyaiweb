@@ -111,7 +111,7 @@ const EnquiryForm = () => {
                                 {errorMessages.phone && <p className="error-message">{errorMessages.phone}</p>}
                             </div>
                             <div className="enquirymessage">
-                                <textarea type="text" placeholder="Message" className="enquiry-message" name="message" style={{ width: "100%" }}  value={formData.message} />
+                                <textarea type="text" placeholder="Message" className="enquiry-message" name="message" style={{ width: "100%" }}  value={formData.message} onChange={handleChange} />
                                 
                             </div>
 
