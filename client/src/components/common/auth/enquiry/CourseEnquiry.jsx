@@ -66,7 +66,7 @@ const EnquiryForm = () => {
         try {
             const res = await fetch('https://courseenquiryform-default-rtdb.firebaseio.com/EnquiryFormData.json', options);
             if (res.ok) {
-                alert("Data Stored");
+                alert("Thank You For Submitting the Form ");
                 setFormData({
                     fname: "",
                     lname: "",
