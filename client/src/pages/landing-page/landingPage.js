@@ -16,6 +16,9 @@ export default function landingPage(){
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <link rel="canonical" href={currentPageUrl} />
             <meta name="description" content="Learn UI/UX designing, artificial intelligence, and digital marketing with our interactive courses and accelerate your career with expert guidance" />
+            <meta property="og:image" content="https://trafyai.com/banner-image.png" />
+            <meta property="og:image:height" content="600"/>
+            <meta property="og:image:width" content="1200"/>
        </Helmet>
         <LandingHero/>
         <LandingLearning/>
