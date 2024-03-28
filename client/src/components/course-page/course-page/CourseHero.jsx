@@ -1,26 +1,14 @@
-import React, { useState } from 'react';
+import React, {useState} from "react";
 import {Link} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import './CoursePage.css';
-import Share from "../../../assets/Images/course-page/hero-section/share.svg";
-import RatingStar from "../../../assets/Images/course-page/hero-section/rating-star.svg";
-import Phone from "../../../assets/Images/course-page/hero-section/iPhone.png";
-import Macbook from "../../../assets/Images/course-page/hero-section/iMac.png";
-import Tab from "../../../assets/Images/course-page/hero-section/iTab.png";
-import Vision from "../../../assets/Images/course-page/hero-section/iVision.png";
-import Watch from "../../../assets/Images/course-page/hero-section/iWatch.png";
-import Whatsapp from '../../../assets/Images/comman/common/socials/whatsapp.png';
-import Facebook from '../../../assets/Images/comman/common/socials/facebook.png';
-import Linkedin from '../../../assets/Images/comman/common/socials/linkedin.png';
-import X from '../../../assets/Images/comman/common/socials/twitter.png';
-import close from '../../../assets/Images/comman/header/close.svg';
 
-
-export default function CourseHeroSection() {
-
+export default function CourseHero(props){
     const [showShare, setShowShare] = useState(false);
     const [pageUrl, setPageUrl] = useState(window.location.href);
     const [showAlert, setShowAlert] = useState(false);
 
+   
     function courseShare() {
         setShowShare(!showShare);
         document.body.classList.toggle('overflow');
@@ -63,52 +51,53 @@ function shareToLinkedIn() {
             });
     }
 
-    return (
-        <main>
-            <div className="hero-section">
+    return(
+       <main>
+            
+             <div className="hero-section" style={{backgroundColor:props.bgColor}}>
                 <div className="hero-section-container">
 
                     <div className="hero-main">
                         <div className="hero-label">
-                            <div className="hero-category"><p>Digital Marketing</p></div>
-                            <div className="hero-popularity"><p>Popular</p></div>
+                            <div className="hero-category"><p>{props.category}</p></div>
+                            <div className="hero-popularity"><p>{props.popularity}</p></div>
                             <div className="share">
-                                <img src={Share} alt="" onClick={courseShare} />
+                                <img src={props.shareIcon} alt="" onClick={courseShare}/>
                             </div>
 
                         </div>
                         <div className="hero-main-heading">
-                            <h1>Learn AI Powered Digital Marketing</h1>
+                            <h1>{props.courseHeading}</h1>
                         </div>
                         <div className="hero-description">
-                            <p>Gain deep understanding of digital marketing principles, strategies, and practices and develop practical skills in SEO, content creation, social media, email campaigns, and paid advertising. </p>
+                            <p>{props.courseDescription} </p>
                         </div>
                         <div className="hero-rating">
-                            <div className="hero-rating-number">4.5</div>
+                            <div className="hero-rating-number">{props.rating}</div>
                             <div className="hero-rating-star">
-                                <img src={RatingStar} alt="" />
+                                <img src={props.ratingIcon} alt="" />
                             </div>
                         </div>
                         <div className="hero-cta">
                             <Link to="/course-enquiry"><button className="hero-enroll">Join now</button></Link>
-                            <p className="hero-enrolled">126 Enrolled in last week</p>
+                            <button className="hero-demo">Free Demo</button>
                         </div>
                     </div>
                     {showShare &&
                         <div className="course-share">
                             <div className="course-share-exit">
                                 <p>Share</p>
-                                <img src={close} alt="" onClick={courseShare} />
+                                <img src={props.closeIcon} alt=""  onClick={courseShare}/>
                             </div>
                             <div className="course-share-container">
                                 <div className="course-share-socials">
-                                    <img src={Whatsapp} alt="whatsapp" onClick={shareToWhatsApp}/>
-                                    <img src={Facebook} alt="facebook" onClick={shareToFacebook}/>
-                                    <img src={Linkedin} alt="linkedin" onClick={shareToLinkedIn}/>
-                                    <img src={X} alt="x" onClick={shareToTwitter} />
+                                    <img src={props.whatsappIcon} alt="whatsapp"  onClick={shareToWhatsApp}/>
+                                    <img src={props.facebookIcon} alt="facebook" onClick={shareToFacebook}/>
+                                    <img src={props.linkedinIcon} alt="linkedin" onClick={shareToLinkedIn}/>
+                                    <img src={props.xIcon} alt="x" onClick={shareToTwitter}/>
                                 </div>
                                 <div className="course-share-link">
-                                    <input type="text" value={pageUrl} readOnly />
+                                    <input type="text"   value={pageUrl} readOnly/>
                                     <button onClick={copyUrlToClipboard}>Copy</button>
                                 </div>
                             </div>
@@ -119,33 +108,38 @@ function shareToLinkedIn() {
                     }
                     <div className="hero-sub">
                         <div className="hero-platform">
-                            <div className="platform-heading"><p>Learn</p></div>
+                            <div className="platform-heading"><p>{props.platform}</p></div>
                             <div className="platform-images">
-                                <img src={Phone} alt="iphone" />
-                                <img src={Macbook} alt="imac" />
-                                <img src={Tab} alt="ipad" />
-                                <img src={Vision} alt="vison" />
-                                <img src={Watch} alt="iwatch" />
+                                <img src={props.iphoneIcon} alt="iphone" />
+                                <img src={props.macIcon} alt="imac" />
+                                <img src={props.tabIcon} alt="ipad" />
+                                <img src={props.visionICon} alt="vison" />
+                                <img src={props.watchIcon} alt="iwatch" />
 
                             </div>
                         </div>
                         <div className="hero-start-date">
-                            <div className="start-date-heading"><p>Start date</p></div>
-                            <div className="start-date"><p>April 1, 2024</p></div>
+                            <div className="start-date-heading"><p>{props.startDateH}</p></div>
+                            <div className="start-date"><p>{props.startDate}</p></div>
                         </div>
                         <div className="hero-level">
-                            <div className="level-heading"><p>Level</p></div>
-                            <div className="level"><p>Advanced</p></div>
+                            <div className="level-heading"><p>{props.levelH}</p></div>
+                            <div className="level"><p>{props.level}</p></div>
                         </div>
                         <div className="hero-duration">
-                            <div className="duration-heading"><p>Duration</p></div>
-                            <div className="duration"><p>4 weeks</p></div>
+                            <div className="duration-heading"><p>{props.durationH}</p></div>
+                            <div className="duration"><p>{props.duration}</p></div>
                         </div>
 
                     </div>
 
                 </div>
             </div>
-        </main>
+           
+        
+           
+
+       </main>
     )
 }
+

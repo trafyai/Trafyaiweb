@@ -3,6 +3,7 @@ import ErrorPage from "../../components/error-page/ErrorPage";
 import { Helmet } from 'react-helmet';
 
 export default function errorPage(){
+    console.log("ErrorPage component rendered");
     return(
         <>
         <Helmet>

@@ -11,7 +11,7 @@ export default function CourseDm(){
                     <div className="course-landing-ai-heading"><h2>Digital Marketing Course</h2></div>
                     <div className="course-landing-ai-box-container">
                     {CourseDmData.map((item, index) => (
-                        <Link to="/digital-marketing-course"> 
+                        // <Link to="/digital-marketing-course"> 
                         <div className="course-landing-ai-box" key={index}>
 
                             <div className="course-landing-dm-card-title">
@@ -50,7 +50,7 @@ export default function CourseDm(){
                             </div>
 
                         </div>
-                        </Link>
+                        // </Link>
                         ))}
 
                     </div>
