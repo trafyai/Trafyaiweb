@@ -12,6 +12,7 @@ import UserProfile from "./pages/auth/user-profile/user-profile.js";
 
 import Courses from "./pages/course-page/coursepage-landing/courseLandingPage.js";
 import CourseEnquiry from "./pages/auth/enquiry/courseEnquiry.js";
+import DemoEnquiry from "./components/common/auth/free-demo/DemoEnquiry.jsx";
 import BlogLanding from "./pages/blog/blog-landing/blogLanding.js";
 import BlogPage from "./pages/blog/blog-single/blogPage.js";
 import CourseSingle from "./pages/course-page/coursePage/coursePage.js";
@@ -30,6 +31,7 @@ function App() {
         <Route path="/:courseId" element={<CourseSingle/>}/>
         
         <Route path="/course-enquiry" element={<CourseEnquiry/> }/>
+        <Route path="/demo-enquiry" element={<DemoEnquiry/> }/>
         
         <Route path="/resources" element={<BlogLanding />} />
         <Route path="/resources/:id" element={<BlogPage />} />
