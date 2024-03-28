@@ -11,7 +11,7 @@ export default function landingPage(){
     const currentPageUrl = 'https://www.trafyai.com';
     return(
         <>
-        <Helmet>
+        {/* <Helmet>
             <title>trafy | Interactive Learning, Next Generation Courses.</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <link rel="canonical" href={currentPageUrl} />
@@ -19,7 +19,7 @@ export default function landingPage(){
             <meta property="og:image" content="https://trafyai.com/banner-image.png" />
             <meta property="og:image:height" content="600"/>
             <meta property="og:image:width" content="1200"/>
-       </Helmet>
+       </Helmet> */}
         <LandingHero/>
         <LandingLearning/>
         <LandingExplore/>
