@@ -64,7 +64,7 @@ const DemoEnquiry = () => {
         };
 
         try {
-            const res = await fetch('https://courseenquiryform-default-rtdb.firebaseio.com/EnquiryFormData.json', options);
+            const res = await fetch('https://freedemo-form-default-rtdb.firebaseio.com/freeDemoFormdata.json', options);
             if (res.ok) {
                 alert("Thank You For Submitting the Form ");
                 setFormData({
