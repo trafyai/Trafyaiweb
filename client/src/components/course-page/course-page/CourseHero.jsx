@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import {Link} from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import './CoursePage.css';
+import { Helmet } from 'react-helmet';
+
 
 export default function CourseHero(props){
     const [showShare, setShowShare] = useState(false);
@@ -53,7 +55,18 @@ function shareToLinkedIn() {
 
     return(
        <main>
-            
+             <Helmet>
+        <title>{props.courseHeading}</title>
+        {/* Add any other meta tags as needed */}
+        <meta name="description" content={props.courseDescription} />
+        {/* <meta property="og:image" content={postData.metaImage} />
+        <meta property="og:image:height" content="600"/>
+        <meta property="og:image:width" content="1200"/> */}
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content={props.courseHeading}/>
+        <meta property="og:description" content={props.courseDescription}/> 
+        
+      </Helmet>
              <div className="hero-section" style={{backgroundColor:props.bgColor}}>
                 <div className="hero-section-container">
 

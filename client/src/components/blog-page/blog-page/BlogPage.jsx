@@ -115,8 +115,8 @@ export default function BlogPage() {
         <meta property="og:image:height" content="600"/>
         <meta property="og:image:width" content="1200"/>
         <meta property="og:type" content="article"/>
-    <meta property="og:title" content={postData.description}/>
-    <meta property="og:description" content={postData.metaImage}/> 
+    <meta property="og:title" content={postData.title}/>
+    <meta property="og:description" content={postData.description}/> 
     
       </Helmet>
 
