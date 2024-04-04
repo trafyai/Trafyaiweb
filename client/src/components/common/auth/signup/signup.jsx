@@ -116,7 +116,7 @@ const Signup = () => {
         <title>Login</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href="https://www.trafyai.com/login" />
-      
+        <meta name="robots" content="noindex" />
       </Helmet>
             <div className="signup-container">
                 <div className="signup-heading"><h1>Create Your Account</h1></div>

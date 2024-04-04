@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import './CourseEnquiry.css';
+import { Helmet } from 'react-helmet';
+
 
 const EnquiryForm = () => {
 
@@ -85,6 +87,9 @@ const EnquiryForm = () => {
 
     return (
         <main>
+             <Helmet>
+        <meta name="robots" content="noindex" />
+      </Helmet>
             <div className="course-enquiry-form">
                 <div className="course-enquiry-form-container">
                     <div className="course-enquiry-form-contents">

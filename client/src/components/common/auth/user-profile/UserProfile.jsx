@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import './UserProfile.css';
+import { Helmet } from 'react-helmet';
+
 
 export default function UserProfile(){
 
@@ -12,6 +14,9 @@ export default function UserProfile(){
 
     return(
        <main>
+         <Helmet>
+        <meta name="robots" content="noindex" />
+      </Helmet>
 
           <div className="user-profile">
             <div className="user-profile-container">

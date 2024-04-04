@@ -1,9 +1,14 @@
 import React from "react";
 import './ErrorPage.css';
 import {Link} from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 export default function ErrorPage(){
     return(
+        <>
+        <Helmet>
+        <meta name="robots" content="noindex" />
+      </Helmet>
         <div className="error-page">
             <div className="error-page-container">
                 <p className="error-404">404 Error</p>
@@ -12,5 +17,6 @@ export default function ErrorPage(){
                <Link to="/"><button className="back-to-home">Back to Trafy</button></Link> 
             </div>
         </div>
+        </>
     )
 }
