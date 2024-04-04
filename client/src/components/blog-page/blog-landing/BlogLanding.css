@@ -11,7 +11,7 @@
 }
 .blog-landing-card{
     padding:24px 28px;
-    width: 30%;
+    width: 33%;
     display: flex;
     flex-direction: column;
     gap:1rem;
@@ -23,9 +23,14 @@
 }
 .blog-landing-card-image{
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    border-radius: 12px;
 }
 .blog-landing-card-image img{
-    width: 100%;
+    width: 70%;
 }
 .blog-landing-card-category{
     display: flex;

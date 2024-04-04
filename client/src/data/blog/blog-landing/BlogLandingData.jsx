@@ -1,50 +1,42 @@
-import IndianTech from '../../../assets/Images/blog/Indian-tech.png';
-import semrush1 from '../../../assets/Images/blog/semrush_1.svg';
-import semrush2 from '../../../assets/Images/blog/semrush_2.svg';
-import semrush3 from '../../../assets/Images/blog/semrush_3.svg';
-import semrush4 from '../../../assets/Images/blog/semrush_4.svg';
 
+import Ux from '../../../assets/Images/blog/ux-r.png';
+import Immersive from '../../../assets/Images/blog/immersive-r.png';
+import Spatial from '../../../assets/Images/blog/spatial-r.png';
 
 
 export default[
     {
-        id:"Indian-Tech-Companies-had-laid-off-over-16,000-Employees-in-the-year-2023",
-        image:IndianTech,
-        category:"Artificial Intelligence",
-        read:"5 mins read",
-        title:"Indian Tech Companies had laid off over 16,000 Employees in the year 2023",
-        description:"A computer would deserve to be called intelligent if it could deceive a human into believing it was human.",
+        id:"Key-Principles-for-Seamless-User-Experiences",
+        image:Ux,
+        bgColor:"#6192ff",
+        category:"UI/UX Design",
+        read:"4.7 mins",
+        title:"5 Key Principles for Seamless User Experiences",
+        description:"UI/UX design principles serve as the foundation for creating intuitive, engaging, and user-friendly experiences. Let's explore five fundamental principles that drive effective UI/UX design.",
         author:"Suthersun",
-        date:"Mar 18, 2024"
+        date:"Apr 04, 2024"
     },
     {
-        id:"2Indian-Tech-Companies-had-laid-off-over-16,000-Employees-in-the-year-2023",
-        image:semrush2,
-        category:"Artificial Intelligence",
-        read:"5 mins read",
-        title:"2Indian Tech Companies had laid off over 16,000 Employees in the year 2023",
-        description:"A computer would deserve to be called intelligent if it could deceive a human into believing it was human.",
+        id:"The-Essence-of-Immersive-UI-Design",
+        image:Immersive,
+        bgColor:"#a16dee",
+        category:"UI/UX Design",
+        read:"3.9 mins",
+        title:"The Essence of Immersive UI Design",
+        description:"Immersive UI (User Interface) design goes beyond mere functionality; it aims to create captivating experiences that draw users into a digital realm, leaving them feeling deeply engaged and connected.",
         author:"Suthersun",
-        date:"Mar 18, 2024"
+        date:"Apr 04, 2024"
     },
     {
-        id:"3Indian-Tech-Companies-had-laid-off-over-16,000-Employees-in-the-year-2023",
-        image:semrush3,
-        category:"Artificial Intelligence",
-        read:"5 mins read",
-        title:"3Indian Tech Companies had laid off over 16,000 Employees in the year 2023",
-        description:"A computer would deserve to be called intelligent if it could deceive a human into believing it was human.",
+        id:"Digital-Dimensions-and-Exploring-Spatial-Design-in-UIUX",
+        image:Spatial,
+        bgColor:"#a4ff9e",
+        category:"UI/UX Design",
+        read:"4.3 mins",
+        title:"Digital Dimensions and Exploring Spatial Design in UI/UX",
+        description:"Principles of spatial relationships, spatial UI/UX design offers a new dimension of interaction that goes beyond traditional interfaces. From virtual reality (VR)  to augmented reality (AR), spatial design transforms digital spaces.",
         author:"Suthersun",
-        date:"Mar 18, 2024"
+        date:"Apr 04, 2024"
     },
-    {
-        id:"4Indian-Tech-Companies-had-laid-off-over-16,000-Employees-in-the-year-2023",
-        image:semrush4,
-        category:"Artificial Intelligence",
-        read:"5 mins read",
-        title:"4Indian Tech Companies had laid off over 16,000 Employees in the year 2023",
-        description:"A computer would deserve to be called intelligent if it could deceive a human into believing it was human.",
-        author:"Suthersun",
-        date:"Mar 18, 2024"
-    }
+  
 ]

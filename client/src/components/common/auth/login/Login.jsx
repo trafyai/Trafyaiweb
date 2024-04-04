@@ -7,7 +7,15 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import { Helmet } from 'react-helmet';
 
+import { useDispatch } from 'react-redux';
+import { loginUser } from "../../../../feature/auth/navBarSlice";
+
 const Login = () => {
+
+    const dispatch = useDispatch();
+
+
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
@@ -21,6 +29,7 @@ const Login = () => {
                 const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
                 // User successfully logged in
                 if (userCredential) {
+                    dispatch(loginUser(userCredential.user)); 
                     navigate('/');
                 }
             }
