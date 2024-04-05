@@ -8,6 +8,7 @@ import instagram from '../../../assets/Images/comman/footer/instagram (2).png';
 import twitter from '../../../assets/Images/comman/footer/twitter (1).png';
 import behance from '../../../assets/Images/comman/footer/behance.png';
 import WhiteLogo from '../../../assets/Images/comman/header/whiteLogo.png';
+import {Link} from 'react-router-dom';
 
 function Footer() {
   return (
@@ -55,11 +56,11 @@ function Footer() {
 
           <div className="footer-content">
             <div className="footer-content-heading"><h2>Compliance</h2></div>
-            <div className="footer-content-text"><p>Terms of Service</p></div>
-            <div className="footer-content-text"><p>Privacy Policy</p></div>
+            <div className="footer-content-text"><Link to="/terms-of-service"><p>Terms of Service</p></Link></div>
+            <div className="footer-content-text"><Link to="/privacy-policy"><p>Privacy Policy</p></Link></div>
             <div className="footer-content-text"><p>Anti-Spam Policy</p></div>
-            <div className="footer-content-text"><p>Cookie Policy</p></div>
-            <div className="footer-content-text"><p>Refund Policy</p></div>
+            <div className="footer-content-text"><Link to="/cookie-policy"><p>Cookie Policy</p></Link></div>
+            <div className="footer-content-text"><Link to="/refund-policy"><p>Refund Policy</p></Link></div>
             <div className="footer-content-text"><p>Freelancers & Affiliate Policy</p></div>
           </div>
 

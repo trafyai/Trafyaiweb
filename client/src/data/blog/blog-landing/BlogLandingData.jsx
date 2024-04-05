@@ -8,6 +8,7 @@ export default[
     {
         id:"Key-Principles-for-Seamless-User-Experiences",
         image:Ux,
+        alt:"Key Principles for Seamless User Experiences",
         bgColor:"#6192ff",
         category:"UI/UX Design",
         read:"4.7 mins",
@@ -19,6 +20,7 @@ export default[
     {
         id:"The-Essence-of-Immersive-UI-Design",
         image:Immersive,
+        alt:"Essence of Immersive UI Design",
         bgColor:"#a16dee",
         category:"UI/UX Design",
         read:"3.9 mins",
@@ -30,6 +32,7 @@ export default[
     {
         id:"Digital-Dimensions-and-Exploring-Spatial-Design-in-UIUX",
         image:Spatial,
+        alt:"Digital Dimensions and Exploring Spatial Design in UI/UX",
         bgColor:"#a4ff9e",
         category:"UI/UX Design",
         read:"4.3 mins",

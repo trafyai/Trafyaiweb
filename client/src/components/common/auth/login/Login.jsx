@@ -29,7 +29,7 @@ const Login = () => {
                 const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
                 // User successfully logged in
                 if (userCredential) {
-                    dispatch(loginUser(userCredential.user)); 
+                    // dispatch(loginUser(userCredential.user)); 
                     navigate('/');
                 }
             }

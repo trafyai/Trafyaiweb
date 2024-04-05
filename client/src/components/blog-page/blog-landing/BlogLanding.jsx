@@ -13,7 +13,7 @@ export default function BlogLanding(){
                     <div className="blog-landing-card" key={index}>
                          <Link to={`/blog/${item.id}`} key={item.id} className="blog-landing-card-inner">
                         <div className="blog-landing-card-image" style={{backgroundColor: item.bgColor}}>
-                            <img src={item.image} alt="" />
+                            <img src={item.image} alt={item.alt} />
                         </div>
                         <div className="blog-landing-card-category">
                             <h1>{item.category}</h1>
