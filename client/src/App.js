@@ -15,6 +15,7 @@ import DemoEnquiry from "./components/common/auth/free-demo/DemoEnquiry.jsx";
 import BlogLanding from "./pages/blog/blog-landing/blogLanding.js";
 import BlogPage from "./pages/blog/blog-single/blogPage.js";
 import CourseSingle from "./pages/course-page/coursePage/coursePage.js";
+import ServicePage from "./pages/service-page/servicePage.js";
 
 import TermsOfService from "./components/footer/compliance/TermsOfService.jsx";
 import PrivacyPolicy from "./components/footer/compliance/PrivacyPolicy.jsx";
@@ -33,6 +34,8 @@ function App() {
         <Route path="/user-dashboard" element={<UserProfile />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/:courseId" element={<CourseSingle/>}/>
+        <Route path="/service" element={<ServicePage/>}/>
+        
         
         <Route path="/course-enquiry" element={<CourseEnquiry/> }/>
         <Route path="/demo-enquiry" element={<DemoEnquiry/> }/>
