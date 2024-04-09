@@ -1,5 +1,6 @@
 import React from "react";
 import './LandingPage.css';
+import { Link } from "react-router-dom";
 import Amazon from '../../assets/Images/landing-page/better-together/amazon.png';
 import Clickup from '../../assets/Images/landing-page/better-together/clickup.png';
 import Hostinger from '../../assets/Images/landing-page/better-together/hostinger.png';
@@ -21,6 +22,7 @@ export default function LandingBetterTogether(){
                         <h4>Better Together</h4>
                         <p>Harness the power of collaboration and watch your business growth with our integrated solutions. 
                             A new era of expansion begins here!</p>
+                          <Link to="/services"><button>Get started</button></Link>  
                     </div>
                     <div className="landing-better-right">
                         <div className="landing-better-image"><img src={Amazon} alt="Amazon" /></div>

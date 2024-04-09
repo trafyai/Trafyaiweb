@@ -34,7 +34,7 @@ function App() {
         <Route path="/user-dashboard" element={<UserProfile />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/:courseId" element={<CourseSingle/>}/>
-        <Route path="/service" element={<ServicePage/>}/>
+        <Route path="/services" element={<ServicePage/>}/>
         
         
         <Route path="/course-enquiry" element={<CourseEnquiry/> }/>

@@ -1018,6 +1018,23 @@
     color: #e2e2e2;
     line-height: 150%;
 }
+.landing-better-left button{
+    width:max-content;
+    border: 2px solid var(--h-text-w-clr);
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 16px;
+    color: var(--h-text-w-clr);
+    background-color: inherit;
+   
+    font-weight: 500;
+    padding-right: 24px;
+    margin-top: 4px;
+}
+.landing-better-left button:hover{
+    color: var(--h-text-b-clr);
+    background-color: var(--h-text-w-clr);
+}
 .landing-better-right{
     width: 50%;
     display: grid;
