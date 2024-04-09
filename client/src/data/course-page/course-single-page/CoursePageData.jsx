@@ -34,8 +34,8 @@ import uiuxcertificate from '../../../assets/Images/course-page/certificate/UIUX
 
 //------------------------------------- Payment ----------------------------------
 
-import Gpay from '../../../assets/Images/course-page/payment-section/GPay.png';
-import PhonePe from '../../../assets/Images/course-page/payment-section/PhonePe.png';
+import Gpay from '../../../assets/Images/course-page/payment-section/Gpay.png';
+import PhonePe from '../../../assets/Images/course-page/payment-section/Phonepe.png';
 import Visa from '../../../assets/Images/course-page/payment-section/Visa.png';
 import Mastercard from '../../../assets/Images/course-page/payment-section/Mastercard.png';
 import Rupay from '../../../assets/Images/course-page/payment-section/rupay.png';
