@@ -38,6 +38,7 @@ function App() {
         
         
         <Route path="/course-enquiry" element={<CourseEnquiry/> }/>
+        <Route path="/enquiry" element={<CourseEnquiry/> }/>
         <Route path="/demo-enquiry" element={<DemoEnquiry/> }/>
         
         <Route path="/blog" element={<BlogLanding />} />

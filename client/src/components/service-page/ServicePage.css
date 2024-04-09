@@ -129,7 +129,7 @@
     background-color: var(--card-bg);
     border-radius: 12px;
 }
-.service-grow-dashboard p, .service-grow-content p {
+.service-grow-dashboard p, .service-grow-content p, .service-grow-contents p {
     font-size: 16px;
     font-family: var(--p-font);
     color: var(--p-text-w-clr);
@@ -142,14 +142,14 @@
     background-color: var( --card-bg);
     color:var(--h-w-text);
 }
-.service-grow-content h3{
+.service-grow-content h3, .service-grow-contents h3{
     font-size: 16px;
     font-family: var(--p-font);
     color: var(--h-w-text);
     font-weight: 500;
     line-height: 150%;
 }
-.service-grow-content li{
+.service-grow-content li, .service-grow-contents li{
     padding-bottom: 4px;
     font-size: 16px;
     font-family: var(--p-font);
@@ -158,27 +158,27 @@
     line-height: 150%;
     list-style-type: none;
 }
-.service-grow-dashboard-mobile{
+.service-grow-dashboard-mobile, .service-grow-contents{
     display: none;
 }
-.service-grow-content h1{
+.service-grow-content h1, .service-grow-contents h1{
     font-size: 24px;
     font-family: var(--p-font);
     color: var(--h-w-text);
     font-weight: 600;
 }
-.service-grow-content > div {
+.service-grow-content > div, .service-grow-contents > div {
     display: none;
   }
   
-  .service-grow-content > div.serviceActive {
+  .service-grow-content > div.serviceActive , .service-grow-contents > div.serviceActive{
     display: block;
     width: 75%;
     display: flex;
     flex-direction: column;
     gap:1rem;
   }
-  .service-grow-content{
+  .service-grow-content,  .service-grow-contents{
     width: 70%;
     display: flex;
     align-items: center;
@@ -187,6 +187,9 @@
     background-color: var(--card-bg);
     border-radius: 24px;
   }
+  .service-grow-content{
+    display: none;
+}
   
   .service-grow-image {
     
@@ -205,8 +208,89 @@
     .service-grow-description h1{
         font-size:28px;
     }
+    .service-grow-description p{
+      width: 80%;
+    }
   }
-
+  @media only screen and (max-width:900px){
+    .service-grow-contents{
+      display: none;
+    }
+    .service-grow-content{
+      display: flex;
+    }
+    .service-grow-container, .service-grow-whole-content{
+      gap:2rem;
+    }
+    .service-grow-whole-content{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .service-grow-whole-content{
+      flex-direction: column;
+    }
+    .service-grow-dashboard-mobile{
+      display: flex;
+      width: 100%;
+    }
+    .service-grow-dashboard-mobile-content{
+      width: 100%;
+      display: flex; 
+      align-items: center;
+      gap:2rem;
+      padding:16px;
+      border-radius: 8px;
+      background-color: var(--card-bg);
+      justify-content: space-between;
+    }
+    .service-grow-dashboard-mobile-content p{
+      border-radius: 16px;
+      background-color: var( --card-bg);
+      color:var(--h-w-text);
+      font-size: 16px;
+      font-family: var(--p-font);
+    }
+    .service-grow-contents h1{
+      font-size: 20px;
+    }
+    .service-grow-dashboard{
+      display: none;
+    }
+    .service-grow-content,  .service-grow-contents{
+      width: 100%;
+    }
+    .service-grow-content > div.serviceActive, .service-grow-contents > div.serviceActive{
+      width: 100%;
+    }
+    .service-grow-contents > div.serviceActive{
+      gap:0.5rem;
+    }
+    .service-grow-image{
+      display: flex;
+      justify-content: center;
+    }
+  }
+  @media only screen and (max-width:600px){
+    .service-grow-description h1{
+      font-size: 24px;
+    }
+    .service-grow-content h1{
+      font-size: 20px;
+    }
+    .service-grow-description p{
+      width: 100%;
+    }
+    .service-grow-container{
+      gap:2rem;
+    }
+    .service-grow-whole-content{
+      gap:2rem;
+    }
+    .service-grow-content{
+      flex-direction: column;
+    }
+  }
   /* -----------------------------------------Ai Section---------------------------- */
   .service-ai-section{
     padding: 60px 0px;
@@ -397,6 +481,7 @@
 
   .service-better-section{
     padding: 60px 0px;
+    padding-bottom: 120px;
     display: flex;
     justify-content: center;
     background-color: var(--h-text-b-clr);
@@ -404,8 +489,10 @@
   .service-better-container{
     width: 80%;
     display: flex;
+    padding: 60px 40px;
+    border-radius: 24px;
+    background-color: var(--card-bg);
     gap:3rem;
-    justify-content: space-between;
   }
   .service-better-content{
     display: flex;
@@ -425,7 +512,7 @@
     font-weight: 500;
   }
   .service-better-content p{
-    width: 60%;
+    width: 70%;
     font-size: 16px;
     font-family: var(--p-font);
     color: var(--p-text-w-clr);
@@ -445,11 +532,13 @@
   @media only screen and (max-width:1024px){
     .service-better-section{
         padding: 40px 0px;
+        padding-bottom: 80px;
     }
     .service-better-container {
         width: 90%;
         flex-direction: column;
         gap:2rem;
+        padding: 42px 32px;
     }
     .service-better-content h2{
         font-size: 28px;
@@ -463,6 +552,7 @@
   @media only screen and (max-width:600px){
     .service-better-section{
         padding: 30px 0px;
+        padding-bottom: 60px;
     }
     .service-better-container {
         width: 90%;
@@ -486,6 +576,14 @@
     .service-better-content p{
         width: 100%;
     }
+  }
+  @media only screen and (max-width:420px){
+    .service-better-container{
+      padding: 24px;
+    }
+    .service-better-logo-container {
+      width: 70px;
+  }
   }
   /* -----------------------------Service-------------------------------------- */
 
@@ -525,3 +623,17 @@
     background-color: inherit;
     color: var(--h-text-b-clr);
   }
+
+  @media only screen and (max-width:1024px){
+    .service-subscribe-container h3{
+      font-size: 28px;
+      text-align: center;
+    }
+  }
+  @media only screen and (max-width:600px){
+    .service-subscribe-container h3{
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+

@@ -1,17 +1,28 @@
 
+
 import React, { useState } from 'react';
 import './ServicePage.css';
 import ServiceData from '../../data/service-page/ServiceData';
+import NextButton from '../../assets/Images/comman/common/next-w-arrow.png';
+import PrevButton from '../../assets/Images/comman/common/prev_w-arrow.png'
 
 function ServiceGrowSection() {
-    const [activeContent, setActiveContent] = useState(1); // Setting initial activeContent to the id of "Email Marketing"
+    const [activeIndex, setActiveIndex] = useState(0); // Setting initial activeIndex to 0
+    const [activesContent, setActivesContent] = useState(1); // Setting initial activeContent to the id of "Email Marketing"
+
+    const showNextContent = () => {
+        setActiveIndex(prevIndex => Math.min(prevIndex + 1, ServiceData.length - 1));
+    };
+
+    const showPrevContent = () => {
+        setActiveIndex(prevIndex => Math.max(prevIndex - 1, 0));
+    };
 
    
 
-    const showContent = (id) => {
-        setActiveContent( id);
-    };
-    
+        const showContent = (id) => {
+            setActivesContent( id);
+        };
 
     return (
         <div className="service-grow-section">
@@ -23,37 +34,68 @@ function ServiceGrowSection() {
                 </div>
                 <div className="service-grow-whole-content">
                     <div className="service-grow-dashboard">
-                        {ServiceData.map(section => (
-                             <div key={section.id} className={section.title} onClick={() => showContent(section.id)}><p>{section.title}</p></div>
+                         {ServiceData.map(section => (
+                               <div key={section.id} className={section.title} onClick={() => showContent(section.id)}><p>{section.title}</p></div>
                              
+                        ))}
+                    </div>
+                    <div className="service-grow-dashboard-mobile">
+                        {ServiceData.map((section, index) => (
+                            <div key={section.id} style={{ display: activeIndex === index ? 'flex' : 'none' }} className="service-grow-dashboard-mobile-content">
+                                <img src={PrevButton} style={{ width: "8px", height: "14px" }}  onClick={showPrevContent} />                                <p>{section.title}</p>
+                                 <img src={NextButton} style={{width:"8px", height:"14px"}} onClick={showNextContent}/>
+                            </div>
                         ))}
                     </div>
 
                     <div className="service-grow-content">
-
-                    {ServiceData.map(section => (
-                            activeContent === section.id &&
-                            <div key={section.id} className={activeContent === section.id ? 'serviceActive' : ''} onClick={() => showContent(section.id)}>
-
+                    {ServiceData.map((section, index) => (
+                            <div key={section.id} className={index === activeIndex ? 'serviceActive' : ''}>
+                                {index === activeIndex && (
                     <div className="service-grow-image"><img src={section.content.image} alt={section.content.alt} /></div>
-                    </div>
-                     ))}
-
-
-                        {ServiceData.map(section => (
-                            activeContent === section.id &&
-                            <div key={section.id} className={activeContent === section.id ? 'serviceActive' : ''} onClick={() => showContent(section.id)}>
-                                <h1>{section.content.heading}</h1>
-                                <p>{section.content.description}</p>
-                                <h3>{section.content.subheading}</h3>
-                                <ul>
-                                    {section.content.contents.map((item, index) => (
-                                        <li key={index}>{item}</li>
-                                    ))}
-                                </ul>
+                )}
+                </div>
+            ))}
+                        {ServiceData.map((section, index) => (
+                            <div key={section.id} className={index === activeIndex ? 'serviceActive' : ''}>
+                                {index === activeIndex && (
+                                    <>
+                                        <h1>{section.content.heading}</h1>
+                                        <p>{section.content.description}</p>
+                                        <h3>{section.content.subheading}</h3>
+                                        <ul>
+                                            {section.content.contents.map((item, i) => (
+                                                <li key={i}>{item}</li>
+                                            ))}
+                                        </ul>
+                                    </>
+                                )}
                             </div>
                         ))}
                     </div>
+
+                   <div className="service-grow-contents">
+                        {ServiceData.map(section => (
+                             activesContent === section.id &&
+                             <div key={section.id} className={activesContent === section.id ? 'serviceActive' : ''}>
+                                <div className="service-grow-image"><img src={section.content.image} alt={section.content.alt} /></div>
+                                </div>
+                         ))}
+                        {ServiceData.map(section => (
+                             activesContent === section.id &&
+                             <div key={section.id} className={activesContent === section.id ? 'serviceActive' : ''}>
+                                 <h1>{section.content.heading}</h1>
+                                 <p>{section.content.description}</p>
+                                <h3>{section.content.subheading}</h3>
+                                <ul>
+                                    {section.content.contents.map((item, index) => (
+                                         <li key={index}>{item}</li>
+                                    ))}
+                                 </ul>
+                             </div>
+                         ))}
+                     </div>
+
                 </div>
             </div>
         </div>
