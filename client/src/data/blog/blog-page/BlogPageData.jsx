@@ -24,6 +24,7 @@ export default [
     description: [
       "In today's digital age, user interface (UI) and user experience (UX) design are paramount in creating successful products and services. Whether it's a website, a mobile app, or any digital platform, the way users interact with it can make or break its success. UI/UX design principles serve as the foundation for creating intuitive, engaging, and user-friendly experiences. Let's explore five fundamental principles that drive effective UI/UX design."
     ],
+    metaDescription:"In today's digital age, user interface (UI) and user experience (UX) design are paramount in creating successful products and services.",
     mainArticle: [
       {
         heading: "1. User-Centered Design",
@@ -83,6 +84,7 @@ export default [
     description: [
           "In a world where digital experiences reign supreme, capturing and holding users' attention is the holy grail of design. Immersive UI (User Interface) design goes beyond mere functionality; it aims to create captivating experiences that draw users into a digital realm, leaving them feeling deeply engaged and connected. From virtual reality (VR) environments to interactive websites, immersive UI design has the power to transport users to new dimensions of interaction. Let's delve into the essence of immersive UI design and explore what sets it apart."
     ],
+    metaDescription:"In a world where digital experiences reign supreme, capturing and holding users' attention is the holy grail of design.",
     mainArticle: [
       {
         heading: "The Power of Immersion",
@@ -134,6 +136,7 @@ export default [
     description: [
         "In the ever-evolving landscape of digital design, spatial design has emerged as a groundbreaking approach to creating immersive and intuitive user experiences. By leveraging principles of depth, perspective, and spatial relationships, spatial UI/UX design offers a new dimension of interaction that goes beyond traditional interfaces. From virtual reality (VR) environments to augmented reality (AR) applications, spatial design transforms digital spaces into dynamic and engaging worlds. Let's embark on a journey to uncover the essence of spatial design in UI/UX and its transformative impact on digital experiences."
     ],
+    metaDescription:"In the ever-evolving landscape of digital design, spatial design has emerged as a groundbreaking approach to creating immersive and intuitive user experiences.",
     mainArticle: [
       {
         heading: "Understanding Spatial Design",

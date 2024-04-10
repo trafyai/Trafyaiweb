@@ -98,15 +98,17 @@ export default function BlogPage() {
     <main>
       <Helmet>
         <title>{postData.title}</title>
-        
-        <meta name="description" content={postData.description} />
+        <link rel="canonical" href= {currentPageUrl}/>
+        <link rel="preload" as="document" href={`${currentPageUrl}`} />
+        <meta name="description" content={postData.metaDescription} />
+        <meta property="og:url" content={currentPageUrl}/>
         <meta property="og:image" content={postData.metaImage} />
         <meta property="og:image:height" content="600"/>
         <meta property="og:image:width" content="1200"/>
         <meta property="og:type" content="article"/>
         <meta property="og:title" content={postData.title}/>
-        <meta property="og:description" content={postData.description}/> 
-    
+        <meta property="og:description" content={postData.metaDescription}/> 
+        
       </Helmet>
 
 
