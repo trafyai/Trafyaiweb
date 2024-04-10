@@ -14,7 +14,7 @@ import { Helmet } from 'react-helmet';
 
 export default function CoursePage() {
     const location = useLocation();
-    const currentPageUrl = location.pathname;
+    const currentPageUrl =  `https://trafyai.com${location.pathname}`;
     const { courseId } = useParams();
    
 
@@ -47,7 +47,8 @@ export default function CoursePage() {
             <meta property="og:image:width" content="1200"/> */}
             <meta property="og:url" content= {currentPageUrl}/>
             <meta property="og:title" content={HeroData.courseHeading}/>
-           <meta property="og:description" content={HeroData.courseDescription}/> 
+           <meta property="og:description" content={HeroData.courseDescription}/>
+           <link rel="preload" as="document" href={`${currentPageUrl}`} />
     </Helmet>
             <CourseHero {...HeroData} />
             <CourseAbout {...AboutData} />
