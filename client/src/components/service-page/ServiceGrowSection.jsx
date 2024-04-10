@@ -35,7 +35,7 @@ function ServiceGrowSection() {
                 <div className="service-grow-whole-content">
                     <div className="service-grow-dashboard">
                          {ServiceData.map(section => (
-                               <div key={section.id} className={section.title} onClick={() => showContent(section.id)}><p>{section.title}</p></div>
+                               <div key={section.id} className={section.title} onMouseOver={() => showContent(section.id)}><p>{section.title}</p></div>
                              
                         ))}
                     </div>

@@ -8,6 +8,9 @@ export default function errorPage(){
         <>
         <Helmet>
         <title>Error 404 (Not Found)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://www.trafyai.com/error" />
+        <meta name="robots" content="noindex" />
         </Helmet>
         <ErrorPage/>
         </>

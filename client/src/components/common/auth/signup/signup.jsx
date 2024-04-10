@@ -113,9 +113,9 @@ const Signup = () => {
     return (
         <div className="signup">
             <Helmet>
-        <title>Login</title>
+        <title>Sign up</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="canonical" href="https://www.trafyai.com/login" />
+        <link rel="canonical" href="https://www.trafyai.com/signup" />
         <meta name="robots" content="noindex" />
       </Helmet>
             <div className="signup-container">
