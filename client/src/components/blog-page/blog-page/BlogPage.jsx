@@ -1,5 +1,4 @@
-
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./BlogPage.css";
 import BlogPageData from "../../../data/blog/blog-page/BlogPageData";
 import { useParams, useLocation } from "react-router-dom";
@@ -14,13 +13,23 @@ export default function BlogPage() {
   });
   const [errorMessage, setErrorMessage] = useState("");
   const [subscribed, setSubscribed] = useState(false); // State to track if the user has subscribed
+  const [postData, setPostData] = useState(null); // State to store blog post data
   const location = useLocation();
   const currentPageUrl = `https://trafyai.com${location.pathname}`;
 
-  const postData = BlogPageData.find((item) => item.id === id);
+  useEffect(() => {
+    // Find postData from BlogPageData based on id
+    const postData = BlogPageData.find(item => item.id === id);
+  
+    if (postData) {
+      setPostData(postData);
+    } else {
+      console.error("Blog post not found");
+    }
+  }, [id]);
 
   if (!postData) {
-    return <div>Blog post not found</div>;
+    return <div>Loading...</div>;
   }
 
   const scrollToHeading = (headingId) => {
