@@ -39,44 +39,6 @@ export default function BlogPage() {
     }
   };
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setUserData({ ...userData, [name]: value });
-  };
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const { email } = userData;
-
-    if (!email) {
-      setErrorMessage("Please fill in the required fields.");
-      return;
-    }
-
-    // Validation of email format can be added here if needed
-
-    try {
-      const response = await fetch('https://newsletter-form-9e6c9-default-rtdb.firebaseio.com/NewsLetterForm.json', {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ email })
-      });
-
-      if (response.ok) {
-        setSubscribed(true); // Set subscribed state to true
-        setErrorMessage(""); // Clear error message
-        setUserData({ email: "" }); // Clear the input field
-      } else {
-        setErrorMessage("Error submitting the form. Please try again later.");
-      }
-    } catch (error) {
-      console.error("Error submitting the form:", error);
-      setErrorMessage("Error submitting the form. Please try again later.");
-    }
-  };
 
   // Function to render the form or the thank you message
   const renderFormOrMessage = () => {
@@ -93,12 +55,10 @@ export default function BlogPage() {
             <h1>Subscribe to our newsletter</h1>
           </div>
           <div className="blog-newsletter-form">
-            <form onSubmit={handleSubmit}>
+            <form >
               <input
                 type="email"
                 placeholder="Email"
-                value={userData.email}
-                onChange={handleInputChange}
                 required
                 autoComplete="off"
                 name="email"
