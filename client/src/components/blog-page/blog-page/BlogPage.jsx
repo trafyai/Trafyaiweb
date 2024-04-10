@@ -2,9 +2,8 @@
 import React, { useRef, useState } from "react";
 import "./BlogPage.css";
 import BlogPageData from "../../../data/blog/blog-page/BlogPageData";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import { Helmet } from 'react-helmet';
-
 
 export default function BlogPage() {
   const { id } = useParams();
@@ -15,6 +14,8 @@ export default function BlogPage() {
   });
   const [errorMessage, setErrorMessage] = useState("");
   const [subscribed, setSubscribed] = useState(false); // State to track if the user has subscribed
+  const location = useLocation();
+  const currentPageUrl = `https://trafyai.com${location.pathname}`;
 
   const postData = BlogPageData.find((item) => item.id === id);
 
@@ -105,6 +106,25 @@ export default function BlogPage() {
     }
   };
 
+  // Functions to share the current page to LinkedIn, Twitter, and Facebook
+  const shareToLinkedIn = () => {
+    const postTitle = encodeURIComponent(postData.title);
+    const postUrl = encodeURIComponent(currentPageUrl);
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${postUrl}&title=${postTitle}`, '_blank', 'width=600,height=400');
+  };
+  
+  const shareToTwitter = () => {
+    const postTitle = encodeURIComponent(postData.title);
+    const postUrl = encodeURIComponent(currentPageUrl);
+    window.open(`https://twitter.com/intent/tweet?text=${postTitle}&url=${postUrl}`, '_blank', 'width=600,height=400');
+  };
+  
+  const shareToFacebook = () => {
+    const postTitle = encodeURIComponent(postData.title);
+    const postUrl = encodeURIComponent(currentPageUrl);
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${postUrl}`, '_blank', 'width=600,height=400');
+  };
+
   return (
     <main>
       <Helmet>
@@ -187,9 +207,9 @@ export default function BlogPage() {
                 ))}
                  <div className="blog-page-article-socials">
                   Share:
-                  <img src={postData.linkedin} alt="" />
-                  <img src={postData.facebook} alt="" />
-                  <img src={postData.twitter} alt="" />
+                  <img src={postData.linkedin} alt="" onClick={shareToLinkedIn}/>
+                  <img src={postData.facebook} alt="" onClick={shareToFacebook}/>
+                  <img src={postData.twitter} alt="" onClick={shareToTwitter}/>
                 </div>
               </div>
             </div>
