@@ -23,7 +23,7 @@ export default function BlogPage() {
   
     if (postData) {
       setPostData(postData);
-    } else {
+    } else { 
       console.error("Blog post not found");
     }
   }, [id]);
@@ -108,7 +108,6 @@ export default function BlogPage() {
         <meta property="og:type" content="article"/>
         <meta property="og:title" content={postData.title}/>
         <meta property="og:description" content={postData.metaDescription}/> 
-        
       </Helmet>
 
 
