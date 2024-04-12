@@ -4,15 +4,21 @@ import BlogPageData from "../../../data/blog/blog-page/BlogPageData";
 import { useParams, useLocation } from "react-router-dom";
 import { Helmet } from 'react-helmet';
 
+
+
 export default function BlogPage() {
   const { id } = useParams();
   const contentRef = useRef(null);
 
-  const [userData, setUserData] = useState({
+   const [userData, setUserData] = useState({
     email: ""
   });
+
+  
   const [errorMessage, setErrorMessage] = useState("");
-  const [subscribed, setSubscribed] = useState(false); // State to track if the user has subscribed
+  const [subscribed, setSubscribed] = useState(false);
+
+
   const [postData, setPostData] = useState(null); // State to store blog post data
   const location = useLocation();
   const currentPageUrl = `https://trafyai.com${location.pathname}`;
@@ -39,6 +45,48 @@ export default function BlogPage() {
     }
   };
 
+  // State to track if the user has subscribed
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setUserData({ ...userData, [name]: value });
+};
+
+const handleSubmit = async (event) => {
+  event.preventDefault();
+
+  const { email } = userData;
+
+  if (!email) {
+      setErrorMessage("Please fill in the required fields.");
+      return;
+  }
+
+  // Validation of email format can be added here if needed
+
+  try {
+      const response = await fetch('https://newsletter-form-9e6c9-default-rtdb.firebaseio.com/NewsLetterForm.json', {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ email })
+      });
+
+      if (response.ok) {
+          setSubscribed(true); // Set subscribed state to true
+          console.log(response)
+          setErrorMessage(""); // Clear error message
+          setUserData({ email: "" }); // Clear the input field
+      } else {
+          setErrorMessage("Error submitting the form. Please try again later.");
+      }
+  } catch (error) {
+      console.error("Error submitting the form:", error);
+      setErrorMessage("Error submitting the form. Please try again later.");
+  }
+};
+
 
   // Function to render the form or the thank you message
   const renderFormOrMessage = () => {
@@ -55,20 +103,22 @@ export default function BlogPage() {
             <h1>Subscribe to our newsletter</h1>
           </div>
           <div className="blog-newsletter-form">
-            <form >
+            <form onSubmit={handleSubmit} >
               <input
                 type="email"
                 placeholder="Email"
+                value={userData.email}
+                onChange={handleInputChange}
                 required
                 autoComplete="off"
                 name="email"
                 className="blog-newsletter-email"
               />
               {errorMessage && <p className="error-message">{errorMessage}</p>}
+              <button type="submit">Submit</button>
               
             </form>
           </div>
-          <button type="submit">Submit</button>
          
         </div>
       );
@@ -94,21 +144,21 @@ export default function BlogPage() {
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${postUrl}`, '_blank', 'width=600,height=400');
   };
 
+
+
   return (
     <main>
       <Helmet>
         <title>{postData.title}</title>
-        <link rel="canonical" href= {currentPageUrl}/>
-        <link rel="preload" as="document" href={`${currentPageUrl}`} />
-        <meta name="description" content={postData.metaDescription} />
-        <meta property="og:url" content={currentPageUrl}/>
+        
+        <meta name="description" content={postData.description} />
         <meta property="og:image" content={postData.metaImage} />
         <meta property="og:image:height" content="600"/>
         <meta property="og:image:width" content="1200"/>
         <meta property="og:type" content="article"/>
         <meta property="og:title" content={postData.title}/>
-        <meta property="og:description" content={postData.metaDescription}/> 
-        
+        <meta property="og:description" content={postData.description}/> 
+    
       </Helmet>
 
 
