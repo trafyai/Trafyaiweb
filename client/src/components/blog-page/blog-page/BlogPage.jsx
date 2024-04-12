@@ -92,15 +92,15 @@ const handleSubmit = async (event) => {
   const renderFormOrMessage = () => {
     if (subscribed) {
       return (
-        <div className="blog-newsletter-heading">
-          <h1>Thank you for subscribing to our newsletter!</h1>
+        <div className="blog-newsletter-form-thankyou">
+          <h3>Thank you for subscribing to our newsletter!</h3>
         </div>
       );
     } else {
       return (
         <div className="blog-newsletter-container-inner">
           <div className="blog-newsletter-heading">
-            <h1>Subscribe to our newsletter</h1>
+            <h3>Subscribe to our newsletter</h3>
           </div>
           <div className="blog-newsletter-form">
             <form onSubmit={handleSubmit} >
