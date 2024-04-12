@@ -180,7 +180,10 @@ justify-content: center;
 }
 .blog-newsletter-form form{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap:1.5rem;
 
 }
 .blog-newsletter-form input{
