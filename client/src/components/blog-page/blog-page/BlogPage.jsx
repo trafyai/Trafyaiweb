@@ -29,7 +29,7 @@ export default function BlogPage() {
   
     if (postData) {
       setPostData(postData);
-    } else {
+    } else { 
       console.error("Blog post not found");
     }
   }, [id]);
@@ -157,8 +157,12 @@ const handleSubmit = async (event) => {
         <meta property="og:image:width" content="1200"/>
         <meta property="og:type" content="article"/>
         <meta property="og:title" content={postData.title}/>
+<<<<<<< HEAD
         <meta property="og:description" content={postData.description}/> 
     
+=======
+        <meta property="og:description" content={postData.metaDescription}/> 
+>>>>>>> 8a835a56ef6bf8fb6c27065eb648d1e1c8a6ac6a
       </Helmet>
 
 
