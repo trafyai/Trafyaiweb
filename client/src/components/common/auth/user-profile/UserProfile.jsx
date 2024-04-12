@@ -15,8 +15,8 @@ export default function UserProfile(){
     return(
        <main>
          <Helmet>
-        <meta name="robots" content="noindex" />
-      </Helmet>
+         <meta name="robots" content="noindex" />
+         </Helmet>
 
           <div className="user-profile">
             <div className="user-profile-container">

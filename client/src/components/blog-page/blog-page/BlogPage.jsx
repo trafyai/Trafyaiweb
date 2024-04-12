@@ -12,7 +12,7 @@ export default function BlogPage() {
     email: ""
   });
   const [errorMessage, setErrorMessage] = useState("");
-  const [subscribed, setSubscribed] = useState(false); // State to track if the user has subscribed
+  const [subscribed, setSubscribed] = useState(false);    // State to track if the user has subscribed
   const [postData, setPostData] = useState(null); // State to store blog post data
   const location = useLocation();
   const currentPageUrl = `https://trafyai.com${location.pathname}`;
