@@ -143,24 +143,24 @@ const handleSubmit = async (event) => {
     const postUrl = encodeURIComponent(currentPageUrl);
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${postUrl}`, '_blank', 'width=600,height=400');
   };
-
+ 
+  const mTitle= postData.title;
+  const mDesc=postData.metaDescription;
 
 
   return (
     <main>
       <Helmet>
-        <title>{postData.title}</title>
-        
-        <meta name="description" content={postData.description} />
+        <title>{mTitle}</title>
+        <link rel="canonical" href={currentPageUrl}/>
+        <meta name="description" content={mDesc} />
         <meta property="og:image" content={postData.metaImage} />
         <meta property="og:image:height" content="600"/>
         <meta property="og:image:width" content="1200"/>
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content={postData.title}/>
-
-        <meta property="og:description" content={postData.description}/> 
-    
-        <meta property="og:description" content={postData.metaDescription}/> 
+        <meta property="og:title" content={mTitle}/>
+        <meta property="og:url" content={currentPageUrl}/>
+        <meta property="og:description" content={mDesc}/> 
       </Helmet>
 
 
