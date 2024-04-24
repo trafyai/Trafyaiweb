@@ -4,8 +4,6 @@ import BlogPageData from "../../../data/blog/blog-page/BlogPageData";
 import { useParams, useLocation } from "react-router-dom";
 import { Helmet } from 'react-helmet';
 
-
-
 export default function BlogPage() {
   const { id } = useParams();
   const contentRef = useRef(null);
@@ -154,6 +152,8 @@ const handleSubmit = async (event) => {
         <title>{mTitle}</title>
         <link rel="canonical" href={currentPageUrl}/>
         <meta name="description" content={mDesc} />
+
+        <meta property="og:site_name" content="Trafy" />
         <meta property="og:image" content={postData.metaImage} />
         <meta property="og:image:height" content="600"/>
         <meta property="og:image:width" content="1200"/>
@@ -199,11 +199,6 @@ const handleSubmit = async (event) => {
               </div>
 
               <div className="blog-page-article-contents">
-                {/* <div className="blog-page-article-image">
-                  <img src={postData.image} alt="" />
-                </div> */}
-                
-                {/* ////////////////////////////////description//////////////////// */}
                 {Array.isArray(postData.description) ? (
                   postData.description.map((desc, descIndex) => (
                     <div className="blog-page-article-socials-description" key={descIndex}>

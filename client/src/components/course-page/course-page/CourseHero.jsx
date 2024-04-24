@@ -83,8 +83,8 @@ function shareToLinkedIn() {
                             </div>
                         </div>
                         <div className="hero-cta">
-                            <Link to="/course-enquiry"><button className="hero-enroll">Join now</button></Link>
-                            <Link to="/demo-enquiry"> <button className="hero-demo">Free Demo</button></Link>
+                            <Link to="/join-now"><button className="hero-enroll">Join now</button></Link>
+                            <Link to="/free-demo"> <button className="hero-demo">Free Demo</button></Link>
                         </div>
                     </div>
                     {showShare &&

@@ -37,9 +37,8 @@ function App() {
         <Route path="/services" element={<ServicePage/>}/>
         
         
-        <Route path="/course-enquiry" element={<CourseEnquiry/> }/>
-        <Route path="/enquiry" element={<CourseEnquiry/> }/>
-        <Route path="/demo-enquiry" element={<DemoEnquiry/> }/>
+        <Route path="/join-now" element={<CourseEnquiry/> }/>
+        <Route path="/free-demo" element={<DemoEnquiry/> }/>
         
         <Route path="/blog" element={<BlogLanding />} />
         <Route path="/blog/:id" element={<BlogPage />} />
