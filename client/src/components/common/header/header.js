@@ -3,8 +3,9 @@ import './Header.css';
 import blackLogo from '../../../assets/Images/comman/header/whiteLogo.png';
 import close from '../../../assets/Images/comman/header/close_small.png';
 import hamburger from '../../../assets/Images/comman/header/hamburger-white.png';
-import dropDown from '../../../assets/Images/comman/header/drop-down-icon.svg'
-import { Link } from "react-router-dom";
+import dropDown from '../../../assets/Images/comman/header/drop-down-icon.svg';
+import profile from '../../../assets/Images/comman/header/account_circle.png';
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { selectUser, logoutUser } from "../../../feature/auth/navBarSlice";
 
@@ -13,6 +14,7 @@ function Header() {
   const [hover, setHover] = useState(false); // State for tracking hover
   const { isLoggedIn, userProfile } = useSelector(selectUser);
   const dispatch = useDispatch();
+  const navigate =  useNavigate();
 
   function toggleMenu() {
     setMenuOpen(!menuOpen);
@@ -28,6 +30,11 @@ function Header() {
   const handleLogout = () => {
     dispatch(logoutUser()); // Dispatch the logout action
     // Additional logout logic if needed (e.g., redirecting to login page)
+    navigate("/");
+  }
+
+  const handleUserDashboardClick = () => {
+    setHover(false); // Close the dropdown when "User Dashboard" link is clicked
   }
 
   return (
@@ -44,12 +51,17 @@ function Header() {
           </div>
 
           {isLoggedIn ? (
-            <div className="header-contents-second">
-              <div className="user-profile" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-                <Link to="/user-dashboard">userProfile</Link>
+            <div className="header-contents-second" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+              <div className="nav-user-profile" >
+                <Link to="/user-dashboard" onClick={handleUserDashboardClick}>
+                  {/* <img src={profile}/>  */}
+                  <div style={{width:"36px",height:"36px",borderRadius:"100%",backgroundColor:"#fcfefe", display:"flex", justifyContent:"center",alignItems:"center"}}>A</div>
+
+                  </Link>
                 {hover && (
-                  <div className="logout-option" onClick={handleLogout}>
-                    Logout
+                  <div className="nav-user-dropdown" >
+                    <Link to="/user-dashboard" onClick={handleUserDashboardClick}><p>User Dashboard</p></Link>
+                  <p onClick={handleLogout}>Logout</p>
                   </div>
                 )}
               </div>

@@ -29,7 +29,7 @@ function Footer() {
 
           <div className="footer-content">
             <div className="footer-content-heading"><h2>Resource</h2></div>
-            <div className="footer-content-text"><p>Blogs</p></div>
+            <div className="footer-content-text"><Link to="/blog"><p>Blogs</p></Link></div>
             <div className="footer-content-text"><p>Trending</p></div>
             <div className="footer-content-text"><p>Insights & Reports</p></div>
             <div className="footer-content-text"><p>trafy Community</p></div>

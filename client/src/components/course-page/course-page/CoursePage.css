@@ -28,7 +28,7 @@
 .hero-category p, .hero-popularity p{
     padding: 8px 16px;
     color:#121212;
-    border: 1px solid #121212;
+    border: 1px solid #818080;
     border-radius: 8px;
     font-family:var( --p-font);
     font-weight: 400;
@@ -36,7 +36,7 @@
 }
 .hero-main-heading h1{
     color:var(--h-text-b-clr);
-    font-family: var( --p-font);
+    font-family: var( --h-font);
     font-weight: 700;
     font-size: 40px;
 }
@@ -333,7 +333,7 @@
 .about-course-heading h2, .course-skills-heading h2, .tools-covered h2{
     font-size: 24px;
     font-weight: 600;
-    font-family:var( --p-font);
+    font-family:var( --h-font);
     color:var(--h-text-b-clr);
 }
 .about-course-description p{
@@ -447,7 +447,7 @@
     font-size: 24px;
     color:var(--h-text-b-clr);
     font-weight: 600;
-    font-family: var( --p-font);
+    font-family: var( --h-font);
 }
 .course-syllabus-accordion-container{
     display: flex;
@@ -534,7 +534,7 @@
   .course-project-heading h2{
     font-size: 24px;
     font-weight: 600;
-    font-family: var( --p-font);
+    font-family: var( --h-font);
     color:var(--h-text-b-clr);
   }
   .course-projects-contents{
@@ -639,7 +639,7 @@
   .course-review-heading h2{
     font-size: 24px;
     font-weight: 600;
-    font-family: var( --p-font);
+    font-family: var( --h-font);
     color:var(--h-text-b-clr);
   }
   .course-review-contents{
@@ -730,7 +730,7 @@
   .course-certificate-heading h2{
     font-size: 20px;
     font-weight: 600;
-    font-family: var( --p-font);
+    font-family: var( --h-font);
     color:var(--h-text-b-clr);
   }
   .course-certificate-contents{
@@ -825,7 +825,7 @@
 .course-faq-heading h2{
     font-size: 24px;
     font-weight: 600;
-    font-family:var( --p-font);
+    font-family:var( --h-font);
     color:var(--h-text-b-clr);
 }
 .course-faq-accordion-container{
@@ -894,7 +894,7 @@
 .course-payment-heading h2{
     font-size: 24px;
     font-weight: 600;
-    font-family:var( --p-font);
+    font-family:var( --h-font);
     color:var(--h-text-b-clr);
 }
 .course-payment-contents{
@@ -918,7 +918,7 @@
     width: max-content;
     padding: 8px 16px;
     color:#121212;
-    border: 1px solid #121212;
+    border: 1px solid #818080;
     border-radius: 8px;
     font-family: var( --p-font);
     font-weight: 400;
