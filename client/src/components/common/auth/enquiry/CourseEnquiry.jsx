@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import './CourseEnquiry.css';
-import { Helmet } from 'react-helmet';
-
+import axios from 'axios';
 
 const EnquiryForm = () => {
-
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         fname: "",
         lname: "",
@@ -12,7 +12,6 @@ const EnquiryForm = () => {
         phone: "",
         message: ""
     });
-
     const [errorMessages, setErrorMessages] = useState({
         fname: "",
         lname: "",
@@ -20,6 +19,7 @@ const EnquiryForm = () => {
         phone: "",
         message: ""
     });
+    const [formSubmitted, setFormSubmitted] = useState(false); 
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -38,8 +38,7 @@ const EnquiryForm = () => {
         e.preventDefault();
 
         const { fname, lname, email, phone, message } = formData;
-
-        const namePattern = /^[A-Za-z]+$/;
+        const namePattern = /^[A-Za-z\s'-]+$/;
         const phonePattern = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 
         const newErrorMessages = {
@@ -47,7 +46,7 @@ const EnquiryForm = () => {
             lname: !namePattern.test(lname) ? "Last name should contain alphabetic characters only." : "",
             email: !validateEmail(email) ? "Please enter a valid email address." : "",
             phone: !phonePattern.test(phone) ? "Please enter a valid phone number." : "",
-            message: "" // No validation for the message field
+            message: ""
         };
 
         setErrorMessages(newErrorMessages);
@@ -56,7 +55,6 @@ const EnquiryForm = () => {
             return;
         }
 
-        // Proceed with form submission
         const options = {
             method: 'POST',
             headers: {
@@ -68,7 +66,18 @@ const EnquiryForm = () => {
         try {
             const res = await fetch('https://courseenquiryform-default-rtdb.firebaseio.com/EnquiryFormData.json', options);
             if (res.ok) {
-                alert("Thank You For Submitting the Form ");
+                axios.post("https://trafyai.com/course-enquiry/submit", { email }, { timeout: 5000 })
+
+                .then(response => {
+                    console.log(response.data);
+                    window.alert("Thank you for submitting the form.");
+                    setFormSubmitted(true); // Set formSubmitted to true to trigger navigation
+                })
+                .catch(error => {
+                    console.error(error);
+                    alert("An error occurred while sending the email notification.");
+                });
+
                 setFormData({
                     fname: "",
                     lname: "",
@@ -85,26 +94,28 @@ const EnquiryForm = () => {
         }
     };
 
+    useEffect(() => {
+        if (formSubmitted) {
+            navigate('/uiux-course');
+            setFormSubmitted(false); // Reset formSubmitted to false for future submissions
+        }
+    }, [formSubmitted, navigate]);
+
     return (
         <main>
-             <Helmet>
-        <meta name="robots" content="noindex" />
-      </Helmet>
             <div className="course-enquiry-form">
                 <div className="course-enquiry-form-container">
                     <div className="course-enquiry-form-contents">
-
                         <form className="enquiryform" onSubmit={handleSubmit} autoComplete="off" method="POST">
                             <div className="enquiryform-heading">
                                 <h2>Ready to get started?</h2>
                             </div>
-
                             <div className="enquiryfname">
-                                <input type="text" placeholder="First name" name="fname" className="enquiry-fname" required onChange={handleChange} value={formData.fname}  />
+                                <input type="text" placeholder="First name" name="fname" className="enquiry-fname" required onChange={handleChange} value={formData.fname} />
                                 {errorMessages.fname && <p className="error-message">{errorMessages.fname}</p>}
                             </div>
                             <div className="enquirylname">
-                                <input type="text" placeholder="Last name" className="enquiry-lname" name="lname" required onChange={handleChange} value={formData.lname}  />
+                                <input type="text" placeholder="Last name" className="enquiry-lname" name="lname" required onChange={handleChange} value={formData.lname} />
                                 {errorMessages.lname && <p className="error-message">{errorMessages.lname}</p>}
                             </div>
                             <div className="enquiryemail">
@@ -116,17 +127,15 @@ const EnquiryForm = () => {
                                 {errorMessages.phone && <p className="error-message">{errorMessages.phone}</p>}
                             </div>
                             <div className="enquirymessage">
-                                <textarea type="text" placeholder="Message" className="enquiry-message" name="message" style={{ width: "100%" }}  value={formData.message} onChange={handleChange} />
-                                
+                                <textarea type="text" placeholder="Message" className="enquiry-message" name="message" style={{ width: "100%" }} value={formData.message} onChange={handleChange} />
                             </div>
-
                             <button type="submit" className="course-enquiry-button">Get in touch</button>
-
                         </form>
                     </div>
                 </div>
             </div>
         </main>
-    )
+    );
 }
+
 export default EnquiryForm;
