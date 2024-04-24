@@ -22,6 +22,21 @@ const Login = () => {
     const [emailError, setEmailError] = useState('');
     const navigate = useNavigate();
 
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     try {
+    //         if (validateForm()) {
+    //             const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
+    //             // User successfully logged in
+    //             if (userCredential) {
+    //                 dispatch(loginUser(userCredential.user)); 
+    //                 navigate('/');
+    //             }
+    //         }
+    //     } catch (error) {
+    //         alert(error.message);
+    //     }
+    // }
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -29,7 +44,10 @@ const Login = () => {
                 const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
                 // User successfully logged in
                 if (userCredential) {
-                    dispatch(loginUser(userCredential.user)); 
+                    // Extract relevant user information
+                    // const { email, displayName, photoURL } = userCredential.user;
+                    // Dispatch the loginUser action with user information
+                    // dispatch(loginUser({ email, displayName, photoURL }));
                     navigate('/');
                 }
             }
@@ -37,6 +55,7 @@ const Login = () => {
             alert(error.message);
         }
     }
+    
     const validateEmail = (email) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
@@ -67,14 +86,23 @@ const Login = () => {
     const handleGoogleSignIn = async () => {
         try {
             const provider = new firebase.auth.GoogleAuthProvider();
-            await firebase.auth().signInWithPopup(provider);
-            alert("login with Google Successfully");
-            navigate('/'); 
+            const userCredential = await firebase.auth().signInWithPopup(provider);
+            // If userCredential is available
+            if (userCredential) {
+                // Extract relevant user information
+                // const { email, displayName, photoURL } = userCredential.user;
+                // Dispatch the loginUser action with user information
+                // dispatch(loginUser({ email, displayName, photoURL }));
+                navigate('/');
+            } else {
+                // Handle the case when userCredential is not available
+                alert("User credential not available");
+            }
         } catch (err) {
             alert(err.message);
         }
     }
-
+    
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     }
