@@ -3,7 +3,7 @@ import './LandingPage.css';
 import Live from '../../assets/Images/landing-page/hero/live.png';
 import One from '../../assets/Images/landing-page/hero/1-1.png';
 import Placement from '../../assets/Images/landing-page/hero/placement.png';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const LandingHero = () => {
     const [userData, setUserData] = useState({
@@ -18,13 +18,6 @@ const LandingHero = () => {
     const postUserData = (event) => {
         const { name, value } = event.target;
         setUserData({ ...userData, [name]: value });
-    };
-
-    const checkEmailExistence = async () => {
-        const { email } = userData;
-        const res = await fetch(`https://freeconslu-form-default-rtdb.firebaseio.com/userDataRecords.json?orderBy="email"&equalTo="${email}"`);
-        const data = await res.json();
-        return Object.keys(data).length > 0;
     };
 
     const validateEmail = (email) => {
@@ -52,46 +45,63 @@ const LandingHero = () => {
             return;
         }
 
-        const res = await fetch('https://freeconslu-form-default-rtdb.firebaseio.com/userDataRecords.json', {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ name, email })
-        });
+        try {
+            // Store form data
+            const res = await fetch('https://freeconslu-form-default-rtdb.firebaseio.com/userDataRecords.json', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ name, email })
+            });
 
-        if (res.ok) {
+            if (!res.ok) {
+                throw new Error('Error storing data');
+            }
+
+            // Send email to user
+            const emailRes = await fetch('https://trafyai.com/landing-page/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email })
+            });
+
+            if (!emailRes.ok) {
+                throw new Error('Error sending email');
+            }
+
             setSuccessMessage("Thank You for Submitting the form"); 
             setUserData({ name: "", email: "" });
             setEmptyDataError(false);
             setEmailError(false);
-        } else {
-            setErrorMessage("Error storing data");
+        } catch (error) {
+            console.error('Error:', error);
+            setErrorMessage("Error submitting form");
         }
     };
 
-    // Function to render the form or success message
     const renderFormOrMessage = () => {
         if (successMessage) {
-            return(
-             <div className="landing-hero-form-submit-message">
-                <p className="landing-hero-form-submit-message-heading">Thank you</p> 
-                <p className="landing-hero-form-submit-message-description"> Our team will contact you soon.</p> 
-            </div>
+            return (
+                <div className="landing-hero-form-submit-message">
+                    <p className="landing-hero-form-submit-message-heading">Thank you</p> 
+                    <p className="landing-hero-form-submit-message-description"> Our team will contact you soon.</p> 
+                </div>
             );
-            
         } else {
             return (
                 <div className="landing-hero-top">
-                <h3>Get a free career consultation</h3>
-                <form className="landing-hero-form">
-                    <input type="text" placeholder="Name" required autoComplete="off" name="name" className="landing-name" value={userData.name} onChange={postUserData} />
-                    <div>
-                        <input type="email" placeholder="Email" required autoComplete="off" name="email" className="landing-email" value={userData.email} onChange={postUserData} />
-                        {emptyDataError || emailError ? <p style={{ paddingTop: "4px", color: "red", fontFamily:"Inter", fontSize:"14px" }}>{errorMessage}</p> : null}
-                    </div>
-                    <button className="landing-hero-form-btn" type="submit" onClick={submitData}>Submit</button>
-                </form>
+                    <h3>Get a free career consultation</h3>
+                    <form className="landing-hero-form">
+                        <input type="text" placeholder="Name" required autoComplete="off" name="name" className="landing-name" value={userData.name} onChange={postUserData} />
+                        <div>
+                            <input type="email" placeholder="Email" required autoComplete="off" name="email" className="landing-email" value={userData.email} onChange={postUserData} />
+                            {emptyDataError || emailError ? <p style={{ paddingTop: "4px", color: "red", fontFamily:"Inter", fontSize:"14px" }}>{errorMessage}</p> : null}
+                        </div>
+                        <button className="landing-hero-form-btn" type="submit" onClick={submitData}>Submit</button>
+                    </form>
                 </div>
             );
         }
@@ -104,12 +114,10 @@ const LandingHero = () => {
                     <div className="landing-hero-left">
                         <h1>Interactive Learning, Next Generation Courses.</h1>
                         <p>Gain knowledge of advanced concepts with our unique Interactive, Immersive, and Adaptive learning modules and accelerate your career.</p>
-                      <Link to="/courses">  <button>Explore</button> </Link>
+                        <Link to="/courses"><button>Explore</button></Link>
                     </div>
-
                     <div className="landing-hero-right">
                         <div className="landing-hero-top">
-                            
                             {renderFormOrMessage()}
                         </div>
                         <div className="landing-hero-bottom">

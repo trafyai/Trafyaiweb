@@ -41,6 +41,19 @@ const LandingNewsletter = () => {
             } else {
                 setErrorMessage("Error submitting the form. Please try again later.");
             }
+
+             // Send email to user
+             const emailRes = await fetch('https://trafyai.com/newsletter/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email })
+            });
+
+            if (!emailRes.ok) {
+                throw new Error('Error sending email');
+            }
         } catch (error) {
             console.error("Error submitting the form:", error);
             setErrorMessage("Error submitting the form. Please try again later.");
